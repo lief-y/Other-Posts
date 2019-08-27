@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bundles on Learning by Writing in Mathematics</title>
+    <link>/categories/bundles/</link>
+    <description>Recent content in Bundles on Learning by Writing in Mathematics</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/bundles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jet bundles or Bundles of Principal Parts</title>
+      <link>/post/2019/08/19/jet-bundles-or-bundles-of-principal-parts/</link>
+      <pubDate>Mon, 19 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/08/19/jet-bundles-or-bundles-of-principal-parts/</guid>
+      <description>The IntuitionJet bundles are also known as bundles of principal part (more generally, modules of principal parts).
+Roughly speaking, sections of a jet bundle, called jets, are operators that send sections to Taylor polynomials. For example, for a function \(f\in\mathcal{O}_{\mathbb{A}^1}\), the second jet of \(f\) at the origin \(o\in \mathbb{A}^1\) is determined by\[J_o^2 f= f(o)+Df(o)(x-o)+\frac{1}{2!}D^2f(o)(x-o)^2,\]where \(D\) the is the differential operator \(\frac{\partial}{\partial x}\).
+Consider a function \(f\in\mathcal{O}_{\mathbb{A}^n}\).</description>
+    </item>
+    
+  </channel>
+</rss>

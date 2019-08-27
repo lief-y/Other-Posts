@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Annotatable Webpages and Annotate Webpages | Learning by Writing in Mathematics</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/topics/">Topics</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Annotatable Webpages and Annotate Webpages</span></h1>
+
+<h2 class="date">2019/04/12</h2>
+</div>
+
+<main>
+
+
+<h2 id="hypothesis-an-online-annotation-tool">Hypothesis, an online annotation tool</h2>
+
+<p>Recently, I learned a cool online annotation tool, <a href="https://web.hypothes.is/">Hypothesis</a>, which lets webpage readers add, share, explore and save annotations online for free.</p>
+
+<h2 id="what-can-hypothesis-do">What can Hypothesis do</h2>
+
+<ul>
+<li>Annotate and post publicly or save privately.</li>
+<li>Reply to or share any annotation publicly.</li>
+<li>Collaborate privately within a group.</li>
+<li>Explore public annotations and profiles.</li>
+</ul>
+
+<h2 id="for-webpage-creator">For webpage creator</h2>
+
+<p>Adding Hypothesis to a webpage is easy. You simply need to add the following codes in the head of you html file.</p>
+
+<pre><code class="language-html,">&lt;script async src=&quot;https://hypothes.is/embed.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>By default, the hypothesis client added an opened sidebar. You may change the default by adding the following codes.</p>
+
+<pre><code class="language-html,">&lt;script type=&quot;application/json&quot; class=&quot;js-hypothesis-config&quot;&gt;
+  {
+    &quot;openSidebar&quot;: false
+  }
+&lt;/script&gt;
+</code></pre>
+
+<p>More <a href="https://h.readthedocs.io/projects/client/en/latest/publishers/config/">configurations for the Hypothesis client</a> are available.</p>
+
+<h2 id="for-readers">For readers</h2>
+
+<p>There are two things that have to be done before you make annotations on any webpage.</p>
+
+<ol>
+<li><p>You need to <a href="https://hypothes.is/signup">sign up a free account at Hypothesis</a> to annotate.</p></li>
+
+<li><p>If the webpage is already Hypothesis enabled (a sidebar on the right is available.), then you are ready to annotate. Otherwise, you need to active Hypothesis. This can be done in a few ways.</p>
+
+<ol>
+<li>If you use Chrome or Brave, you may add the <a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek">Hypothesis extension</a> to your browser. The benefit of this method is that you can even <a href="https://web.hypothes.is/help/annotating-locally-saved-pdfs/">annotate pdf files in Chrome</a>. (Note: <a href="https://github.com/hypothesis/product-backlog/issues/899">Brave need a patch</a> to do so.)</li>
+<li>A browser independent way is to add the following link to bookmark.
+<a class="fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray" href="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();" target="_self">
+<span class="fusion-button-text"><hypothesis-highlight class="annotator-hl">Hypothesis Bookmarklet</hypothesis-highlight>
+</span>
+</a></li>
+<li>Using the proxy of Hypothesis <a href="https://via.hypothes.is/">via.hypothes.is</a>.</li>
+</ol></li>
+</ol>
+
+<p>For more information on how to use Hypothesis and how it can do, check the webpage <a href="https://web.hypothes.is/help-categories/tutorials/">Hypothesis Tutorials and How-Tos</a>.</p>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

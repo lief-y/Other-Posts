@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebWork Authoring Tips | Learning by Writing in Mathematics</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/topics/">Topics</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">WebWork Authoring Tips</span></h1>
+
+<h2 class="date">2019/02/26</h2>
+</div>
+
+<main>
+
+
+<h2 id="webwork-text-display-languages">WebWork Text Display Languages</h2>
+
+<ul>
+<li>Original way using <code>TEXT(EV3())</code>
+<br /></li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code class="language-perl">    TEXT(EV3(&lt;&lt;'END_TEXT'));
+      The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles      processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands.
+    END_TEXT
+</code></pre>
+
+<pre><code>**Remark:**
+</code></pre>
+
+<ol>
+<li><p>In the example two <code>pg</code> macros were used <code>TEXT()</code> and <code>EV3()</code>. Both macros are defined in <code>PGbasicmacros.pl</code>. (See the document on <a href="http://webwork.maa.org/pod/pg_TRUNK/macros/PGbasicmacros.pl.html#text_macros">text macros</a>) for more information)</p></li>
+
+<li><p>The expression <code>&lt;&lt;'END_TEXT'</code> is a string holder which holds strings end up to the indicator <code>END_TEXT</code>. The ending indicator has to be adjusted to the left.</p></li>
+
+<li><p>The single quotes about a <code>END_TEXT</code> indicates that no interpolation takes place. Using double quotes or no quotes allows interpolation. (See <a href="http://webwork.maa.org/wiki/Basic_Perl_syntax">Basic Perl syntax</a> for more information.)</p></li>
+</ol>
+
+<ul>
+<li>A more commonly seen method uses <code>BEGIN_TEXT/END_TEXT</code> which will be translated into the construction in the above example by <code>PGtranslator.pm</code>.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code class="language-perl">    BEGIN_TEXT
+      Find a the sum of 1+1:
+      \{ans_rule(20)\}
+    END_TEXT
+</code></pre>
+
+<ul>
+<li>Supported by <code>PGML.pl</code>, the usage <code>BEGIN\_PGML/END\_PGML</code> provides a markdown alike formats for text. (For more information see <a href="http://webwork.maa.org/wiki/Introduction_to_PGML">Introduction to PGML</a>.)
+<br /></li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code class="language-perl">    BEGIN_TEXT
+      If [: x = [$a] :], then the value of [: x^2 :] is [___________]
+    END_TEXT
+</code></pre>
+
+<h2 id="hyperlinks">Hyperlinks</h2>
+
+<p>It should be helpful to insert video link or example to WebWork Questions. There are several <a href="http://webwork.maa.org/pod/pg_TRUNK/macros/PGbasicmacros.pl.html#formatting_macros">formating macros</a> in <code>PGbasicmacros.pl</code> that can do the job</p>
+
+<p>One basic macro is</p>
+
+<pre><code class="language-perl">htmlLink(&quot;link&quot;, &quot;display name&quot;, &quot;option&quot;)
+</code></pre>
+
+<p>Examples:</p>
+
+<ul>
+<li><p>Link to a local file example.pdf. Upload the local file example.pdf
+to the same folder as where the question pg file is. The option
+<code>TARGET=’\_blank’</code> tells the function to open the file in a new
+windows.</p>
+
+<pre><code class="language-perl">htmlLink(alias(&quot;example.pdf&quot;), &quot;Click the link to see an example.&quot;, &quot;TARGET='_blank'&quot;)
+</code></pre></li>
+
+<li><p>Link to a webpage address which contains no special characters.</p>
+
+<pre><code class="language-perl">htmlLink( &quot;http://webwork.maa.org/&quot;, &quot;QCC-CUNY&quot;, &quot;TARGET='_blank'&quot;)
+</code></pre></li>
+
+<li><p>Link to a webpage using javascript.</p></li>
+</ul>
+
+<p>First include the following customized function in the header (before BEGIN_TEXT after <code>loadMacros()</code>).</p>
+
+<pre><code class="language-perl">    HEADER_TEXT(&lt;&lt;EOF);
+    &lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
+    function windowpopup() {
+      var url = 'http://webwork.maa.org/';
+      var opt = &quot;height=625,width=600,location=no,menubar=no,&quot; +
+                &quot;status=no,resizable=yes,scrollbars=yes,&quot; +
+                &quot;toolbar=no,&quot;;
+      window.open(url,'newwindow',opt).focus();
+    }
+    &lt;/script&gt;
+    EOF
+</code></pre>
+
+<p>Then we call the function by</p>
+
+<pre><code class="language-perl">    htmlLink( &quot;javascript:windowpopup();&quot;, &quot;QCC-CUNY&quot;, &quot;TARGET='_blank'&quot;)
+</code></pre>
+
+<p>An alternative solution is to move <code>var url = &quot;http://webwork.maa.org/&quot;;</code> from the definition of <code>windowpopup()</code> to <code>htmlLink()</code></p>
+
+<pre><code class="language-perl">    htmlLink( &quot;javascript:var url = 'http://webwork.maa.org/';windowpopup();&quot;, &quot;QCC-CUNY&quot;, &quot;TARGET='_blank'&quot;)
+</code></pre>
+
+<p>For more details, please check the <a href="http://webwork.maa.org/wiki/HtmlLinks#.WrF5GGaZPuQ">MAA webpage on htmlLink</a>.</p>
+
+<p><strong>Remark</strong>:</p>
+
+<ul>
+<li><p>It depends on which language you use to display text, the function should be placed in different environment.</p>
+
+<ul>
+<li><p>In BEGIN_TEXT … END_TEXT, the function should be placed as</p>
+
+<p>{ htmlLink(&ldquo;link&rdquo;, &ldquo;display name&rdquo;, &ldquo;option&rdquo;) }
+There must be a blank space after <code>\{</code> or <code>\}</code>.</p></li>
+
+<li><p>In BEGIN_PGML … END_PGML, the function should be placed as</p>
+
+<p>[@ htmlLink(&ldquo;link&rdquo;, &ldquo;display name&rdquo;, &ldquo;option&rdquo;) @]*</p></li>
+</ul></li>
+</ul>
+
+<p>Here <code>[@ command @]*</code> tells the system to not escape HTML special
+  characters.</p>
+
+<ul>
+<li>Use <code>[| protect_underbar() |]</code> whenever underscore appears in a
+string outside of math mode. (See )</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code class="language-perl">    htmlLink( protect_underbar(&quot;http://webwork.maa.org/pod/pg_TRUNK/macros/PGbasicmacros.pl.html&quot;), display name&quot;))
+</code></pre>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

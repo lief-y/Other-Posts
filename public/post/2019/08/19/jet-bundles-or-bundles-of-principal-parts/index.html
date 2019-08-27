@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jet bundles or Bundles of Principal Parts | Learning by Writing in Mathematics</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/topics/">Topics</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Jet bundles or Bundles of Principal Parts</span></h1>
+
+<h2 class="date">2019/08/19</h2>
+</div>
+
+<main>
+
+
+
+<div id="introduction" class="section level2">
+<h2>The Intuition</h2>
+<p>Jet bundles are also known as bundles of principal part (more generally, modules of principal parts).</p>
+<p>Roughly speaking, sections of a jet bundle, called jets, are operators that send sections to Taylor polynomials. For example, for a function <span class="math inline">\(f\in\mathcal{O}_{\mathbb{A}^1}\)</span>, the second jet of <span class="math inline">\(f\)</span> at the origin <span class="math inline">\(o\in \mathbb{A}^1\)</span> is determined by
+<span class="math display">\[
+J_o^2 f= f(o)+Df(o)(x-o)+\frac{1}{2!}D^2f(o)(x-o)^2,
+\]</span>
+where <span class="math inline">\(D\)</span> the is the differential operator <span class="math inline">\(\frac{\partial}{\partial x}\)</span>.</p>
+<p>Consider a function <span class="math inline">\(f\in\mathcal{O}_{\mathbb{A}^n}\)</span>. For a vector <span class="math inline">\(\alpha=(\alpha_1,\dots, \alpha_m)\)</span> with <span class="math inline">\(m\leq n\)</span> and <span class="math inline">\(\alpha_i\in\mathbb{N}\)</span>, we write <span class="math inline">\(|\alpha|=\alpha_1+\cdots+\alpha_m,\)</span> <span class="math inline">\(\alpha!=\alpha_1!\cdots\alpha_m!,\)</span> <span class="math inline">\(x^\alpha=x_1^{\alpha_1}\cdots x_m^{\alpha_m},\)</span>
+<span class="math display">\[
+D_\alpha(f)=\frac{1}{\alpha!}\frac{\partial^\alpha f}{\partial x^\alpha}:=\frac{1}{\alpha!}\frac{\partial^{|\alpha|} f}{(\partial x_1)^{\alpha_1}\cdots (\partial x_1)^{\alpha_1} },
+\]</span>
+and <span class="math inline">\(\mathrm{d}x^\alpha=(\mathrm{d}x_1)^{\alpha_1}\cdots(\mathrm{d}x_m)^{\alpha_m}\)</span>.
+Then the <span class="math inline">\(k\)</span>-th jet of <span class="math inline">\(f\)</span> at the origin <span class="math inline">\(o\)</span> is
+<span class="math display">\[
+J_o^kf=\sum_{|\alpha|\leq k}D_{\alpha}(f)\mathrm{d}x^\alpha.
+\]</span></p>
+<p>On a smooth variety <span class="math inline">\(X\)</span>, a jet <span class="math inline">\(J_o^k f\)</span> can be considered as an element in <span class="math inline">\(\mathcal{O}_{o,X}/\mathfrak{m}_o^{k+1}\)</span>. The space of the image of <span class="math inline">\(J^k_o\)</span> is called the <span class="math inline">\(k\)</span>-th jet space at <span class="math inline">\(o\)</span>.</p>
+</div>
+<div id="definition-of-sheaves-of-principal-parts" class="section level2">
+<h2>Definition of Sheaves of Principal Parts</h2>
+<p>Let <span class="math inline">\(f: X\to S\)</span> be a morphism between schemes <span class="math inline">\(S\)</span>. Denote by <span class="math inline">\(\pi_1\)</span> and <span class="math inline">\(\pi_2\)</span> the projection of <span class="math inline">\(X\times_S X\)</span> on the first and second factor respectively. Let <span class="math inline">\(\Delta^{(k)}\)</span> be the <span class="math inline">\(k\)</span>-th infinitesimal neighborhood of the diagonal, that is, <span class="math inline">\(\mathcal{O}_{\Delta^{(k)}}=\mathcal{O}_{X\times_S X}/\mathcal{J}^{k+1}\)</span>, where <span class="math inline">\(\mathcal{J}\)</span> is the ideal sheaf of the diagonal <span class="math inline">\(\Delta\subset X\times_S X\)</span>. Denote by <span class="math inline">\(\delta^{(k)}: \Delta^{(k)}\to X\times_SX\)</span> the immersion morphism. Set <span class="math inline">\(\delta=\delta^{(0)}\)</span>, <span class="math inline">\(p=\delta^{(k)}\circ\pi_1\)</span> and <span class="math inline">\(q=\delta^{(k)}\circ\pi_2\)</span>.</p>
+
+<div class="definition">
+<span id="def:unnamed-chunk-1" class="definition"><strong>Definition 1  </strong></span>Given a <span class="math inline">\(\mathcal{O}_X\)</span>-module <span class="math inline">\(\mathcal{F}\)</span> on <span class="math inline">\(X\)</span>, the sheaf of <span class="math inline">\(k\)</span>-th order principal part (or the <span class="math inline">\(n\)</span>-jets of sections) of <span class="math inline">\(\mathcal{F}\)</span> over <span class="math inline">\(S\)</span> is defined as
+<span class="math display">\[
+\mathcal{P}_{X/S}^k(\mathcal{F}):=p_*(q^*\mathcal{F})={\pi_1}_*(\mathcal{O}_{X\times_SX}/\mathcal{J}^{k+1}\otimes_{\mathcal{O}_{X\times_SX}} \pi_2^*\mathcal{F}).
+\]</span>
+In particular, <span class="math inline">\(\mathcal{P}_{X/S}^k:=\mathcal{P}_{X/S}^k(\mathcal{O}_X)={\pi_1}_*(\mathcal{O}_{\Delta^{(k)}})\)</span>.
+</div>
+
+<p>From the identity maps <span class="math inline">\(\pi_i\circ \delta: X \overset{\delta}{\to} \Delta\overset{\pi_i}{\to} X\)</span>, we see that <span class="math inline">\(\mathcal{P}_{X/S}^0\cong\mathcal{O}_X\)</span>, and <span class="math inline">\(\mathcal{P}_{X/S}^0(\mathcal{F})\cong\mathcal{F}.\)</span></p>
+</div>
+<div id="bimodule-structure-on-the-sheaf-of-principal-parts" class="section level2">
+<h2>Bimodule Structure on the Sheaf of Principal Parts</h2>
+<p>As the direct image of a <span class="math inline">\(\mathcal{O}_{X\times_S X}\)</span>-module, the sheaf <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span> has a natural left <span class="math inline">\(\mathcal{O}_X\)</span>-module structure defined by the canonical map
+<span class="math display">\[
+c^k: \mathcal{O}_X\to \mathcal{P}_{X/S}^k={\pi_1}_*(\mathcal{O}_{\Delta^{(k)}}).
+\]</span></p>
+<p>Because <span class="math inline">\(\pi_1=\pi_2\circ s\)</span>, <span class="math inline">\(\pi_2=\pi_1\circ s\)</span>, and <span class="math inline">\(s\circ\delta =\delta\)</span>, where <span class="math inline">\(s=\left(\pi_{2}, \pi_{1}\right)_S:X\times_S X \to X \times_S X\)</span> is the involutional automorphism, known as the canonical symmetry, the sheaf <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span> also admits a right module structure derived from <span class="math inline">\(\pi_2\)</span> as follows
+<span class="math display">\[
+d^k: \mathcal{O}_X\overset{(\pi_2)_*}{\to} (\pi_2)_*\mathcal{O}_{\Delta^{(k)}}\overset{s_*}{\to} \mathcal{P}_{X/S}^k.
+\]</span></p>
+<p>Note that the <span class="math inline">\(s^*\)</span> is an identity map on <span class="math inline">\(\Delta\)</span> as <span class="math inline">\(s\circ s=\mathrm{id}_{X\times_SX}\)</span> and <span class="math inline">\(\delta\circ s=\delta\)</span>.</p>
+<p>There is an alternative way to see the bimodule structure of <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span>.</p>
+<p>Using <span class="math inline">\(\pi_i\circ \delta \cong \mathrm{id}_X\)</span>, we may identify
+<span class="math display">\[
+\mathcal{O}_{X\otimes_S X}=\mathcal{O}_X\otimes_{f^{-1}\mathcal{O}_S}\mathcal{O}_X
+\]</span>
+and <span class="math inline">\(\mathcal{J}=\ker{m}\)</span>, where
+<span class="math display">\[
+m: \mathcal{O}_X\otimes_{f^{-1}\mathcal{O}_S}\mathcal{O}_X \to \mathcal{O}_X
+\]</span>
+is the natural multiplication map.</p>
+<p>By slight abuse of notation, the left module structure is given by
+<span class="math display">\[
+\begin{aligned}
+c^k: \mathcal{O}_X &amp;\to \mathcal{O}_{X\times_SX}/\mathcal{J}^{k+1}=\mathcal{P}_{X/S}^k\\
+a &amp;\mapsto  \overline{a\otimes_{f^{-1}\mathcal{O}_S} 1} = a\otimes_{f^{-1}\mathcal{O}_S} 1  + \mathcal{J}^{k+1}
+\end{aligned}
+\]</span>
+and the right module structure is given by
+<span class="math display">\[
+\begin{aligned}
+d^k: \mathcal{O}_X &amp;\to \mathcal{O}_{X\times_SX}/\mathcal{J}^{k+1}=\mathcal{P}_{X/S}^k\\
+a &amp;\mapsto  \overline{1\otimes_{f^{-1}\mathcal{O}_S} a} = 1\otimes_{f^{-1}\mathcal{O}_S} a + \mathcal{J}^{k+1}.
+\end{aligned}
+\]</span></p>
+</div>
+<div id="sheaves-of-principal-parts-as-tensor-products" class="section level2">
+<h2>Sheaves of Principal Parts as Tensor Products</h2>
+<p>Since the sheaf <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span> has a support contained in <span class="math inline">\(\Delta^{(k)}\)</span>, using the canonical symmetry <span class="math inline">\(s\)</span>, we may identify
+<span class="math display">\[
+\mathcal{P}_{X/S}^k(\mathcal{F})\cong  \mathcal{P}_{X/S}^k \otimes_{\mathcal{O}_{X}}\mathcal{F},
+\]</span>
+where in order to tensor over <span class="math inline">\(\mathcal{O}_X\)</span>, <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span> is considered as a right <span class="math inline">\(\mathcal{O}_X\)</span>-module which is given by <span class="math inline">\(d^k:\mathcal{O}_X\to\mathcal{P}_{X/S}^k\)</span>.</p>
+<p>The bimodule structure on <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span> induces a bimodule structure on <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span> via the tensor product.
+Locally, for <span class="math inline">\(a\in\mathcal{O}_X(U)\)</span>, <span class="math inline">\(b\in\mathcal{P}_{X/S}^k(U)\)</span>, and <span class="math inline">\(t\in\mathcal{F}(U)\)</span>, the bimodule structure can be described by
+<span class="math display">\[
+a\cdot (b\otimes t) = (ab)\otimes t
+\]</span>
+and
+<span class="math display">\[
+(b\otimes t)\cdot a =(b\cdot a)\otimes t = b\otimes (at) = (b d^k(a))\otimes t = (d^k(a)\cdot b)\otimes t.
+\]</span></p>
+<p>Using the tensor product interpretation of <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span>, we define a map
+<span class="math display">\[
+\begin{aligned}
+d_{\mathcal{F}}^k: \mathcal{F} &amp; \to \mathcal{P}_{X/S}^k(\mathcal{F}) \cong \mathcal{P}_{X/S}^k \otimes_{\mathcal{O}_{X}}\mathcal{F} \\
+t &amp; \mapsto 1\otimes_{\mathcal{O}_{X}} t = \overline{1 \otimes_{f^{-1}\mathcal{O}_S} 1} \otimes_{\mathcal{O}_X} t
+\end{aligned}
+\]</span>
+which is a homomorphism of sheaves of abelian groups. In general, if <span class="math inline">\(d^k_{\mathcal{F}}\)</span> is not an <span class="math inline">\(\mathcal{O}_X\)</span>-module homomorphism unless the sheaf <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span> is considered as a right <span class="math inline">\(\mathcal{O}_X\)</span>-module. Indeed, we have
+<span class="math display">\[
+d^k_{\mathcal{F}}(ta) = 1\otimes (ta) = 1\otimes (at) = (1\otimes t)\cdot a = d^k_{\mathcal{F}}(t)\cdot a
+\]</span>
+and
+<span class="math display">\[
+d^k_{\mathcal{F}}(at)=(1\cdot a)\otimes t=(d^k(a))\otimes t=d^k(a)\cdot(1\otimes t).
+\]</span></p>
+<p>Here, we note that <span class="math inline">\(d^k_{\mathcal{F}}\)</span> is <span class="math inline">\(\mathcal{O}_X\)</span>-linear with respect to the right module structure on <span class="math inline">\(\mathcal{P}_{X/S}^k\)</span>.</p>
+<p>It’s clear that <span class="math inline">\(d_{\mathcal{F}}^k\)</span> lifts any global section <span class="math inline">\(g\)</span> of <span class="math inline">\(\mathcal{F}\)</span> to a global section <span class="math inline">\(d_{\mathcal{F}}^k\circ g\)</span> of <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span>, where we identify a global section <span class="math inline">\(g\)</span> as a homomorphism <span class="math inline">\(g: \mathcal{O}_X\to \mathcal{F}\)</span>.</p>
+<p>For <span class="math inline">\(\mathcal{F} = L\)</span>, a line bundle on <span class="math inline">\(X\)</span>, over a local neighborhood <span class="math inline">\(U\)</span> of a point <span class="math inline">\(o\)</span> with local coordinates <span class="math inline">\((x_1, x_2, \cdots, x_n)\)</span>, the homomorphism <span class="math inline">\(d^k_L\)</span> sends a section <span class="math inline">\(t(x_1,x_2,\cdots, x_n)e\)</span> of <span class="math inline">\(L\)</span> to its truncated Taylor series
+<span class="math display">\[
+t(x_1,x_2,\cdots, x_n)e\mapsto \sum_{|\alpha|\leq k}\left( \frac{1}{\alpha !} \frac{\partial^\alpha t}{\partial x^\alpha}\mathrm{d}x^\alpha\otimes e\right),
+\]</span>
+where <span class="math inline">\(\{e\}\)</span> is the basis (the local frame) of the line bundle <span class="math inline">\(L\)</span> over <span class="math inline">\(U\)</span> and <span class="math inline">\(\{\mathrm{d}x^\alpha\otimes e\mid |\alpha|\leq k\}\)</span> forms a basis for <span class="math inline">\(\mathcal{P}_{X/S}^k(L)\)</span>.</p>
+<p>The above description can be checked using the <a href="#FundExactSeq">fundamental exact sequence</a> in the next section.</p>
+</div>
+<div id="fundamental-exact-sequence" class="section level2">
+<h2>Fundamental Exact Sequence</h2>
+<p>Suppose that <span class="math inline">\(X\)</span> is smooth over <span class="math inline">\(S\)</span> (more generally, <span class="math inline">\(\mathcal{J}\)</span> is locally generated by a regular sequences ) and <span class="math inline">\(\mathcal{F}\)</span> be a locally free sheaf on <span class="math inline">\(X\)</span>. Then
+<span class="math display">\[
+Sym^k\Omega_X^1=Sym^k({p}_*(\mathcal{J}/\mathcal{J}^2))={p}_*(Sym^k(\mathcal{J}/\mathcal{J}^2))={p}_*(\mathcal{J}^k/\mathcal{J}^{k+1})
+\]</span>
+and <span class="math inline">\(R^1{\pi_1}_*(\mathcal{J}^k/\mathcal{J}^{k+1})=0\)</span> because, <span class="math inline">\(\pi_1: \Delta\to X\)</span> is an isomorphism.</p>
+
+<div class="proposition">
+<span id="prp:unnamed-chunk-2" class="proposition"><strong>Proposition 1  </strong></span>The sheaves of principal parts on <span class="math inline">\(\mathcal{F}\)</span> on a smooth variety <span class="math inline">\(X\)</span> over <span class="math inline">\(S\)</span> fit in the following exact sequence <a id="FundExactSeq"></a>
+<!-- \begin{equation}
+0\to Sym^k\Omega_X^1\to \mathcal{P}_{X/S}^k \overset{\phi^k}{\to}  \mathcal{P}_{X/S}^{k-1}\to 0.
+\end{equation}
+ the the following sequence -->
+<span class="math display">\[
+0\to Sym^k\Omega_X^1\otimes\mathcal{F}\to \mathcal{P}_{X/S}^k(\mathcal{F})\overset{\phi^k_{\mathcal{F}}}{\to} \mathcal{P}_{X/S}^{k-1}(\mathcal{F})\to 0
+\]</span>
+is exact for each <span class="math inline">\(k\ge 1\)</span>.
+</div>
+
+
+<div class="proof">
+ <span class="proof"><em>Proof. </em></span> The proposition follows by
+applying <span class="math inline">\({\pi_1}_*(\cdot\otimes\pi_2^*\mathcal{F})\)</span> to the exact sequence
+<span class="math display">\[
+0\to \mathcal{J}^k/\mathcal{J}^{k+1}\to \mathcal{O}_{X\times_S X}/\mathcal{J}^{k+1}\to \mathcal{O}_{X\times_S X}/\mathcal{J}^k\to 0
+\]</span>
+and identifying <span class="math inline">\(\mathcal{J}^k/\mathcal{J}^{k+1}\otimes\pi_1^*\mathcal{F}=\mathcal{J}^k/\mathcal{J}^{k+1}\otimes\pi_2^*\mathcal{F}\)</span> and <span class="math inline">\({\pi_1}_*(\mathcal{J}^k/\mathcal{J}^{k+1})=\mathcal{J}^k/\mathcal{J}^{k+1}\)</span> using the canonical symmetry <span class="math inline">\(s\)</span> and the fact that <span class="math inline">\(\mathcal{J}^k/\mathcal{J}^{k+1}\)</span> is supported on the diagonal <span class="math inline">\(\Delta\)</span>.
+</div>
+
+<p>Note that <span class="math inline">\(d^{k-1}_{\mathcal{F}}=\phi^k_{\mathcal{F}}\circ d^{k-1}_{\mathcal{F}}: \mathcal{F}\to \mathcal{P}_{X/S}^{k-1}(\mathcal{F})\)</span>.</p>
+<p>By induction using the fundamental exact sequences, we obtain the following result.</p>
+
+<div class="proposition">
+<span id="prp:unnamed-chunk-4" class="proposition"><strong>Proposition 2  </strong></span>Suppose that <span class="math inline">\(X\)</span> is smooth over <span class="math inline">\(S\)</span> and <span class="math inline">\(\mathcal{F}\)</span> is locally free of rank <span class="math inline">\(r\)</span> on <span class="math inline">\(X\)</span>. Then the <span class="math inline">\(\mathcal{O}_X\)</span>-module <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span> is locally free of rank <span class="math inline">\(r\cdot {\dim X+k \choose k}\)</span>.
+</div>
+
+</div>
+<div id="functorial-properties" class="section level2">
+<h2>Functorial Properties</h2>
+<p>The functor <span class="math inline">\(\mathcal{P}_{X/S}^k(\cdot)\)</span> is a covariant function from the category of <span class="math inline">\(\mathcal{O}_X-\mathrm{Mod}\)</span> to itself.</p>
+<p>Let <span class="math inline">\(f: X\to Y\)</span> be a morphism of schemes over <span class="math inline">\(S\)</span>. Then there is a morphism
+<span class="math display">\[
+f^*\mathcal{P}_{X/S}^k(\mathcal{F})\to \mathcal{P}_{X/S}^k(f^*\mathcal{F}).
+\]</span></p>
+
+<div class="proposition">
+<span id="prp:unnamed-chunk-5" class="proposition"><strong>Proposition 3  </strong></span>Let <span class="math inline">\(f: X\to Y\)</span> be a morphism between smooth <span class="math inline">\(S\)</span>-schemes and <span class="math inline">\(\mathcal{F}\)</span> a locally free sheaf on <span class="math inline">\(Y\)</span>. Then the pullback map induces commutative diagram of exact sequences of left <span class="math inline">\(\mathcal{O}_X\)</span>-modules
+<span class="math display">\[
+\begin{array}{ccccccccc}
+0 &amp; \longrightarrow &amp; S^{k}\left(f^{*} \Omega_{Y}^{1}\right) \otimes f^{*} \mathcal{E} &amp; \longrightarrow &amp; f^{*} \mathcal{P}_{Y}^{k}(\mathcal{E}) &amp;\longrightarrow &amp; f^{*} \mathcal{P}_{Y}^{k-1}(\mathcal{E}) &amp; \longrightarrow &amp; 0\\
+&amp; &amp; \downarrow &amp; &amp; \downarrow &amp; &amp; \downarrow &amp; &amp;\\
+0 &amp; \longrightarrow &amp; S^{k}\left( \Omega_{X}^{1}\right) \otimes f^{*} \mathcal{E} &amp; \longrightarrow &amp; \mathcal{P}_{X}^{k}(f^{*} \mathcal{E}) &amp;\longrightarrow &amp; \mathcal{P}_{X}^{k-1}(f^{*} \mathcal{E}) &amp; \longrightarrow &amp; 0.
+\end{array}
+\]</span>
+</div>
+
+</div>
+<div id="sheaves-of-differential-operators" class="section level2">
+<h2>Sheaves of Differential Operators</h2>
+
+<div class="definition">
+<span id="def:unnamed-chunk-6" class="definition"><strong>Definition 2  (EGA IV Definition (16.8.1))  </strong></span>A homomorphism <span class="math inline">\(D: \mathcal{F}\to \mathcal{G}\)</span> of sheaves of abelian groups is called a differential operator of order <span class="math inline">\(\leq k\)</span> if there exists a unique <span class="math inline">\(\mathcal{O}_X\)</span>-module homomorphism <span class="math inline">\(u: \mathcal{P}_{X/S}^k(\mathcal{F})\to \mathcal{G}\)</span> such that <span class="math inline">\(D=u\circ d^k_{\mathcal{F}}\)</span>, where <strong>the left <span class="math inline">\(\mathcal{O}_X\)</span>-module structure</strong> on <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span> is taken for <span class="math inline">\(u\)</span>.
+</div>
+
+<p>Since the left and right module structures in general don’t agree on <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span>, a differential operator of order <span class="math inline">\(\leq k\)</span> is not a <span class="math inline">\(\mathcal{O}_X\)</span>-module homomorphism in general, but it is always a <span class="math inline">\(f^*\mathcal{O}_S\)</span>-module homomorphism.</p>
+<p>It is clear that the set of differential operators of order <span class="math inline">\(\le k\)</span> from <span class="math inline">\(\mathcal{F}\)</span> to <span class="math inline">\(\mathcal{G}\)</span> is an abelian group, denoted by <span class="math inline">\(\mathrm{Diff}_{X/S}^k(\mathcal{F}, \mathcal{G})\)</span>.</p>
+<p>Let <span class="math inline">\(D:\mathcal{F}\to \mathcal{G}\)</span> be a differential operator of order <span class="math inline">\(\le k\)</span>. For any open set <span class="math inline">\(U\)</span>, it’s clear that <span class="math inline">\(D|_U:\mathcal{F}|_U\to\mathcal{G}|_U\)</span> is a differential operator of order <span class="math inline">\(\le k\)</span>. We define a sheaf of abelian sheaves
+<span class="math inline">\(\mathcal{Diff}_{X/S}^k(\mathcal{F},\mathcal{G})\)</span> by
+<span class="math display">\[
+\mathcal{Diff}_{X/S}^k(\mathcal{F},\mathcal{G})(U)= \mathcal{Diff}_{U/S}^k(\mathcal{F}|_U,\mathcal{G}|_U)
+\]</span></p>
+
+<div class="proposition">
+<span id="prp:unnamed-chunk-7" class="proposition"><strong>Proposition 4  (EGA IV Proposition (16.8.4))  </strong></span>There is a natural isomorphism of sheaves of abelian groups
+<span class="math display">\[
+\mathcal{Hom}_{\mathcal{O}_X}(\mathcal{P}_{X/S}^k(\mathcal{F}), \mathcal{G}) \cong \mathcal{Diff}_{X/S}^k(\mathcal{F},\mathcal{G})
+\]</span>
+</div>
+
+<p>Since <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span> has a bimodule structure, the sheaf <span class="math inline">\(\mathcal{Diff}_{X/S}^k(\mathcal{F},\mathcal{G})\)</span> inherits a bimodule structure which are given locally as follows.</p>
+<ul>
+<li><p>The left module structure: <span class="math inline">\((a\cdot D)(t)=a(D(t))\)</span>, where <span class="math inline">\(a\in \mathcal{O}_X(U)\)</span> and <span class="math inline">\(t\in \mathcal{F}(U)\)</span>.</p></li>
+<li><p>The right module structure: <span class="math inline">\((D\cdot a)(t)=D(at)\)</span>, where <span class="math inline">\(a\in \mathcal{O}_X(U)\)</span> and <span class="math inline">\(t\in \mathcal{F}(U)\)</span>.</p></li>
+</ul>
+
+<div class="proposition">
+<p><span id="prp:unnamed-chunk-8" class="proposition"><strong>Proposition 5  (EGA IV Proposition (16.8.8))  </strong></span>Let <span class="math inline">\(\mathcal{F}\)</span> and <span class="math inline">\(\mathcal{G}\)</span> be <span class="math inline">\(\mathcal{O}_X\)</span>-modules and <span class="math inline">\(D: \mathcal{F}\to \mathcal{G}\)</span> be a homeomorphism of <span class="math inline">\(f^*\mathcal{O}_S\)</span>-modules. For a nonnegative integer <span class="math inline">\(k\)</span>, the following are equivalent</p>
+<ol style="list-style-type: decimal">
+<li><p>the homomorphism <span class="math inline">\(D\)</span> is a differential operator of order <span class="math inline">\(\le k\)</span></p></li>
+<li><p>for any section of <span class="math inline">\(\mathcal{O}_X\)</span> over an open set <span class="math inline">\(U\)</span>, the homomorphism <span class="math inline">\(D_a=a\cdot D|_U-D|_U\cdot a: \mathcal{F}|_U\to \mathcal{G}|_U\)</span> is a differential operator of order <span class="math inline">\(\leq k-1\)</span>.</p>
+</div></li>
+</ol>
+<p>We call the sheaf
+<span class="math display">\[
+\mathcal{D}_{X/S}^k(\mathcal{F})=\mathcal{Hom}_{\mathcal{O}_X}(\mathcal{P}_{X/S}^k(\mathcal{F}), \mathcal{F})\cong (\mathcal{P}_{X/S}^k(\mathcal{F}))^\vee\otimes_{\mathcal{O}_X}\mathcal{F}
+\]</span>
+the sheaf of differential operators of order <span class="math inline">\(\le k\)</span> on <span class="math inline">\(\mathcal{F}\)</span>. In particular, we write
+<span class="math display">\[
+\mathcal{D}_{X/S}^k=\mathcal{D}_{X/S}^k(\mathcal{O}_X)=\left(\mathcal{P}_{X/S}^k\right)^\vee.
+\]</span></p>
+<p>We note that <span class="math inline">\(\mathcal{D}_{\mathbb{A}^n/S}^k\)</span> is generated by the differential operators of order <span class="math inline">\(\le k\)</span>
+<span class="math display">\[
+D_\alpha=\frac{1}{\alpha!}\frac{\partial^\alpha }{\partial x^\alpha}, \qquad |\alpha|\le k
+\]</span>
+(see the section <a href="#introduction">The Intuition Introduction</a> for notations).</p>
+<p>Since <span class="math inline">\(\mathcal{P}_{X/S}^0(\mathcal{F})=\mathcal{F}\)</span>, we see that
+<span class="math display">\[
+\mathcal{D}_{X/S}^0(\mathcal{F})\cong\mathcal{Hom}_{\mathcal{O}_X}(\mathcal{F}, \mathcal{F})\cong \mathcal{F}^\vee\otimes_{\mathcal{O}_X}\mathcal{F}.
+\]</span></p>
+<p>In particular, if <span class="math inline">\(\mathcal{F}=L\)</span> is a line bundle, then
+<span class="math display">\[
+\mathcal{D}_{X/S}^0(L)\cong\mathcal{O}_X.
+\]</span></p>
+<p>When <span class="math inline">\(\mathcal{F}\)</span> is locally free, we also have a short exact sequence for <span class="math inline">\(\mathcal{D}_{X/S}^k(\mathcal{F})\)</span> which is obtained by dualizing of the fundamental exact sequence for <span class="math inline">\(\mathcal{P}_{X/S}^k(\mathcal{F})\)</span>.</p>
+<p>For a line bundle <span class="math inline">\(L\)</span> on a smooth variety <span class="math inline">\(X\)</span> over <span class="math inline">\(S\)</span>, the sheaf <span class="math inline">\(\mathcal{D}_{X/S}^k(L)\)</span> is locally free of rank <span class="math inline">\({\dim X+k\choose k}\)</span> and fits in the exact sequence
+<span class="math display">\[
+0\to \mathcal{D}_{X/S}^{k-1}(L)\to \mathcal{D}_{X/S}^k(L)\to Sym^k\mathcal{T}_X\to 0,
+\]</span>
+where <span class="math inline">\(\mathcal{T}_X\)</span> is the tangent bundle of <span class="math inline">\(X\)</span>.</p>
+<p>Note that a <span class="math inline">\(\mathcal{O}_X\)</span>-module homomorphism <span class="math inline">\(\psi: \mathcal{O}_X\to \mathcal{F}\)</span> determines an unique global section <span class="math inline">\(h=\psi(1)\in\Gamma(X, \mathcal{F})\)</span> and vise verse (<span class="math inline">\(\psi_h: \mathcal{O}_X\to \mathcal{F}\)</span> given by <span class="math inline">\(\psi_h(f)=fh\)</span>.)</p>
+<p>Given a global section <span class="math inline">\(g:\mathcal{O}_X\to L\)</span>, we get a homomorphism of bundles
+<span class="math display">\[
+\begin{aligned}
+j^k_{L}(g): \mathcal{D}_{X/S}^k(L)\cong\mathcal{Hom}_{\mathcal{O}_X}(\mathcal{P}_{X/S}^k(\mathcal{L}), L) &amp;\to L\cong \mathcal{Hom}_{\mathcal{O}_X}(\mathcal{O}_X, L)\\
+D=d_L^k\circ u_D &amp;\mapsto D(g)=u_D\circ d_L^k\circ g(1).
+\end{aligned}
+\]</span>
+which can be considered as the transpose of <span class="math inline">\(d^k_{L}(g)\)</span>.</p>
+<p>Locally, <span class="math inline">\(j^k_{L}(g)\)</span> is just the map which takes a differential operator <span class="math inline">\(D\)</span> of order <span class="math inline">\(\le k\)</span> to the function <span class="math inline">\(D(g)\)</span>. It follows that <span class="math inline">\(j^k_{L}(g)\)</span> is zero precisely at the locus where <span class="math inline">\(g\)</span> vanishes to order greater than <span class="math inline">\(k\)</span>.</p>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+
