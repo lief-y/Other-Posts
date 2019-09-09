@@ -1,6 +1,6 @@
 ---
-title: About This Site
-author: Fei Ye
+title: "About This Site"
+author: "Fei Ye"
 ---
 
 This website built using [blogdown](https://bookdown.org/yihui/blogdown/) is to collect writing in education, technology and other subjects that I am interested in. I hope you will enjoy reading the posts.
