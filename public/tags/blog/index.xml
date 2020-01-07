@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Learning by Writing in Mathematics</title>
+    <title>Blog on </title>
     <link>/tags/blog/</link>
-    <description>Recent content in Blog on Learning by Writing in Mathematics</description>
+    <description>Recent content in Blog on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>How to Create Multiple Pages in Blog Style with Jekyll</title>
-      <link>/post/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</link>
+      <link>/en/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</link>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</guid>
+      <guid>/en/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</guid>
       <description>Multiple Blogs on One Site1 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder 1.  --blog1 |--_posts --blog2 |--_post  2.  |--_posts |--blog1 |--blog2  The first approach will automatically assign categories to your posts Using the second approach, you will need to manually add category: your_blog_folder_name to Yaml Front Matter in each post.
 In the webpage containing your blogs, add a filter using post.</description>
     </item>

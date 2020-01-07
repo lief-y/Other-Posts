@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tools on Learning by Writing in Mathematics</title>
+    <title>Tools on </title>
     <link>/categories/tools/</link>
-    <description>Recent content in Tools on Learning by Writing in Mathematics</description>
+    <description>Recent content in Tools on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 31 Oct 2018 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Useful Online LaTeX and Markdown Editors</title>
-      <link>/post/2018/10/31/useful-online-latex-and-markdown-editors/</link>
+      <link>/en/2018/10/31/useful-online-latex-and-markdown-editors/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018/10/31/useful-online-latex-and-markdown-editors/</guid>
+      <guid>/en/2018/10/31/useful-online-latex-and-markdown-editors/</guid>
       <description>LaTeX  ShareLaTeX which is integrated with Overleaf now.   Online LaTeX editors and best for working individully or collaboratively online.
  TeXLive + Visual Studio Code + LaTeX Workshop.  Very productive combination for writing LaTeX.
 Markdown  StackEdit   Online Markdown editor and good for writing simple documents and converting them into different format.

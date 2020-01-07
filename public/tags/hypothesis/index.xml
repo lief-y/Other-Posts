@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hypothesis on Learning by Writing in Mathematics</title>
+    <title>Hypothesis on </title>
     <link>/tags/hypothesis/</link>
-    <description>Recent content in Hypothesis on Learning by Writing in Mathematics</description>
+    <description>Recent content in Hypothesis on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Apr 2019 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>Annotatable Webpages and Annotate Webpages</title>
-      <link>/post/2019/04/12/annotatable-webpages-and-annotate-webpages/</link>
+      <link>/en/2019/04/12/annotatable-webpages-and-annotate-webpages/</link>
       <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019/04/12/annotatable-webpages-and-annotate-webpages/</guid>
+      <guid>/en/2019/04/12/annotatable-webpages-and-annotate-webpages/</guid>
       <description>Hypothesis, an online annotation tool Recently, I learned a cool online annotation tool, Hypothesis, which lets webpage readers add, share, explore and save annotations online for free.
 What can Hypothesis do  Annotate and post publicly or save privately. Reply to or share any annotation publicly. Collaborate privately within a group. Explore public annotations and profiles.  For webpage creator Adding Hypothesis to a webpage is easy. You simply need to add the following codes in the head of you html file.</description>
     </item>

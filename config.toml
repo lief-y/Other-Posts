@@ -1,6 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Learning by Writing in Mathematics"
+DefaultContentLanguage = "en"
+hasCJKLanguage = "true"
 theme = "hugo-xmin"
 # theme = "hugo-lithium"
 googleAnalytics = ""
@@ -9,29 +10,73 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
 [permalinks]
-    post = "/post/:year/:month/:day/:slug/"
-    note = "/note/:year/:month/:day/:slug/"
+    en = "en/:year/:month/:day/:slug/"
+    cn = "cn/:year/:month/:day/:slug/"
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 3
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 4
-# [[menu.main]]
-#     name = "Subscribe"
-#     url = "/index.xml"
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Blog"
+        url = "/en/"
+        weight = 2
+    [[menu.main]]
+        name = "博客"
+        url = "/cn/"
+        weight = 3
+    # [[menu.en]]
+    #     name = "Home"
+    #     url = "/"
+    #     weight = 1
+    # [[menu.en]]
+    #     name = "Blog"
+    #     url = "/en/"
+    #     weight = 2
+    # [[menu.en]]
+    #     name = "Categories"
+    #     url = "/en/categories/"
+    #     weight = 3
+    # [[menu.en]]
+    #     name = "Tags"
+    #     url = "/en/tags/"
+    #     weight = 4
+    # [[menu.en]]
+    #     name = "中文"
+    #     url = "/cn/"
+    #     weight = 5
+
+    # [[menu.cn]]
+    #     name = "首页"
+    #     url = "/"
+    #     weight = 1
+    # [[menu.cn]]
+    #     name = "博客"
+    #     url = "/cn/"
+    #     weight = 2
+    # [[menu.cn]]
+    #     name = "菜谱"
+    #     url = "/cn/recipes/"
+    #     weight = 3
+    # [[menu.cn]]
+    #     name = "English"
+    #     url = "/en/"
+    #     weight = 4
+
 
 [params]
     # description = "A website built through Hugo and blogdown."
     footer = "&copy; [Fei Ye](https://yfei.page) 2019 | [Github](https://github.com/fyemath) "
+
+    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
+    highlightjsLang = [
+    "r",
+    "yaml",
+    "tex"
+    ]
+    highlightjsTheme = "github"
+
+    [params.author]
+        en = "Fei Ye"
+        cn = "叶飞"

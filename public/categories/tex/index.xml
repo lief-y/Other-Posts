@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TeX on Learning by Writing in Mathematics</title>
+    <title>TeX on </title>
     <link>/categories/tex/</link>
-    <description>Recent content in TeX on Learning by Writing in Mathematics</description>
+    <description>Recent content in TeX on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate>
@@ -13,10 +13,10 @@
     
     <item>
       <title>How to install fonts in TeXLive</title>
-      <link>/post/2019/05/04/how-to-install-fonts-in-texlive/</link>
+      <link>/en/2019/05/04/how-to-install-fonts-in-texlive/</link>
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019/05/04/how-to-install-fonts-in-texlive/</guid>
+      <guid>/en/2019/05/04/how-to-install-fonts-in-texlive/</guid>
       <description>After using LaTeX for a long time, you might be bored for default fonts and would like to install some new good looking fonts. If you will use XeTeX engine to compile your tex file, you don&amp;rsquo;t have to worry about the installation. However, for pdfTeX engine, we do need a proper installation. If you use TeXLive like I do, you will complete the installation easily in three steps.</description>
     </item>
     
