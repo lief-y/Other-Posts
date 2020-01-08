@@ -18,27 +18,7 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/knitr/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,32 +28,7 @@
   </url>
   
   <url>
-    <loc>/tags/tikz/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/tikzdevice/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/fonts/</loc>
-    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/2019/05/04/how-to-install-fonts-in-texlive/</loc>
-    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tex/</loc>
-    <lastmod>2019-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/texlive/</loc>
     <lastmod>2019-05-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -83,37 +38,7 @@
   </url>
   
   <url>
-    <loc>/tags/annotation/</loc>
-    <lastmod>2019-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/hypothesis/</loc>
-    <lastmod>2019-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/web/</loc>
-    <lastmod>2019-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/2019/03/31/a-few-tips-for-xaringan/</loc>
-    <lastmod>2019-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rmarkdown/</loc>
-    <lastmod>2019-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/slides/</loc>
-    <lastmod>2019-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/xaringan/</loc>
     <lastmod>2019-03-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -123,62 +48,12 @@
   </url>
   
   <url>
-    <loc>/tags/vba/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/visual-basic/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/word/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/hyperlink/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/webwork/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/webwork/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/2019/02/26/webwork-authoring-tips/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/blog/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/jekyll/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/jquery/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/js/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -188,33 +63,8 @@
   </url>
   
   <url>
-    <loc>/tags/rstudio/</loc>
-    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/2019/02/22/tips-for-rstudio-setup-for-rmarkdown-and-more/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/latex/</loc>
-    <lastmod>2018-10-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/markdown/</loc>
-    <lastmod>2018-10-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/online/</loc>
-    <lastmod>2018-10-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tools/</loc>
-    <lastmod>2018-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -223,36 +73,8 @@
   </url>
   
   <url>
-    <loc>/tags/mathematics/</loc>
-    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/2018/08/09/online-videos-on-mathematics/</loc>
     <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/resources/</loc>
-    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/videos/</loc>
-    <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/en/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/cn/about/</loc>
   </url>
   
 </urlset>

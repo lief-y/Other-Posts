@@ -9,9 +9,19 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
+# [taxonomies.en]
+#     category = "categories"
+#     tag = "tags"
+#     recipe = "recipes"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
 [permalinks]
     en = "en/:year/:month/:day/:slug/"
     cn = "cn/:year/:month/:day/:slug/"
+    # categories = "en/categories/"
+    # tags = "en/tags/"
+    # recipes = "cn/recipes/"
+
 
 [menu]
     [[menu.main]]
@@ -26,14 +36,14 @@ footnotereturnlinkcontents = "↩"
         name = "博客"
         url = "/cn/"
         weight = 3
-    # [[menu.en]]
-    #     name = "Home"
-    #     url = "/"
-    #     weight = 1
-    # [[menu.en]]
-    #     name = "Blog"
-    #     url = "/en/"
-    #     weight = 2
+    [[menu.en]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.en]]
+        name = "Blog"
+        url = "/en/"
+        weight = 2
     # [[menu.en]]
     #     name = "Categories"
     #     url = "/en/categories/"
@@ -42,41 +52,37 @@ footnotereturnlinkcontents = "↩"
     #     name = "Tags"
     #     url = "/en/tags/"
     #     weight = 4
-    # [[menu.en]]
-    #     name = "中文"
-    #     url = "/cn/"
-    #     weight = 5
+    [[menu.en]]
+        name = "中文"
+        url = "/cn/"
+        weight = 5
 
-    # [[menu.cn]]
-    #     name = "首页"
-    #     url = "/"
-    #     weight = 1
-    # [[menu.cn]]
-    #     name = "博客"
-    #     url = "/cn/"
-    #     weight = 2
+    [[menu.cn]]
+        name = "首页"
+        url = "/"
+        weight = 1
+    [[menu.cn]]
+        name = "博客"
+        url = "/cn/"
+        weight = 2
     # [[menu.cn]]
     #     name = "菜谱"
     #     url = "/cn/recipes/"
     #     weight = 3
-    # [[menu.cn]]
-    #     name = "English"
-    #     url = "/en/"
-    #     weight = 4
+    [[menu.cn]]
+        name = "English"
+        url = "/en/"
+        weight = 4
 
 
 [params]
     # description = "A website built through Hugo and blogdown."
     footer = "&copy; [Fei Ye](https://yfei.page) 2019 | [Github](https://github.com/fyemath) "
 
-    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    highlightjsLang = [
-    "r",
-    "yaml",
-    "tex"
-    ]
-    highlightjsTheme = "github"
+    # highlightjsCDN = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"
+    # highlightjsLang = ["r", "yaml", "tex", "markdown"]
+    # highlightjsTheme = "github"
 
-    [params.author]
-        en = "Fei Ye"
-        cn = "叶飞"
+    # [params.author]
+    #     en = "Fei Ye"
+    #     cn = "叶飞"

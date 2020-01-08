@@ -1,8 +1,10 @@
 ---
 title: "WebWork Authoring Tips"
 date: "2019-02-26"
-categories: WebWork
-tags: [WebWork, Hyperlink]
+# categories: WebWork
+# tags: 
+#     - WebWork
+#     - Hyperlink
 ---
 
 ## WebWork Text Display Languages

@@ -1,8 +1,10 @@
 ---
 title: "Online Videos on Mathematics"
 date: "2018-08-09"
-categories: Resources
-tags: [Mathematics, Videos]
+# categories: Resources
+# tags:
+#     - Mathematics
+#     - Videos
 ---
 
 ## List of some links to online videos on Mathematics (mostly Algebraic Geometry).

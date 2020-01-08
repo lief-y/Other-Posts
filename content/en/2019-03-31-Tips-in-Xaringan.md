@@ -1,8 +1,11 @@
 ---
 title: A Few Tips for Xaringan
 date: 2019-03-31
-categories: R
-tags: [Xaringan, Slides, Rmarkdown]
+# categories: R
+# tags: 
+#     - Xaringan
+#     - Slides
+#     - Rmarkdown
 ---
 
 ## Add CSS Codes within RMarkdown

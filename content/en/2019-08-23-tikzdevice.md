@@ -1,8 +1,11 @@
 ---
 title: The tikzDevice for R Users
 date: '2019-08-23'
-categories: R
-tags: [tikz, tikzDevice, knitr]
+# categories: R
+# tags: 
+#     - tikz
+#     - tikzDevice
+#     - knitr
 ---
 
 ## What is the tikzDevice
