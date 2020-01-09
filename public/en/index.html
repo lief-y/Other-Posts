@@ -107,10 +107,25 @@
 
   <footer>
   <script src="//yihui.name/js/math-code.js"></script>
-<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+</script>
+<script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    }
+</script>
 <script async src="//yihui.name/js/center-img.js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
+</script>
+
+<script src="/js/check-for-tex.js" defer></script>
   
   <hr/>
   &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
