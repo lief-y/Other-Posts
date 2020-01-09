@@ -3,8 +3,10 @@
 <h1><span class="title">{{ .Title | markdownify }}</span></h1>
 
 <h2 class="author">
-{{ with .Params.author }}
-    {{ . }}
+{{ if .Params.author }}
+    {{ .Params.author }}
+{{ else }}
+    {{ .Site.Params.author }}
 {{ end }}
 </h2>
 {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}

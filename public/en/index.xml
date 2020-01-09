@@ -13,47 +13,47 @@
     
     <item>
       <title>Port Bookdown to Other Rmarkdown Format</title>
-      <link>/en/2020/01/09/port-bookdown/</link>
+      <link>/en/2020/01/port-bookdown/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/en/2020/01/09/port-bookdown/</guid>
+      <guid>/en/2020/01/port-bookdown/</guid>
       <description>In mathematics, we write a lot definitions, theorem etc. and refer to them in articles. However, among the Rmarkdown family, only bookdown has all those features that you need. Fortunately, Yihui created a feature base_format for bookdown which allows us to port it to amost all format in Rmarkdown family. Here is an example how you can do it and you may always want to write your yaml header in this way.</description>
     </item>
     
     <item>
       <title>The tikzDevice for R Users</title>
-      <link>/en/2019/08/23/the-tikzdevice-for-r-users/</link>
+      <link>/en/2019/08/the-tikzdevice-for-r-users/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/08/23/the-tikzdevice-for-r-users/</guid>
+      <guid>/en/2019/08/the-tikzdevice-for-r-users/</guid>
       <description>What is the tikzDevice The tikzDevice is a R package that transforms R plots into $\LaTeX$ codes blocks. Those $\LaTeX$ codes can be complied by pdfLaTeX (or other $\TeX$ engines) with the help of TikZ — a graphics package for TeX and friends written by Till Tantau. On the website $\TeX$ample you may find many beautiful pictures created using TikZ/PGF (TikZ is a set of higher-level macros built on top of PGF).</description>
     </item>
     
     <item>
       <title>How to install fonts in TeXLive</title>
-      <link>/en/2019/05/04/how-to-install-fonts-in-texlive/</link>
+      <link>/en/2019/05/how-to-install-fonts-in-texlive/</link>
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/05/04/how-to-install-fonts-in-texlive/</guid>
+      <guid>/en/2019/05/how-to-install-fonts-in-texlive/</guid>
       <description>After using LaTeX for a long time, you might be bored for default fonts and would like to install some new good looking fonts. If you will use XeTeX engine to compile your tex file, you don&amp;rsquo;t have to worry about the installation. However, for pdfTeX engine, we do need a proper installation. If you use TeXLive like I do, you will complete the installation easily in three steps.</description>
     </item>
     
     <item>
       <title>Annotatable Webpages and Annotate Webpages</title>
-      <link>/en/2019/04/12/annotatable-webpages-and-annotate-webpages/</link>
+      <link>/en/2019/04/annotatable-webpages-and-annotate-webpages/</link>
       <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/04/12/annotatable-webpages-and-annotate-webpages/</guid>
+      <guid>/en/2019/04/annotatable-webpages-and-annotate-webpages/</guid>
       <description>Hypothesis, an online annotation tool Recently, I learned a cool online annotation tool, Hypothesis, which lets webpage readers add, share, explore and save annotations online for free.
 What can Hypothesis do  Annotate and post publicly or save privately. Reply to or share any annotation publicly. Collaborate privately within a group. Explore public annotations and profiles.  For webpage creator Adding Hypothesis to a webpage is easy. You simply need to add the following codes in the head of you html file.</description>
     </item>
     
     <item>
       <title>A Few Tips for Xaringan</title>
-      <link>/en/2019/03/31/a-few-tips-for-xaringan/</link>
+      <link>/en/2019/03/a-few-tips-for-xaringan/</link>
       <pubDate>Sun, 31 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/03/31/a-few-tips-for-xaringan/</guid>
+      <guid>/en/2019/03/a-few-tips-for-xaringan/</guid>
       <description>Add CSS Codes within RMarkdown When using Xaringan to create slides, one may include a custom.css or use the xaringanthemer package to change styles in whole or by part.
 Recently, I found another trick that allow you make changes to styles within your rmarkdown file. It&amp;rsquo;s very simple. You simply only need to add a CSS code chunk1 at the beginning of your content.
 Here is an example.
@@ -62,39 +62,39 @@ Here is an example.
     
     <item>
       <title>Some VBA Codes for Formating Tables</title>
-      <link>/en/2019/02/28/some-vba-codes-for-formating-tables/</link>
+      <link>/en/2019/02/some-vba-codes-for-formating-tables/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/02/28/some-vba-codes-for-formating-tables/</guid>
+      <guid>/en/2019/02/some-vba-codes-for-formating-tables/</guid>
       <description>Some VBA Codes for Formating Tables  Step 1: In Word -&amp;gt; File -&amp;gt; Options -&amp;gt; Customize Ribbon, check Developer in &amp;lsquo;Customize the ribbon&amp;rsquo; and click ok. Step 2: In Ribbons, find and click Developer -&amp;gt; Visual Basic (Alt+F11). Step 3: In the pop out windows, click Module on the Insert tab, copy and paste the following VBA code into the Module window and click the Run tab (F5) to run the macro.</description>
     </item>
     
     <item>
       <title>WebWork Authoring Tips</title>
-      <link>/en/2019/02/26/webwork-authoring-tips/</link>
+      <link>/en/2019/02/webwork-authoring-tips/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/02/26/webwork-authoring-tips/</guid>
+      <guid>/en/2019/02/webwork-authoring-tips/</guid>
       <description>WebWork Text Display Languages  Original way using TEXT(EV3())   Example:
 TEXT(EV3(&amp;lt;&amp;lt;&#39;END_TEXT&#39;)); The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands. END_TEXT  **Remark:**   In the example two pg macros were used TEXT() and EV3(). Both macros are defined in PGbasicmacros.</description>
     </item>
     
     <item>
       <title>How to Create Multiple Pages in Blog Style with Jekyll</title>
-      <link>/en/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</link>
+      <link>/en/2019/02/how-to-create-multiple-pages-in-blog-style-with-jekyll/</link>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/02/22/how-to-create-multiple-pages-in-blog-style-with-jekyll/</guid>
+      <guid>/en/2019/02/how-to-create-multiple-pages-in-blog-style-with-jekyll/</guid>
       <description>Multiple Blogs on One Site1 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder 1.  --blog1 |--_posts --blog2 |--_post  2.  |--_posts |--blog1 |--blog2  The first approach will automatically assign categories to your posts Using the second approach, you will need to manually add category: your_blog_folder_name to Yaml Front Matter in each post.
 In the webpage containing your blogs, add a filter using post.</description>
     </item>
     
     <item>
       <title>Make Links Open in New Windows/Tab for Markdown</title>
-      <link>/en/2019/02/22/make-links-open-in-new-windows/tab-for-markdown/</link>
+      <link>/en/2019/02/make-links-open-in-new-windows/tab-for-markdown/</link>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/02/22/make-links-open-in-new-windows/tab-for-markdown/</guid>
+      <guid>/en/2019/02/make-links-open-in-new-windows/tab-for-markdown/</guid>
       <description>Using jQuery to Open External Links in New Windows1 Creating (static) webpages using markdown is every convenient, for example
 [Queensborough Community College](http://www.qcc.cuny.edu).  However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example
 &amp;lt;a href=&amp;quot;http://www.qcc.cuny.edu&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Queensborough Community College&amp;lt;/a&amp;gt;.  When there are many links it will be a little bit painful to create such links using html in a markdown file.</description>
@@ -102,10 +102,10 @@ In the webpage containing your blogs, add a filter using post.</description>
     
     <item>
       <title>Tips for RStudio Setup for RMarkdown and More</title>
-      <link>/en/2019/02/22/tips-for-rstudio-setup-for-rmarkdown-and-more/</link>
+      <link>/en/2019/02/tips-for-rstudio-setup-for-rmarkdown-and-more/</link>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/en/2019/02/22/tips-for-rstudio-setup-for-rmarkdown-and-more/</guid>
+      <guid>/en/2019/02/tips-for-rstudio-setup-for-rmarkdown-and-more/</guid>
       <description>Don&amp;rsquo;t install R to the default location. Instead, choose a location such as C:\Program Files\R.  Verdict: no version difference issue
  Create a .Renviron file to your home directory ~/ using the following function:
 # File will be created if it doesn&#39;t exist file.edit(&#39;~/.Renviron&#39;)  Add R_LIBS_USER=&amp;quot;C:/R&amp;quot; to .Renviron. This variable will be the library of R packages. It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</description>
@@ -113,10 +113,10 @@ In the webpage containing your blogs, add a filter using post.</description>
     
     <item>
       <title>Useful Online LaTeX and Markdown Editors</title>
-      <link>/en/2018/10/31/useful-online-latex-and-markdown-editors/</link>
+      <link>/en/2018/10/useful-online-latex-and-markdown-editors/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/en/2018/10/31/useful-online-latex-and-markdown-editors/</guid>
+      <guid>/en/2018/10/useful-online-latex-and-markdown-editors/</guid>
       <description>LaTeX  ShareLaTeX which is integrated with Overleaf now.   Online LaTeX editors and best for working individully or collaboratively online.
  TeXLive + Visual Studio Code + LaTeX Workshop.  Very productive combination for writing LaTeX.
 Markdown  StackEdit   Online Markdown editor and good for writing simple documents and converting them into different format.
@@ -125,10 +125,10 @@ Markdown  StackEdit   Online Markdown editor and good for writing simple documen
     
     <item>
       <title>Online Videos on Mathematics</title>
-      <link>/en/2018/08/09/online-videos-on-mathematics/</link>
+      <link>/en/2018/08/online-videos-on-mathematics/</link>
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/en/2018/08/09/online-videos-on-mathematics/</guid>
+      <guid>/en/2018/08/online-videos-on-mathematics/</guid>
       <description>List of some links to online videos on Mathematics (mostly Algebraic Geometry).  ICM Videos
  MSRI VMath
  Isaac Newton Institute for Mathematical Sciences
