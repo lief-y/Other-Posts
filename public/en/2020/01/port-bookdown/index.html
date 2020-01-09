@@ -55,7 +55,14 @@ Add the following to the yaml header will generate a pagedown format html file.<
 
 <p>For beamer presentation, you may use <code>bookdown::beamer_presentation2</code>.</p>
 
-<p>For more options for bookdown, you may run the following command <code>getNamespaceExports(&quot;bookdown&quot;)</code> in Rstudio Console to find out. Those names with the number 2 should be the ones with the option <code>base_format</code>. For example, you may type in <code>?bookdown::beamer_presentation2</code> to see the options.</p>
+<p>For more options for bookdown, you may run the following command <code>getNamespaceExports(&quot;bookdown&quot;)</code> in Rstudio Console to find out. Those names with the number 2 should be the ones with the option <code>base_format</code>. For example,you may type in <code>?bookdown::beamer_presentation2</code> to see the options.</p>
+
+<p>One remark has to be made is that by default <code>distill_article</code> assigns the vale <code>TRUE</code> to <code>knitr_options$opts_chunk$echo</code>. To use the theorem environment provided by <code>bookdown</code>, one may add the following code chunk right after the yaml header.</p>
+
+<pre><code>```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+</code></pre>
 
 </main>
 
