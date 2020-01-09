@@ -1,6 +1,13 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Title }}</h1>
+{{ $title:= .Title }}
+{{ if (hasPrefix $title "En/") }}
+    {{ $title = (strings.TrimPrefix "En/" $title) }}
+{{ else }}   
+    {{ $title = "分类" }}
+{{ end }}
+
+<h1>{{ $title }}</h1>
 
 <ul class="terms">
   {{ range .Data.Terms }}

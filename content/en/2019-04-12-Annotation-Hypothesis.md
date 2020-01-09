@@ -1,10 +1,10 @@
 ---
 title: Annotatable Webpages and Annotate Webpages
 date: 2019-04-12
-# categories: Web
-# tags: 
-#     - Hypothesis
-#     - Annotation
+en/categories: Web
+en/tags: 
+    - Hypothesis
+    - Annotation
 ---
 
 ## Hypothesis, an online annotation tool

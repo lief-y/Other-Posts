@@ -1,10 +1,10 @@
 ---
 title: "Make Links Open in New Windows/Tab for Markdown"
 date: "2019-02-22"
-# categories: Web
-# tags: 
-#     - js
-#     - jQuery
+en/categories: Web
+en/tags: 
+    - js
+    - jQuery
 ---
 
 ## Using jQuery to Open External Links in New Windows[^1]

@@ -1,10 +1,10 @@
 ---
 title: "Tips for RStudio Setup for RMarkdown and More"
 date: "2019-02-22"
-# categories: R
-# tags: 
-#     - Rstudio
-#     - Rmarkdown
+en/categories: R
+en/tags: 
+    - Rstudio
+    - Rmarkdown
 ---
 
 - Don't install R to the default location. Instead, choose a location such as C:\Program Files\R.

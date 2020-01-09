@@ -1,11 +1,11 @@
 ---
 title: "Useful Online LaTeX and Markdown Editors"
 date: "2018-10-31"
-# categories: Tools
-# tags: 
-#     - Online
-#     - LaTeX
-#     - Markdown
+en/categories: Tools
+en/tags: 
+    - Online
+    - LaTeX
+    - Markdown
 ---
 
 ## LaTeX

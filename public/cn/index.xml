@@ -6,10 +6,19 @@
     <description>Recent content in 行而知之 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/cn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用Hugo创建中英混合博客</title>
+      <link>/cn/2020/01/08/multilingual-blog-using-hugo/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/2020/01/08/multilingual-blog-using-hugo/</guid>
+      <description>用Blogdown/Hugo创建中英混合博客 熟悉或者不熟悉 RStudio, 你都可以很快的用blogdown来创建一个私人博客。头一次创建，最容易当然是导入</description>
+    </item>
     
     <item>
       <title>松软蛋奶牛油包</title>

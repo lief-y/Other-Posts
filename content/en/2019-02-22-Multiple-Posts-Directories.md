@@ -1,10 +1,10 @@
 ---
 title: "How to Create Multiple Pages in Blog Style with Jekyll"
 date: "2019-02-22"
-# categories: Web
-# tags: 
-#     - Blog
-#     - Jekyll
+en/categories: Web
+en/tags: 
+    - Blog
+    - Jekyll
 ---
 
 ## Multiple Blogs on One Site[^1]

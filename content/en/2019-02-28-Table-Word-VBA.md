@@ -1,10 +1,10 @@
 ---
 title: "Some VBA Codes for Formating Tables"
 date: "2019-02-28"
-# categories: "Visual Basic"
-# tags: 
-#     - VBA
-#     - Word
+en/categories: "Visual Basic"
+en/tags: 
+    - VBA
+    - Word
 ---
 
 # Some VBA Codes for Formating Tables

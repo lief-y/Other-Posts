@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>knitren/en/ on </title>
+    <link>/en/tags/knitren/en/</link>
+    <description>Recent content in knitren/en/ on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/tags/knitren/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The tikzDevice for R Users</title>
+      <link>/en/2019/08/23/the-tikzdevice-for-r-users/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2019/08/23/the-tikzdevice-for-r-users/</guid>
+      <description>What is the tikzDevice The tikzDevice is a R package that transforms R plots into $\LaTeX$ codes blocks. Those $\LaTeX$ codes can be complied by pdfLaTeX (or other $\TeX$ engines) with the help of TikZ — a graphics package for TeX and friends written by Till Tantau. On the website $\TeX$ample you may find many beautiful pictures created using TikZ/PGF (TikZ is a set of higher-level macros built on top of PGF).</description>
+    </item>
+    
+  </channel>
+</rss>

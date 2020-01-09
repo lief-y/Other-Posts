@@ -1,10 +1,10 @@
 ---
 title: How to install fonts in TeXLive
 date: 2019-05-04
-# categories: TeX
-# tags: 
-#     - TeXLive
-#     - Fonts
+en/categories: TeX
+en/tags: 
+    - TeXLive
+    - Fonts
 ---
 
 After using LaTeX for a long time, you might be bored for default fonts and would like to install some new good looking fonts. If you will use XeTeX engine to compile your tex file, you don't have to worry about the installation. However, for pdfTeX engine, we do need a proper installation. If you use TeXLive like I do, you will complete the installation easily in three steps.

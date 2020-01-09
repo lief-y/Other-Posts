@@ -6,7 +6,7 @@
 
 {{ .Content }}
 
-{{ $currentPage := . }}
+<!-- {{ $currentPage := . }} -->
 {{ if .IsHome }}
 {{ $.Scratch.Set "pages" .Site.RegularPages }}
 {{ else }}

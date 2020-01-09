@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用Hugo创建中英混合博客 | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+
+  <body class="cn">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">首页</a></li>
+      
+      <li><a href="/cn/">博客</a></li>
+      
+      <li><a href="/cn/ctags/">标签</a></li>
+      
+      <li><a href="/en/">English</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">用Hugo创建中英混合博客</span></h1>
+<h2 class="author">Fei Ye</h2>
+<h2 class="date">2020/01/08</h2>
+</div>
+
+<main>
+
+
+<h1 id="用blogdown-hugo创建中英混合博客">用Blogdown/Hugo创建中英混合博客</h1>
+
+<p>熟悉或者不熟悉 RStudio, 你都可以很快的用<a href="https://bookdown.org/yihui/blogdown/">blogdown</a>来创建一个私人博客。头一次创建，最容易当然是导入模板。以下我们将以<a href="https://github.com/yihui/hugo-xmin">yihui/hugo-xmin</a>为例，简述一下怎样修改模板，从而创建如本博客网站的中英混合博客。由于经验有限，这里只能介绍两个方面的修改。这两方面的修改分别参考了<a href="https://github.com/yihui/yihui.org">谢益辉的主页</a>和GitHub上关于Hugo 的<a href="https://github.com/gohugoio/hugo/issues/1208#issuecomment-219126178">Option to change taxonomies URL</a>的讨论。</p>
+
+<h2 id="文件结构">文件结构</h2>
+
+<p>默认的博客源文件(md 文件)一般都放在<code>content\post</code>文件夹里。对于双语博客，我倾向于一种语言一个文件夹，所以我的<code>content</code> 目录下面设置了两文件夹: <code>en</code>和<code>cn</code>,前一个放英文，后一个放中文。对应的，在<code>config.toml</code> 文件下做如下设置</p>
+
+<pre><code class="language-toml">[permalinks]
+    en = &quot;en/:year/:month/:day/:slug/&quot;
+    cn = &quot;cn/:year/:month/:day/:slug/&quot;
+</code></pre>
+
+<p>这样设置的目的是使生成的html文件分别仍然在相应的文件加下。另外，*每个文件夹需要有一个空的 <code>_index.md</code>文件*。</p>
+
+<h2 id="博客导航栏">博客导航栏</h2>
+
+<p>一般中英，或者多语言混排，至少有两套导航栏。本博站设置了三套，对应的 <code>config.tom</code> 中分别由<code>[menu.main]</code>, <code>[menu.en]</code>, <code>[menu.cn]</code> 来定义：</p>
+
+<pre><code class="language-toml">
+[menu]
+    [[menu.main]]
+        name = &quot;Home&quot;
+        url = &quot;/&quot;
+        weight = 1
+    [[menu.main]]
+        name = &quot;Blog&quot;
+        url = &quot;/en/&quot;
+        weight = 2
+    [[menu.main]]
+        name = &quot;博客&quot;
+        url = &quot;/cn/&quot;
+        weight = 3
+    [[menu.en]]
+        name = &quot;Home&quot;
+        url = &quot;/&quot;
+        weight = 1
+    [[menu.en]]
+        name = &quot;Blog&quot;
+        url = &quot;/en/&quot;
+        weight = 2
+    [[menu.en]]
+        name = &quot;Categories&quot;
+        url = &quot;/en/categories/&quot;
+        weight = 3
+    [[menu.en]]
+        name = &quot;Tags&quot;
+        url = &quot;/en/tags/&quot;
+        weight = 4
+    [[menu.en]]
+        name = &quot;中文&quot;
+        url = &quot;/cn/&quot;
+        weight = 5
+
+    [[menu.cn]]
+        name = &quot;首页&quot;
+        url = &quot;/&quot;
+        weight = 1
+    [[menu.cn]]
+        name = &quot;博客&quot;
+        url = &quot;/cn/&quot;
+        weight = 2
+    [[menu.cn]]
+        name = &quot;标签&quot;
+        url = &quot;/cn/ctags/&quot;
+        weight = 3
+    [[menu.cn]]
+        name = &quot;English&quot;
+        url = &quot;/en/&quot;
+        weight = 4
+</code></pre>
+
+<p>注意导航里关于分类的目录项我也都设置到了相应的子目录。然而，要使得生成的html及相关的文件夹也分别在<code>en</code>和<code>cn</code>文件夹里，还需要更改默认的<code>[taxonomies]</code>：</p>
+
+<pre><code class="language-toml">[taxonomies]
+    category = &quot;en/categories&quot;
+    tag = &quot;en/tags&quot;
+    ctag = &quot;cn/ctags&quot;
+</code></pre>
+
+<p>需要注意的是，在为博客源文件添加分类或标签时，要保留<code>en/</code>和<code>cn/</code>。例如</p>
+
+<pre><code class="language-yaml">---
+title: 用Hugo创建中英混合博客
+author: Fei Ye
+date: '2020-01-08'
+slug: multilingual-blog-using-hugo
+cn/ctags:
+  - hugo
+  - blogdown
+---
+</code></pre>
+
+<p>完成这一步，还有两个问题要通过修改布局模板来解决:
+- 修改<code>layout</code>文件夹下的<code>list.html</code>，从而将<code>[menu.en]</code>和<code>[menu.cn]</code>两个导航正确的显示出来;
+- 修改<code>layout</code>文件夹下的<code>terms.html</code>，从而能正确显示页面主题。</p>
+
+<h2 id="修改-list-html">修改<code>list.html</code></h2>
+
+<p>在文件夹<code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开<code>list.html</code>。将</p>
+
+<pre><code class="language-html+hugo">  &lt;ul&gt;
+  {{ $pages := .Pages }}
+  {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+  {{ range (where $pages &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
+</code></pre>
+
+<p>改成</p>
+
+<pre><code class="language-html+hugo">{{ $currentPage := . }}
+{{ if .IsHome }}
+{{ $.Scratch.Set &quot;pages&quot; .Site.RegularPages }}
+{{ else }}
+{{ $.Scratch.Set &quot;pages&quot; .Pages }}
+{{ end }}
+&lt;ul&gt;
+    {{ range (where ($.Scratch.Get &quot;pages&quot;) &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
+</code></pre>
+
+<p>这段修改完全是借鉴了<code>[hugo-ivy](https://github.com/yihui/hugo-ivy)</code>的相应设置。</p>
+
+<h2 id="修改-terms-html">修改<code>terms.html</code></h2>
+
+<p>在文件夹<code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开<code>terms.html</code>。将</p>
+
+<pre><code class="language-html+hugo"> &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+</code></pre>
+
+<p>改成</p>
+
+<pre><code class="language-html+hugo">{{ $title:= .Title }}
+{{ if (hasPrefix $title &quot;En/&quot;) }}
+    {{ $title = (strings.TrimPrefix &quot;En/&quot; $title) }}
+{{ else }}   
+    {{ $title = &quot;标签&quot; }}
+{{ end }}
+
+&lt;h1&gt;{{ $title }}&lt;/h1&gt;
+</code></pre>
+
+<p>如果中文相应的还有分类，则需要额外加一个<code>{{ else if (condition) }}</code> 手动定义。如果未做修改，你会发现，生成的分类或者标签页面的主题显示为<code>En/...</code>或者<code>Cn/...</code>。</p>
+
+<h2 id="结语">结语</h2>
+
+<p>最后这两步或许有更简单的方法实现。如果您有好的办法，请移步<a href="https://github.com/fyemath/Other-Posts">本博客的github仓库</a>提交建议或合并。谢谢！</p>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

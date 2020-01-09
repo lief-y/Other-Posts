@@ -1,11 +1,9 @@
 ---
 title: "松软蛋奶牛油包"
 date: '2020-01-06'
-recipes: bread
+cn/ctags: Bread
 slug: "soft-butter-milk-bread"
 ---
-
-
 
 # 松软蛋奶牛油包
 
