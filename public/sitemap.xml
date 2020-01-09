@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/2020/01/09/port-bookdown/</loc>
+    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/cn/ctags/blogdown/</loc>
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/cn/ctags/</loc>
-    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -54,11 +64,6 @@
   
   <url>
     <loc>/en/tags/knitr/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,12 +173,12 @@
   </url>
   
   <url>
-    <loc>/en/tags/webwork/</loc>
+    <loc>/en/categories/webwork/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/en/categories/webwork/</loc>
+    <loc>/en/tags/webwork/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   

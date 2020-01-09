@@ -9,7 +9,6 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
-
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [taxonomies]
@@ -81,6 +80,8 @@ footnotereturnlinkcontents = "↩"
     # highlightjsCDN = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"
     # highlightjsLang = ["r", "yaml", "tex", "markdown"]
     # highlightjsTheme = "github"
+
+    author = "Fei Ye"
 
     # [params.author]
     #     en = "Fei Ye"

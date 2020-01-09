@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Port Bookdown to Other Rmarkdown Format | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+
+  <body class="en">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/en/">Blog</a></li>
+      
+      <li><a href="/en/categories/">Categories</a></li>
+      
+      <li><a href="/en/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Port Bookdown to Other Rmarkdown Format</span></h1>
+
+<h2 class="author">
+
+</h2>
+<h2 class="date">2020/01/09</h2>
+</div>
+
+<main>
+<p>In mathematics, we write a lot definitions, theorem etc. and refer to them in articles. However, among the Rmarkdown family, only bookdown has all those features that you need. Fortunately, Yihui created a feature <code>base_format</code> for bookdown which allows us to port it to amost all format in Rmarkdown family. Here is an example how you can do it and you may always want to write your yaml header in this way.
+Add the following to the yaml header will generate a pagedown format html file.</p>
+
+<pre><code>output:
+  bookdown::html_document2:
+    base_format: pagedown::html_paged
+    self_contain: true
+</code></pre>
+
+<p>Changing <code>pagedown::html_paged</code> to <code>xaringan::moon_reader</code> will generate <code>xaringan slides</code>.</p>
+
+<p>For beamer presentation, you may use <code>bookdown::beamer_presentation2</code>.</p>
+
+<p>For more options for bookdown, you may run the following command <code>getNamespaceExports(&quot;bookdown&quot;)</code> in Rstudio Console to find out. Those names with the number 2 should be the ones with the option <code>base_format</code>. For example, you may type in <code>?bookdown::beamer_presentation2</code> to see the options.</p>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

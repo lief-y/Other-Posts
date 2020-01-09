@@ -1,6 +1,5 @@
 ---
 title: 用Hugo创建中英混合博客
-author: Fei Ye
 date: '2020-01-08'
 slug: multilingual-blog-using-hugo
 cn/ctags:
