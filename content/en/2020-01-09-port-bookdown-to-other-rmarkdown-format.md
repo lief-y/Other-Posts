@@ -2,9 +2,9 @@
 title: Port Bookdown to Other Rmarkdown Format
 date: '2020-01-09'
 slug: port-bookdown
-categories:
-  - Rmarkdown
-tags:
+en/categories:
+  - R
+en/tags:
   - Bookdown
   - Rmarkdown
 ---

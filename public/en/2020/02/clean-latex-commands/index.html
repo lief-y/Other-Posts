@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>En/Categories | </title>
+    <title>Clean LaTeX Commands For R Bookdown | </title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     
@@ -30,45 +30,32 @@
     <hr/>
     </nav>
 
+<div class="article-meta">
+<h1><span class="title">Clean LaTeX Commands For R Bookdown</span></h1>
 
+<h2 class="author">
 
+    Fei Ye
 
-    
+</h2>
+<h2 class="date">2020/02/27</h2>
+</div>
 
+<main>
+<p>When using LaTeX template with customized theorem environments in R bookdown, you may see an error say a thereom environment is defined. Checking the output LaTex files, you will find that bookdown generated theorem enviroment at the end of the LaTeX preamble. To solve the problem, currently, one may use the magical <code>bookdown.post.latex</code> option. Adding the following code at the beginning of the index.Rmd file will remove the injected theorem environments.</p>
 
-<h1>Categories</h1>
+<pre><code>```{r remove_amsmath, include=FALSE}
+options(bookdown.post.latex = function(x) {
+    start_row &lt;- grep(&quot;package\\{amsthm&quot;, x)
+    end_row &lt;- grep(&quot;newtheorem\\*\\{solution&quot;, x)
+    x&lt;-x[-c(start_row:end_row)]
+})
+```
+</code></pre>
 
-<ul class="terms">
-  
-  <li>
-    <a href="/en/categories/r/">R</a> (5)
-  </li>
-  
-  <li>
-    <a href="/en/categories/resources/">Resources</a> (1)
-  </li>
-  
-  <li>
-    <a href="/en/categories/tex/">TeX</a> (1)
-  </li>
-  
-  <li>
-    <a href="/en/categories/tools/">Tools</a> (1)
-  </li>
-  
-  <li>
-    <a href="/en/categories/visual-basic/">Visual Basic</a> (1)
-  </li>
-  
-  <li>
-    <a href="/en/categories/web/">Web</a> (3)
-  </li>
-  
-  <li>
-    <a href="/en/categories/webwork/">WebWork</a> (1)
-  </li>
-  
-</ul>
+<p>I learned the option from the source file of Yihui&rsquo;s book <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a> and the codes from the Github issue <a href="https://github.com/rstudio/bookdown/issues/417">pdf_book is trying inject latex code to use package amsthm #417</a>.</p>
+
+</main>
 
   <footer>
   <script src="//yihui.name/js/math-code.js"></script>

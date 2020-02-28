@@ -4,12 +4,42 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/bookdown/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/2020/02/clean-latex-commands/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/categories/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/en/</loc>
-    <lastmod>2020-01-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/categories/r/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/rmarkdown/</loc>
+    <lastmod>2020-02-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,22 +83,7 @@
   </url>
   
   <url>
-    <loc>/en/categories/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/tags/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/tags/knitr/</loc>
-    <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/categories/r/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -133,11 +148,6 @@
   </url>
   
   <url>
-    <loc>/en/tags/rmarkdown/</loc>
-    <lastmod>2019-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/en/tags/slides/</loc>
     <lastmod>2019-03-31T00:00:00+00:00</lastmod>
   </url>
@@ -173,12 +183,12 @@
   </url>
   
   <url>
-    <loc>/en/tags/webwork/</loc>
+    <loc>/en/categories/webwork/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/en/categories/webwork/</loc>
+    <loc>/en/tags/webwork/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   

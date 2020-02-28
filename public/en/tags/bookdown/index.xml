@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bookdown on </title>
+    <link>/en/tags/bookdown/</link>
+    <description>Recent content in Bookdown on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/en/tags/bookdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Clean LaTeX Commands For R Bookdown</title>
+      <link>/en/2020/02/clean-latex-commands/</link>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/02/clean-latex-commands/</guid>
+      <description>When using LaTeX template with customized theorem environments in R bookdown, you may see an error say a thereom environment is defined. Checking the output LaTex files, you will find that bookdown generated theorem enviroment at the end of the LaTeX preamble. To solve the problem, currently, one may use the magical bookdown.post.latex option. Adding the following code at the beginning of the index.Rmd file will remove the injected theorem environments.</description>
+    </item>
+    
+    <item>
+      <title>Port Bookdown to Other Rmarkdown Format</title>
+      <link>/en/2020/01/port-bookdown/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/01/port-bookdown/</guid>
+      <description>In mathematics, we write a lot definitions, theorem etc. and refer to them in articles. However, among the Rmarkdown family, only bookdown has all those features that you need. Fortunately, Yihui created a feature base_format for bookdown which allows us to port it to amost all format in Rmarkdown family. Here is an example how you can do it and you may always want to write your yaml header in this way.</description>
+    </item>
+    
+  </channel>
+</rss>
