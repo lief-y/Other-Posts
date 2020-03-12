@@ -56,9 +56,9 @@ For PDF (using TeX) output, to change dimension, first you need create a tex fil
 %The following codes add max dimension options to includegraphics
 \usepackage[export]{adjustbox} %Needed for max width
 \usepackage{etoolbox} %Needed for \pathcmd
-\expandafter\patchcmd\csname Gin@ii\endcsname 
+\expandafter\patchcmd\csname Gin@ii\endcsname
 {\setkeys{Gin}{#1}}
-{\setkeys{Gin}{max width=\textwidth, max height=.5\textwidth,keepaspectratio,#1}%}
+{\setkeys{Gin}{max width=\textwidth, max height=.5\textwidth,keepaspectratio,#1}}
 {}
 {}
 ```
