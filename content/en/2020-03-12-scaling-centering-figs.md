@@ -46,18 +46,21 @@ For PDF (using TeX) output, to change dimension, first you need create a tex fil
 
 ```latex
 \usepackage{graphicx}
-% The following codes are for scaling images to at most 0.5\textwidth and 0.5\textheight globally.
-% However, it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
+%The following codes scale images in mainmatter if necessary
+%It will be overwrite by local setting in \includegraphics[width, height, ...]{}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>0.5\textwidth 0.5\textwidth\else\Gin@nat@width\fi}
+\def\maxwidth{\ifdim\Gin@nat@width>\textwidth \textwidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>0.5\textheight 0.5\textheight\else\Gin@nat@height\fi}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatothe
+%The following codes add max dimension options to includegraphics
+\usepackage[export]{adjustbox} %Needed for max width
+\usepackage{etoolbox} %Needed for \pathcmd
+\expandafter\patchcmd\csname Gin@ii\endcsname 
+{\setkeys{Gin}{#1}}
+{\setkeys{Gin}{max width=\textwidth, max height=.5\textwidth,keepaspectratio,#1}%}
+{}
+{}
 ```
 
 Then add the following to Rmarkdown yaml under the output for pdf.
