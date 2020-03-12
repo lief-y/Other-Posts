@@ -43,36 +43,25 @@
 
 <main>
 <ul>
-<li>Don&rsquo;t install R to the default location. Instead, choose a location such as C:\Program Files\R.</li>
-</ul>
-
+<li>
+<p>Don&rsquo;t install R to the default location. Instead, choose a location such as C:\Program Files\R.</p>
 <p>Verdict: no version difference issue</p>
-
-<ul>
-<li><p>Create a <code>.Renviron</code> file to your home directory <code>~/</code> using the following function:</p>
-
-<pre><code class="language-r"># File will be created if it doesn't exist
-file.edit('~/.Renviron')
-</code></pre>
-
-<p>Add   <code>R_LIBS_USER=&quot;C:/R&quot;</code> to <code>.Renviron</code>. This variable will be the library of R packages.
-It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</p></li>
-</ul>
-
+</li>
+<li>
+<p>Create a <code>.Renviron</code> file to your home directory <code>~/</code> using the following function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># File will be created if it doesn&#39;t exist</span>
+<span style="color:#a6e22e">file.edit</span>(<span style="color:#e6db74">&#39;~/.Renviron&#39;</span>)
+</code></pre></div><p>Add   <code>R_LIBS_USER=&quot;C:/R&quot;</code> to <code>.Renviron</code>. This variable will be the library of R packages.
+It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</p>
 <p>Remember to restart RStudio before you install new packages to this folder.</p>
-
-<ul>
-<li><p>Using the function  <code>file.edit()</code> to open/create a <code>.Rprofile</code>  file.</p>
-
-<pre><code class="language-r">file.edit('~/.Rprofile')
-</code></pre></li>
-</ul>
-
-<p>Add <code>options(servr.daemon = TRUE)</code> to the file so that <code>Infinite Moon Reader</code> addin won&rsquo;t lock <code>R</code> process.</p>
-
-<ul>
-<li><p>Using RStudio with VS Code for infinite moon</p>
-
+</li>
+<li>
+<p>Using the function  <code>file.edit()</code> to open/create a <code>.Rprofile</code>  file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">file.edit</span>(<span style="color:#e6db74">&#39;~/.Rprofile&#39;</span>)
+</code></pre></div><p>Add <code>options(servr.daemon = TRUE)</code> to the file so that <code>Infinite Moon Reader</code> addin won&rsquo;t lock <code>R</code> process.</p>
+</li>
+<li>
+<p>Using RStudio with VS Code for infinite moon</p>
 <ul>
 <li>Download R language support in VS Code.</li>
 <li>Open <code>.rmd</code> file in both VS Code and RStudio.</li>
@@ -80,12 +69,13 @@ It is extremely useful if you are using a computer with limited rights and anti-
 <li>(Option) Check Auto Save in VS Code.</li>
 <li>Open RStudio and VS Code side by side (on Windows: window buttom+arrow)</li>
 <li>Maximaze the viewer pane in RStudio.</li>
-</ul></li>
-
-<li><p>Relative path for Xaringan</p></li>
 </ul>
-
+</li>
+<li>
+<p>Relative path for Xaringan</p>
 <p>For css and beforeInt, relative path may be used. However, to let <code>knitr</code> recognize the relative path, the function <code>xaringan::inf_mr(cast_from = '..')</code> or similar should be used. After using it once,  the <code>Infinite Moon Reader</code> addin seems work.</p>
+</li>
+</ul>
 
 </main>
 
@@ -112,7 +102,7 @@ hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
 <script src="/js/check-for-tex.js" defer></script>
   
   <hr/>
-  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
   
   </footer>
   </body>

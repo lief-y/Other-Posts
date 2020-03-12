@@ -42,29 +42,15 @@
 </div>
 
 <main>
-
-
-<h2 id="multiple-blogs-on-one-site-1">Multiple Blogs on One Site<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></h2>
-
+<h2 id="multiple-blogs-on-one-site1">Multiple Blogs on One Site<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
 <p>Suppose that you have two categories of blogs. There are two ways to create directories in your website folder
 1.
-      <code>
-      --blog1
-         |--_posts
-      --blog2
-         |--_post
-</code>
+<code>--blog1 |--_posts --blog2 |--_post</code>
 2.
-      <code>
-      |--_posts
-         |--blog1
-         |--blog2
-</code>
+<code>|--_posts |--blog1 |--blog2</code>
 The first approach will automatically assign categories to your posts
 Using the second approach, you will need to manually add <code>category: your_blog_folder_name</code> to <code>Yaml Front Matter</code> in each post.</p>
-
 <p>In the webpage containing your blogs, add a filter using <code>post.categories contains 'category name'</code> to where it is appropriate. For example,</p>
-
 <pre><code>---
 layout: default
 title: Blog1
@@ -79,18 +65,15 @@ category: blog1
   {% endif %}
 {% endfor %}
 {% endraw %}
-</code></pre>
-
-<hr />
-<div class="footnotes">
-
-<hr />
-
+</code></pre><hr>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">I learned this trick mainly from the post <a href="https://www.garron.me/en/blog/multi-blog-site-jekyll.html">Create a Multi Blog Site with Jekyll</a> written by Guillermo Garron.
- <a class="footnote-return" href="#fnref:1">↩</a></li>
+<li id="fn:1" role="doc-endnote">
+<p>I learned this trick mainly from the post <a href="https://www.garron.me/en/blog/multi-blog-site-jekyll.html">Create a Multi Blog Site with Jekyll</a> written by Guillermo Garron. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
 </main>
 
@@ -117,7 +100,7 @@ hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
 <script src="/js/check-for-tex.js" defer></script>
   
   <hr/>
-  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
   
   </footer>
   </body>

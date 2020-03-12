@@ -75,7 +75,7 @@ footnotereturnlinkcontents = "↩"
 
 [params]
     # description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Fei Ye](https://yfei.page) 2019 | [Github](https://github.com/fyemath) "
+    footer = "&copy; [Fei Ye](https://yfei.page) 2019-now | [Github](https://github.com/fyemath) "
 
     # highlightjsCDN = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"
     # highlightjsLang = ["r", "yaml", "tex", "markdown"]

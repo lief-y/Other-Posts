@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About | 关于 on </title>
@@ -6,10 +6,21 @@
     <description>Recent content in About | 关于 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scaling and Centering Figures for Rmarkdown</title>
+      <link>/en/2020/03/scaling-centering-figs/</link>
+      <pubDate>Thu, 12 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/03/scaling-centering-figs/</guid>
+      <description>There are different ways to include a picture in Rmarkdown. The basic way is to use ![caption](path/to/picture.extension). If the figure is not in an bookdown theorem environment, you may also use knitr.
+```{r figure, echo=FALSE}knitr::include_graphics(path/to/picture.extension)```The way using knitr to include graphics provide more options to control the dimension and position of a figure. For details, you may read Yihui&amp;rsquo;s knitr manual on plots.
+Because I normally have to include pictures in theorem environment in bookdown.</description>
+    </item>
     
     <item>
       <title>Clean LaTeX Commands For R Bookdown</title>
@@ -44,7 +55,7 @@
       <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/cn/2020/01/soft-butter-milk-bread/</guid>
-      <description>松软蛋奶牛油包 食材及用量 面粉: 3 杯 （略微多点少点没关系）。 大鸡蛋: 3 (如果用小一点的或者更大的鸡蛋可以调节牛奶的加入量。) 牛奶: 3&amp;frasl;4 杯 (略微多</description>
+      <description>松软蛋奶牛油包 食材及用量 面粉: 3 杯 （略微多点少点没关系）。 大鸡蛋: 3 (如果用小一点的或者更大的鸡蛋可以调节牛奶的加入量。) 牛奶: 3/4 杯 (略微多</description>
     </item>
     
     <item>
@@ -62,7 +73,8 @@
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/en/2019/05/how-to-install-fonts-in-texlive/</guid>
-      <description>After using LaTeX for a long time, you might be bored for default fonts and would like to install some new good looking fonts. If you will use XeTeX engine to compile your tex file, you don&amp;rsquo;t have to worry about the installation. However, for pdfTeX engine, we do need a proper installation. If you use TeXLive like I do, you will complete the installation easily in three steps.</description>
+      <description>After using LaTeX for a long time, you might be bored for default fonts and would like to install some new good looking fonts. If you will use XeTeX engine to compile your tex file, you don&amp;rsquo;t have to worry about the installation. However, for pdfTeX engine, we do need a proper installation. If you use TeXLive like I do, you will complete the installation easily in three steps.
+Where to install To make the fonts installation independent to distribution of TeXLive from different years, fonts should go into the local TEXMF-tree.</description>
     </item>
     
     <item>
@@ -84,7 +96,7 @@ What can Hypothesis do  Annotate and post publicly or save privately. Reply to o
       <description>Add CSS Codes within RMarkdown When using Xaringan to create slides, one may include a custom.css or use the xaringanthemer package to change styles in whole or by part.
 Recently, I found another trick that allow you make changes to styles within your rmarkdown file. It&amp;rsquo;s very simple. You simply only need to add a CSS code chunk1 at the beginning of your content.
 Here is an example.
-```{css, echo=F} .</description>
+```{css, echo=F}.</description>
     </item>
     
     <item>
@@ -102,8 +114,10 @@ Here is an example.
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/en/2019/02/webwork-authoring-tips/</guid>
-      <description>WebWork Text Display Languages  Original way using TEXT(EV3())   Example:
-TEXT(EV3(&amp;lt;&amp;lt;&#39;END_TEXT&#39;)); The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands. END_TEXT  **Remark:**   In the example two pg macros were used TEXT() and EV3(). Both macros are defined in PGbasicmacros.</description>
+      <description>WebWork Text Display Languages   Original way using TEXT(EV3())
+Example:
+TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;)); The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands. END_TEXT Remark:
+  In the example two pg macros were used TEXT() and EV3(). Both macros are defined in PGbasicmacros.</description>
     </item>
     
     <item>
@@ -112,7 +126,7 @@ TEXT(EV3(&amp;lt;&amp;lt;&#39;END_TEXT&#39;)); The material in this section is c
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/en/2019/02/how-to-create-multiple-pages-in-blog-style-with-jekyll/</guid>
-      <description>Multiple Blogs on One Site1 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder 1.  --blog1 |--_posts --blog2 |--_post  2.  |--_posts |--blog1 |--blog2  The first approach will automatically assign categories to your posts Using the second approach, you will need to manually add category: your_blog_folder_name to Yaml Front Matter in each post.
+      <description>Multiple Blogs on One Site1 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder 1. --blog1 |--_posts --blog2 |--_post 2. |--_posts |--blog1 |--blog2 The first approach will automatically assign categories to your posts Using the second approach, you will need to manually add category: your_blog_folder_name to Yaml Front Matter in each post.
 In the webpage containing your blogs, add a filter using post.</description>
     </item>
     
@@ -123,8 +137,8 @@ In the webpage containing your blogs, add a filter using post.</description>
       
       <guid>/en/2019/02/make-links-open-in-new-windows/tab-for-markdown/</guid>
       <description>Using jQuery to Open External Links in New Windows1 Creating (static) webpages using markdown is every convenient, for example
-[Queensborough Community College](http://www.qcc.cuny.edu).  However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example
-&amp;lt;a href=&amp;quot;http://www.qcc.cuny.edu&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Queensborough Community College&amp;lt;/a&amp;gt;.  When there are many links it will be a little bit painful to create such links using html in a markdown file.</description>
+[Queensborough Community College](http://www.qcc.cuny.edu). However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example
+&amp;lt;a href=&amp;quot;http://www.qcc.cuny.edu&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;Queensborough Community College&amp;lt;/a&amp;gt;. When there are many links it will be a little bit painful to create such links using html in a markdown file.</description>
     </item>
     
     <item>
@@ -133,9 +147,10 @@ In the webpage containing your blogs, add a filter using post.</description>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/en/2019/02/tips-for-rstudio-setup-for-rmarkdown-and-more/</guid>
-      <description>Don&amp;rsquo;t install R to the default location. Instead, choose a location such as C:\Program Files\R.  Verdict: no version difference issue
- Create a .Renviron file to your home directory ~/ using the following function:
-# File will be created if it doesn&#39;t exist file.edit(&#39;~/.Renviron&#39;)  Add R_LIBS_USER=&amp;quot;C:/R&amp;quot; to .Renviron. This variable will be the library of R packages. It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</description>
+      <description>Don&amp;rsquo;t install R to the default location. Instead, choose a location such as C:\Program Files\R.
+Verdict: no version difference issue
+  Create a .Renviron file to your home directory ~/ using the following function:
+# File will be created if it doesn&amp;#39;t exist file.edit(&amp;#39;~/.Renviron&amp;#39;) Add R_LIBS_USER=&amp;quot;C:/R&amp;quot; to .Renviron. This variable will be the library of R packages. It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</description>
     </item>
     
     <item>
@@ -144,10 +159,14 @@ In the webpage containing your blogs, add a filter using post.</description>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/en/2018/10/useful-online-latex-and-markdown-editors/</guid>
-      <description>LaTeX  ShareLaTeX which is integrated with Overleaf now.   Online LaTeX editors and best for working individully or collaboratively online.
- TeXLive + Visual Studio Code + LaTeX Workshop.  Very productive combination for writing LaTeX.
-Markdown  StackEdit   Online Markdown editor and good for writing simple documents and converting them into different format.
- Typora   Very impressive offline Markdown WYSIWYG editor. Very powerful in converting markdown to other formats.</description>
+      <description>LaTeX   ShareLaTeX which is integrated with Overleaf now.
+Online LaTeX editors and best for working individully or collaboratively online.
+  TeXLive + Visual Studio Code + LaTeX Workshop.
+Very productive combination for writing LaTeX.
+  Markdown   StackEdit
+Online Markdown editor and good for writing simple documents and converting them into different format.
+  Typora
+Very impressive offline Markdown WYSIWYG editor. Very powerful in converting markdown to other formats.</description>
     </item>
     
     <item>
@@ -156,19 +175,17 @@ Markdown  StackEdit   Online Markdown editor and good for writing simple documen
       <pubDate>Thu, 09 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/en/2018/08/online-videos-on-mathematics/</guid>
-      <description>List of some links to online videos on Mathematics (mostly Algebraic Geometry).  ICM Videos
- MSRI VMath
- Isaac Newton Institute for Mathematical Sciences
- Vod the MathNet Korea
- MathNet Russia
- Clay Mathematics Institute
- Institute of Advanced Study
- Duke Mathematics Department
- Atiyah80 Video Lectures
- Southwest Center Streaming Video
- Foundation Sciences Mathématiques de Paris
- Institut des Hautes Études Scientifiques
- GRASP University of Texas at Austin</description>
+      <description>List of some links to online videos on Mathematics (mostly Algebraic Geometry).   ICM Videos
+  MSRI VMath
+  Isaac Newton Institute for Mathematical Sciences
+  Vod the MathNet Korea
+  MathNet Russia
+  Clay Mathematics Institute
+  Institute of Advanced Study
+  Duke Mathematics Department
+  Atiyah80 Video Lectures
+  Southwest Center Streaming Video
+  Foundation Sciences Mathématiques de Paris</description>
     </item>
     
   </channel>

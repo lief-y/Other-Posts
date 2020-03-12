@@ -43,7 +43,6 @@
 
 <main>
 <p>When using LaTeX template with customized theorem environments in R bookdown, you may see an error say a thereom environment is defined. Checking the output LaTex files, you will find that bookdown generated theorem enviroment at the end of the LaTeX preamble. To solve the problem, currently, one may use the magical <code>bookdown.post.latex</code> option. Adding the following code at the beginning of the index.Rmd file will remove the injected theorem environments.</p>
-
 <pre><code>```{r remove_amsmath, include=FALSE}
 options(bookdown.post.latex = function(x) {
     start_row &lt;- grep(&quot;package\\{amsthm&quot;, x)
@@ -52,7 +51,6 @@ options(bookdown.post.latex = function(x) {
 })
 ```
 </code></pre>
-
 <p>I learned the option from the source file of Yihui&rsquo;s book <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a> and the codes from the Github issue <a href="https://github.com/rstudio/bookdown/issues/417">pdf_book is trying inject latex code to use package amsthm #417</a>.</p>
 
 </main>
@@ -80,7 +78,7 @@ hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
 <script src="/js/check-for-tex.js" defer></script>
   
   <hr/>
-  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
   
   </footer>
   </body>

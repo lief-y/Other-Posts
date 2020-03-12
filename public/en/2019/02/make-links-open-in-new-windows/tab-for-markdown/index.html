@@ -42,79 +42,58 @@
 </div>
 
 <main>
-
-
-<h2 id="using-jquery-to-open-external-links-in-new-windows-1">Using jQuery to Open External Links in New Windows<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></h2>
-
+<h2 id="using-jquery-to-open-external-links-in-new-windows1">Using jQuery to Open External Links in New Windows<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
 <p>Creating (static) webpages using markdown is every convenient, for example</p>
-
-<pre><code class="language-html">[Queensborough Community College](http://www.qcc.cuny.edu).
-</code></pre>
-
-<p>However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[Queensborough Community College](http://www.qcc.cuny.edu).
+</code></pre></div><p>However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example</p>
 <pre><code>&lt;a href=&quot;http://www.qcc.cuny.edu&quot; target=&quot;_blank&quot;&gt;Queensborough Community College&lt;/a&gt;.
-</code></pre>
-
-<p>When there are many links it will be a little bit painful to create such links using html in a markdown file. I expected a few lines of CSS code will do the job. Indee, CSS3 does have a <code>target-new</code> property, which is unfortunately not supported by any major browsers yet. Another solution I found is to use jQuery.</p>
-
+</code></pre><p>When there are many links it will be a little bit painful to create such links using html in a markdown file. I expected a few lines of CSS code will do the job. Indee, CSS3 does have a <code>target-new</code> property, which is unfortunately not supported by any major browsers yet. Another solution I found is to use jQuery.</p>
 <ul>
-<li><p>We first need to <a href="https://www.w3schools.com/jquery/jquery_get_started.asp">add jQuery</a> to the inside of the <code>&lt;head&gt;</code> section.</p>
-
-<pre><code>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-</code></pre></li>
-
-<li><p>To open links in new windows, we add an attribute <code>target=&quot;_blank&quot;</code> (to all links ).</p>
-
-<pre><code class="language-js">&lt;script&gt;
-	$(document).ready(function() {
-		$( '.main-body a[href^=&quot;http&quot;]' )
-    .attr( 'target','_blank' )
-		;
-	});
-&lt;/script&gt;
-</code></pre></li>
-
-<li><p>We may also add a message after the link to be open in a new window.</p>
-
-<pre><code>&lt;script&gt;
-	$(document).ready(function() {
-		$( '.main-body a[href^=&quot;http&quot;]' )
-    .attr( 'target','_blank' ).attr('title','This link will open in a new window.')
-		;
-	});
-&lt;/script&gt;
-</code></pre></li>
-
-<li><p>We may let the function apply to specific link using keyword.</p>
-
-<pre><code>&lt;script&gt;
-	$(document).ready(function() {
-		$( '.main-body a[href^=&quot;http&quot;]' ).not('a[href*=keywork]').add('a[href*=pdf]')
-    .attr( 'target','_blank' ).attr('title','This link will open in a new window.')
-		;
-	});
-&lt;/script&gt;
-</code></pre></li>
+<li>We first need to <a href="https://www.w3schools.com/jquery/jquery_get_started.asp">add jQuery</a> to the inside of the <code>&lt;head&gt;</code> section.</li>
 </ul>
-
-<h2 id="using-kramdown-https-stackoverflow-com-questions-4425198-can-i-create-links-with-target-blank-in-markdown"><a href="https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown">Using <code>Kramdown</code>.</a></h2>
-
+<pre><code>&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><ul>
+<li>To open links in new windows, we add an attribute <code>target=&quot;_blank&quot;</code> (to all links ).</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+  	<span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span>() {
+  		<span style="color:#a6e22e">$</span>( <span style="color:#e6db74">&#39;.main-body a[href^=&#34;http&#34;]&#39;</span> )
+        .<span style="color:#a6e22e">attr</span>( <span style="color:#e6db74">&#39;target&#39;</span>,<span style="color:#e6db74">&#39;_blank&#39;</span> )
+  		;
+  	});
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><ul>
+<li>We may also add a message after the link to be open in a new window.</li>
+</ul>
+<pre><code>&lt;script&gt;
+  	$(document).ready(function() {
+  		$( '.main-body a[href^=&quot;http&quot;]' )
+        .attr( 'target','_blank' ).attr('title','This link will open in a new window.')
+  		;
+  	});
+&lt;/script&gt;
+</code></pre><ul>
+<li>We may let the function apply to specific link using keyword.</li>
+</ul>
+<pre><code>&lt;script&gt;
+  	$(document).ready(function() {
+  		$( '.main-body a[href^=&quot;http&quot;]' ).not('a[href*=keywork]').add('a[href*=pdf]')
+        .attr( 'target','_blank' ).attr('title','This link will open in a new window.')
+  		;
+  	});
+&lt;/script&gt;
+</code></pre><h2 id="using-kramdownhttpsstackoverflowcomquestions4425198can-i-create-links-with-target-blank-in-markdown"><a href="https://stackoverflow.com/questions/4425198/can-i-create-links-with-target-blank-in-markdown">Using <code>Kramdown</code>.</a></h2>
 <p>Kramdown supports it in the following way:</p>
-
 <pre><code>[link](url){:target=&quot;_blank&quot;}
-</code></pre>
-
-<hr />
-<div class="footnotes">
-
-<hr />
-
+</code></pre><hr>
+<section class="footnotes" role="doc-endnotes">
+<hr>
 <ol>
-<li id="fn:1">The jQuery solution was inspired by the post <a href="http://www.stylinwithcss.com/blog/post.php?s=2013-02-11-make-external-links-open-in-new-windows">Make External Links Open In New Windows</a> of Charles Wyke-Smith and the answer of gion_13 to this question <a href="https://stackoverflow.com/questions/7901679/jquery-add-target-blank-for-outgoing-link?noredirect=1&amp;lq=1">jQuery add target=“_blank” for outgoing link</a> on stackoverflow.
- <a class="footnote-return" href="#fnref:1">↩</a></li>
+<li id="fn:1" role="doc-endnote">
+<p>The jQuery solution was inspired by the post <a href="http://www.stylinwithcss.com/blog/post.php?s=2013-02-11-make-external-links-open-in-new-windows">Make External Links Open In New Windows</a> of Charles Wyke-Smith and the answer of gion_13 to this question <a href="https://stackoverflow.com/questions/7901679/jquery-add-target-blank-for-outgoing-link?noredirect=1&amp;lq=1">jQuery add target=“_blank” for outgoing link</a> on stackoverflow. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-</div>
+</section>
 
 </main>
 
@@ -141,7 +120,7 @@ hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
 <script src="/js/check-for-tex.js" defer></script>
   
   <hr/>
-  &copy; <a href="https://yfei.page">Fei Ye</a> 2019 | <a href="https://github.com/fyemath">Github</a>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
   
   </footer>
   </body>
