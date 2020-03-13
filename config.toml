@@ -86,3 +86,6 @@ footnotereturnlinkcontents = "↩"
     # [params.author]
     #     en = "Fei Ye"
     #     cn = "叶飞"
+
+[markup.goldmark.renderer]
+  unsafe = true # allows HTML inside your CommonMark content
