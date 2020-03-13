@@ -1,23 +1,5 @@
 [[redirects]]
-    from = "http://yfei.netlify.com/*"
-    to = "http://yfei.page/:splat"
-    status = 301
-    force = true
-
-[[redirects]]
-    from = "http://agfun.netlify.com/*"
-    to = "http://yfei.page/agfun:splat"
-    status = 301
-    force = true
-
-[[redirects]]
-    from = "http://ex4calc.netlify.com/*"
-    to = "http://yfei.page/ex4calc:splat"
-    status = 301
-    force = true
-
-[[redirects]]
-    from = "http://maple4calc.netlify.com/*"
-    to = "http://yfei.page/maple4calc:splat"
+    from = "http://fy-blog.netlify.com/*"
+    to = "http://blog.yfei.page/:splat"
     status = 301
     force = true
