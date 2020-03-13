@@ -64,18 +64,21 @@ img {
 </code></pre></div><h2 id="centering-and-scaling-for-pdf-output">Centering and Scaling for PDF Output</h2>
 <p>For PDF (using TeX) output, to change dimension, first you need create a tex file, say <code>preamble.tex</code>, and add the following into it.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\usepackage</span>{graphicx}
-<span style="color:#75715e">% The following codes are for scaling images to at most 0.5\textwidth and 0.5\textheight globally.
-</span><span style="color:#75715e">% However, it is still possible to overwrite the defaults
-</span><span style="color:#75715e">% using explicit options in \includegraphics[width, height, ...]{}
+<span style="color:#75715e">%The following codes scale images in mainmatter if necessary
+</span><span style="color:#75715e">%It will be overwrite by local setting in \includegraphics[width, height, ...]{}
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\makeatletter</span>
-<span style="color:#66d9ef">\def\maxwidth</span>{<span style="color:#66d9ef">\ifdim\Gin</span>@nat@width&gt;0.5<span style="color:#66d9ef">\textwidth</span> 0.5<span style="color:#66d9ef">\textwidth\else\Gin</span>@nat@width<span style="color:#66d9ef">\fi</span>}
+<span style="color:#66d9ef">\def\maxwidth</span>{<span style="color:#66d9ef">\ifdim\Gin</span>@nat@width&gt;<span style="color:#66d9ef">\textwidth</span> <span style="color:#66d9ef">\textwidth\else\Gin</span>@nat@width<span style="color:#66d9ef">\fi</span>}
 <span style="color:#66d9ef">\def\maxheight</span>{<span style="color:#66d9ef">\ifdim\Gin</span>@nat@height&gt;0.5<span style="color:#66d9ef">\textheight</span> 0.5<span style="color:#66d9ef">\textheight\else\Gin</span>@nat@height<span style="color:#66d9ef">\fi</span>}
 <span style="color:#66d9ef">\makeatother</span>
 <span style="color:#66d9ef">\setkeys</span>{Gin}{width=<span style="color:#66d9ef">\maxwidth</span>,height=<span style="color:#66d9ef">\maxheight</span>,keepaspectratio}
-<span style="color:#75715e">% Set default figure placement to htbp
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">\makeatletter</span>
-<span style="color:#66d9ef">\def\fps</span>@figure{htbp}
-<span style="color:#66d9ef">\makeatothe</span>
+<span style="color:#75715e">%The following codes add max dimension options to includegraphics
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[export]</span>{adjustbox} <span style="color:#75715e">%Needed for max width
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span>{etoolbox} <span style="color:#75715e">%Needed for \pathcmd
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\expandafter\patchcmd\csname</span> Gin@ii<span style="color:#66d9ef">\endcsname</span>
+{<span style="color:#66d9ef">\setkeys</span>{Gin}{#1}}
+{<span style="color:#66d9ef">\setkeys</span>{Gin}{max width=<span style="color:#66d9ef">\textwidth</span>, max height=.5<span style="color:#66d9ef">\textwidth</span>,keepaspectratio,#1}}
+{}
+{}
 </code></pre></div><p>Then add the following to Rmarkdown yaml under the output for pdf.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">includes:
     <span style="color:#66d9ef">in_header</span>: latex/preamble.tex
