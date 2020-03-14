@@ -53,14 +53,14 @@
 </ul>
 <h2 id="for-webpage-creator">For webpage creator</h2>
 <p>Adding Hypothesis to a webpage is easy. You simply need to add the following codes in the head of you html file.</p>
-<pre><code class="language-{html," data-lang="{html,">&lt;script async src=&quot;https://hypothes.is/embed.js&quot;&gt;&lt;/script&gt;
-</code></pre><p>By default, the hypothesis client added an opened sidebar. You may change the default by adding the following codes.</p>
-<pre><code class="language-{html," data-lang="{html,">&lt;script type=&quot;application/json&quot; class=&quot;js-hypothesis-config&quot;&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://hypothes.is/embed.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>By default, the hypothesis client added an opened sidebar. You may change the default by adding the following codes.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/json&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-hypothesis-config&#34;</span>&gt;
   {
-    &quot;openSidebar&quot;: false
+    <span style="color:#e6db74">&#34;openSidebar&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
   }
-&lt;/script&gt;
-</code></pre><p>More <a href="https://h.readthedocs.io/projects/client/en/latest/publishers/config/">configurations for the Hypothesis client</a> are available.</p>
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>More <a href="https://h.readthedocs.io/projects/client/en/latest/publishers/config/">configurations for the Hypothesis client</a> are available.</p>
 <h2 id="for-readers">For readers</h2>
 <p>There are two things that have to be done before you make annotations on any webpage.</p>
 <ol>
@@ -70,13 +70,19 @@
 <li>
 <p>If the webpage is already Hypothesis enabled (a sidebar on the right is available.), then you are ready to annotate. Otherwise, you need to active Hypothesis. This can be done in a few ways.</p>
 <ol>
-<li>If you use Chrome or Brave, you may add the <a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek">Hypothesis extension</a> to your browser. The benefit of this method is that you can even <a href="https://web.hypothes.is/help/annotating-locally-saved-pdfs/">annotate pdf files in Chrome</a>. (Note: <a href="https://github.com/hypothesis/product-backlog/issues/899">Brave need a patch</a> to do so.)</li>
-<li>A browser independent way is to add the following link to bookmark.
-<a class="fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray" href="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();" target="_self">
-<span class="fusion-button-text"><hypothesis-highlight class="annotator-hl">Hypothesis Bookmarklet</hypothesis-highlight>
-</span>
-</a></li>
-<li>Using the proxy of Hypothesis <a href="https://via.hypothes.is/">via.hypothes.is</a>.</li>
+<li>
+<p>If you use Chrome or Brave, you may add the <a href="https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek">Hypothesis extension</a> to your browser. The benefit of this method is that you can even <a href="https://web.hypothes.is/help/annotating-locally-saved-pdfs/">annotate pdf files in Chrome</a>. (Note: <a href="https://github.com/hypothesis/product-backlog/issues/899">Brave need a patch</a> to do so.)</p>
+</li>
+<li>
+<p>A browser independent way is to add the following link to bookmark.</p>
+  <a class="fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray" href="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();" target="_self">
+      <span class="fusion-button-text"><hypothesis-highlight class="annotator-hl">Hypothesis Bookmarklet</hypothesis-highlight>
+      </span>
+  </a>
+</li>
+<li>
+<p>Using the proxy of Hypothesis <a href="https://via.hypothes.is/">via.hypothes.is</a>.</p>
+</li>
 </ol>
 </li>
 </ol>

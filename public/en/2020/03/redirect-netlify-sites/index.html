@@ -48,12 +48,12 @@
 <p>First thing that need to be done is to make sure the domain or the subdomain that you want redirect to exists. If not, you need go to your domain provider to create them.</p>
 <p>Second, in your netlify site, go to domain settings, under <code>Custom Domains</code>, click <code>Add custom domain</code>. In the popup windows enter the domain or subdomain name, click <code>Verify</code> and then <code>Yes, add domain</code>.</p>
 <p>Third, you need to create a <code>_redirects</code> file with the following syntax.</p>
-<pre><code># Redirects from what the browser requests to what we serve
+<pre><code class="language-netlify" data-lang="netlify"># Redirects from what the browser requests to what we serve
 mysite.netlify.com/*  subdomain.mydomain.gTLD/:splat: 301!
 </code></pre><p><strong>This file should be put in the root folder of your <em>netlify site</em>.</strong></p>
 <h2 id="redirect-a-subdirectory-to-a-netlify-site">Redirect a subdirectory to a netlify site</h2>
 <p>If you don&rsquo;t have to subdomains, you may use subdirectories to host multiple netlify sites. In this case, you only need to create <code>_redirects</code> file with the following syntax.</p>
-<pre><code># Redirects from what the browser requests to what we serve
+<pre><code class="language-netlify" data-lang="netlify"># Redirects from what the browser requests to what we serve
 /subdirectory/*  mysite.netlify.com/:splat: 200
 </code></pre><p><strong>This file should be put in the root folder of your <em>personal domain site</em>.</strong></p>
 <p>In this way, the intended domain name will shown in the address bar. For example, if you visit the site through  <code>mysite.netlify.com</code>, you will see one as the domain name. If you visit the site through <code>mydomain.gTLD/subdirectory</code>, you will see this name.</p>

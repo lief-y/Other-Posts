@@ -11,13 +11,13 @@ en/tags:
 
 Creating (static) webpages using markdown is every convenient, for example
 
-```html
+```markdown
 [Queensborough Community College](http://www.qcc.cuny.edu).
 ```
 
 However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example
 
-```
+```html
 <a href="http://www.qcc.cuny.edu" target="_blank">Queensborough Community College</a>.
 ```
 
@@ -25,7 +25,7 @@ When there are many links it will be a little bit painful to create such links u
 
 - We first need to [add jQuery](https://www.w3schools.com/jquery/jquery_get_started.asp) to the inside of the `<head>` section.
 
-```
+```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 ```
 
@@ -43,7 +43,7 @@ When there are many links it will be a little bit painful to create such links u
 
 - We may also add a message after the link to be open in a new window.
 
-```
+```js
 <script>
   	$(document).ready(function() {
   		$( '.main-body a[href^="http"]' )
@@ -55,7 +55,7 @@ When there are many links it will be a little bit painful to create such links u
 
 - We may let the function apply to specific link using keyword.
 
-```
+```js
 <script>
   	$(document).ready(function() {
   		$( '.main-body a[href^="http"]' ).not('a[href*=keywork]').add('a[href*=pdf]')
@@ -69,7 +69,7 @@ When there are many links it will be a little bit painful to create such links u
 
 Kramdown supports it in the following way:
 
-```
+```markdown
 [link](url){:target="_blank"}
 ```
 

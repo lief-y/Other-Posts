@@ -22,13 +22,13 @@ Recently, I learned a cool online annotation tool, [Hypothesis](https://web.hypo
 
 Adding Hypothesis to a webpage is easy. You simply need to add the following codes in the head of you html file.
 
-```{html, echo=F}
+```html
 <script async src="https://hypothes.is/embed.js"></script>
 ```
 
 By default, the hypothesis client added an opened sidebar. You may change the default by adding the following codes.
 
-```{html, echo=F}
+```html
 <script type="application/json" class="js-hypothesis-config">
   {
     "openSidebar": false
@@ -47,10 +47,12 @@ There are two things that have to be done before you make annotations on any web
 2. If the webpage is already Hypothesis enabled (a sidebar on the right is available.), then you are ready to annotate. Otherwise, you need to active Hypothesis. This can be done in a few ways.
    1. If you use Chrome or Brave, you may add the [Hypothesis extension](https://chrome.google.com/webstore/detail/hypothesis-web-pdf-annota/bjfhmglciegochdpefhhlphglcehbmek) to your browser. The benefit of this method is that you can even [annotate pdf files in Chrome](https://web.hypothes.is/help/annotating-locally-saved-pdfs/). (Note: [Brave need a patch](https://github.com/hypothesis/product-backlog/issues/899) to do so.)
    2. A browser independent way is to add the following link to bookmark.
-   <a class="fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray" href="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();" target="_self">
-      <span class="fusion-button-text"><hypothesis-highlight class="annotator-hl">Hypothesis Bookmarklet</hypothesis-highlight>
-      </span>
-   </a>
+
+        <a class="fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray" href="javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:'bookmarklet'};};var d=document,s=d.createElement('script');s.setAttribute('src','https://hypothes.is/embed.js');d.body.appendChild(s)})();" target="_self">
+            <span class="fusion-button-text"><hypothesis-highlight class="annotator-hl">Hypothesis Bookmarklet</hypothesis-highlight>
+            </span>
+        </a>
+
    3. Using the proxy of Hypothesis [via.hypothes.is](https://via.hypothes.is/).
 
 For more information on how to use Hypothesis and how it can do, check the webpage [Hypothesis Tutorials and How-Tos](https://web.hypothes.is/help-categories/tutorials/).

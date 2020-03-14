@@ -43,20 +43,29 @@
 
 <main>
 <h2 id="multiple-blogs-on-one-site1">Multiple Blogs on One Site<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></h2>
-<p>Suppose that you have two categories of blogs. There are two ways to create directories in your website folder
-1.
-<code>--blog1 |--_posts --blog2 |--_post</code>
-2.
-<code>|--_posts |--blog1 |--blog2</code>
-The first approach will automatically assign categories to your posts
-Using the second approach, you will need to manually add <code>category: your_blog_folder_name</code> to <code>Yaml Front Matter</code> in each post.</p>
-<p>In the webpage containing your blogs, add a filter using <code>post.categories contains 'category name'</code> to where it is appropriate. For example,</p>
-<pre><code>---
-layout: default
-title: Blog1
-category: blog1
+<p>Suppose that you have two categories of blogs. There are two ways to create directories in your website folder</p>
+<ol>
+<li>
+<pre><code>--blog1
+    |--_posts
+--blog2
+    |--_post
+</code></pre></li>
+<li>
+<pre><code>|--_posts
+    |--blog1
+    |--blog2
+</code></pre></li>
+</ol>
+<p>The first approach will automatically assign categories to your posts.</p>
+<p>Using the second approach, you will need to manually add <code>category: your_blog_folder_name</code> to <code>Yaml Front Matter</code> in each post.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
+<span style="color:#66d9ef">layout</span>: default
+<span style="color:#66d9ef">title</span>: Blog1
+<span style="color:#66d9ef">category</span>: blog1
 ---
-{% raw %}
+</code></pre></div><p>You also need to modify the default layout template for the category <code>blog1</code> by adding a filter using <code>post.categories contains 'category name'</code> to where it is appropriate. For example,</p>
+<pre><code class="language-liquid" data-lang="liquid">{% raw %}
 {% for post in site.posts %}
   {% if post.categories contains 'blog1' %}
 
@@ -65,7 +74,10 @@ category: blog1
   {% endif %}
 {% endfor %}
 {% endraw %}
-</code></pre><hr>
+</code></pre><p>See Jekyll help document on <a href="https://jekyllrb.com/docs/posts/">Posts</a> for more information on how to modify a template</p>
+<hr>
+<hr>
+<p>Updated on 3/14/2020.</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>

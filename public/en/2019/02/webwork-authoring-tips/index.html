@@ -47,9 +47,9 @@
 <li>
 <p>Original way using <code>TEXT(EV3())</code></p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  TEXT(EV3(<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#39;END_TEXT&#39;</span>));
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">TEXT(EV3(<span style="color:#f92672">&lt;&lt;</span><span style="color:#e6db74">&#39;END_TEXT&#39;</span>));
     The material in this section is collected into a string which is <span style="color:#66d9ef">then</span> passed to the EV3 (evaluation <span style="color:#ae81ff">3</span> ) routine which handles      processing of the sections in curly braces, <span style="color:#66d9ef">then</span> does interpolation, <span style="color:#f92672">and</span> finally processes the LaTeX commands<span style="color:#f92672">.</span>
-  END_TEXT
+END_TEXT
 </code></pre></div><p><strong>Remark:</strong></p>
 <ol>
 <li>
@@ -66,17 +66,17 @@
 <li>
 <p>A more commonly seen method uses <code>BEGIN_TEXT/END_TEXT</code> which will be translated into the construction in the above example by <code>PGtranslator.pm</code>.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  BEGIN_TEXT
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">BEGIN_TEXT
     Find a the sum of <span style="color:#ae81ff">1</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:
     <span style="color:#f92672">\</span>{ans_rule(<span style="color:#ae81ff">20</span>)<span style="color:#f92672">\</span>}
-  END_TEXT
+END_TEXT
 </code></pre></div></li>
 <li>
 <p>Supported by <code>PGML.pl</code>, the usage <code>BEGIN\_PGML/END\_PGML</code> provides a markdown alike formats for text. (For more information see <a href="http://webwork.maa.org/wiki/Introduction_to_PGML">Introduction to PGML</a>.)</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  BEGIN_TEXT
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">BEGIN_TEXT
     If [: x <span style="color:#f92672">=</span> [$a] :], <span style="color:#66d9ef">then</span> the value of [: x<span style="color:#f92672">^</span><span style="color:#ae81ff">2</span> :] is [___________]
-  END_TEXT
+END_TEXT
 </code></pre></div></li>
 </ul>
 <h2 id="hyperlinks">Hyperlinks</h2>
@@ -90,30 +90,30 @@
 to the same folder as where the question pg file is. The option
 <code>TARGET=’\_blank’</code> tells the function to open the file in a new
 windows.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  htmlLink(alias(<span style="color:#e6db74">&#34;example.pdf&#34;</span>), <span style="color:#e6db74">&#34;Click the link to see an example.&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">htmlLink(alias(<span style="color:#e6db74">&#34;example.pdf&#34;</span>), <span style="color:#e6db74">&#34;Click the link to see an example.&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
 </code></pre></div></li>
 <li>
 <p>Link to a webpage address which contains no special characters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  htmlLink( <span style="color:#e6db74">&#34;http://webwork.maa.org/&#34;</span>, <span style="color:#e6db74">&#34;QCC-CUNY&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">htmlLink( <span style="color:#e6db74">&#34;http://webwork.maa.org/&#34;</span>, <span style="color:#e6db74">&#34;QCC-CUNY&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
 </code></pre></div></li>
 <li>
 <p>Link to a webpage using javascript.</p>
 <p>First include the following customized function in the header (before BEGIN_TEXT after <code>loadMacros()</code>).</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  HEADER_TEXT(<span style="color:#f92672">&lt;&lt;</span>EOF);
-  <span style="color:#f92672">&lt;</span>script type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> language<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">&gt;</span>
-  function windowpopup() {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">HEADER_TEXT(<span style="color:#f92672">&lt;&lt;</span>EOF);
+<span style="color:#f92672">&lt;</span>script type<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/javascript&#34;</span> language<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript&#34;</span><span style="color:#f92672">&gt;</span>
+function windowpopup() {
     var url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://webwork.maa.org/&#39;</span>;
     var opt <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;height=625,width=600,location=no,menubar=no,&#34;</span> <span style="color:#f92672">+</span>
-              <span style="color:#e6db74">&#34;status=no,resizable=yes,scrollbars=yes,&#34;</span> <span style="color:#f92672">+</span>
-              <span style="color:#e6db74">&#34;toolbar=no,&#34;</span>;
+            <span style="color:#e6db74">&#34;status=no,resizable=yes,scrollbars=yes,&#34;</span> <span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#34;toolbar=no,&#34;</span>;
     window<span style="color:#f92672">.</span>open(url,<span style="color:#e6db74">&#39;newwindow&#39;</span>,opt)<span style="color:#f92672">.</span>focus();
-  }
-  <span style="color:#e6db74">&lt;/script&gt;</span>
-  EOF
+}
+<span style="color:#e6db74">&lt;/script&gt;</span>
+EOF
 </code></pre></div><p>Then we call the function by</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  htmlLink( <span style="color:#e6db74">&#34;javascript:windowpopup();&#34;</span>, <span style="color:#e6db74">&#34;QCC-CUNY&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">htmlLink( <span style="color:#e6db74">&#34;javascript:windowpopup();&#34;</span>, <span style="color:#e6db74">&#34;QCC-CUNY&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
 </code></pre></div><p>An alternative solution is to move <code>var url = &quot;http://webwork.maa.org/&quot;;</code> from the definition of <code>windowpopup()</code> to <code>htmlLink()</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  htmlLink( <span style="color:#e6db74">&#34;javascript:var url = &#39;http://webwork.maa.org/&#39;;windowpopup();&#34;</span>, <span style="color:#e6db74">&#34;QCC-CUNY&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">htmlLink( <span style="color:#e6db74">&#34;javascript:var url = &#39;http://webwork.maa.org/&#39;;windowpopup();&#34;</span>, <span style="color:#e6db74">&#34;QCC-CUNY&#34;</span>, <span style="color:#e6db74">&#34;TARGET=&#39;_blank&#39;&#34;</span>)
 </code></pre></div><p>For more details, please check the <a href="http://webwork.maa.org/wiki/HtmlLinks#.WrF5GGaZPuQ">MAA webpage on htmlLink</a>.</p>
 </li>
 </ul>
@@ -124,17 +124,15 @@ windows.</p>
 <ul>
 <li>
 <p>In BEGIN_TEXT … END_TEXT, the function should be placed as</p>
-<pre><code>  \{ htmlLink(&quot;link&quot;, &quot;display name&quot;, &quot;option&quot;) \}
-</code></pre>
-</li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#f92672">\</span>{ htmlLink(<span style="color:#e6db74">&#34;link&#34;</span>, <span style="color:#e6db74">&#34;display name&#34;</span>, <span style="color:#e6db74">&#34;option&#34;</span>) <span style="color:#f92672">\</span>}
+</code></pre></div></li>
 </ul>
 <p>There must be a blank space after <code>\{</code> or <code>\}</code>.</p>
 <ul>
 <li>
 <p>In BEGIN_PGML … END_PGML, the function should be placed as</p>
-<pre><code>  [@ htmlLink(&quot;link&quot;, &quot;display name&quot;, &quot;option&quot;) @]*
-</code></pre>
-</li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">[@ htmlLink(<span style="color:#e6db74">&#34;link&#34;</span>, <span style="color:#e6db74">&#34;display name&#34;</span>, <span style="color:#e6db74">&#34;option&#34;</span>) @<span style="color:#960050;background-color:#1e0010">]*</span>
+</code></pre></div></li>
 </ul>
 <p>Here <code>[@ command @]*</code> tells the system to not escape HTML special
 characters.</p>
@@ -143,7 +141,7 @@ characters.</p>
 <p>Use <code>[| protect_underbar() |]</code> whenever underscore appears in a
 string outside of math mode. (See )</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">  htmlLink( protect_underbar(<span style="color:#e6db74">&#34;http://webwork.maa.org/pod/pg_TRUNK/macros/PGbasicmacros.pl.html&#34;</span>), display name<span style="color:#960050;background-color:#1e0010">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">htmlLink( protect_underbar(<span style="color:#e6db74">&#34;http://webwork.maa.org/pod/pg_TRUNK/macros/PGbasicmacros.pl.html&#34;</span>), display name<span style="color:#960050;background-color:#1e0010">&#34;</span>))
 </code></pre></div></li>
 </ul>
 
