@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirect Netlify Sites | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  
+
+  <body class="en">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/en/">Blog</a></li>
+      
+      <li><a href="/en/categories/">Categories</a></li>
+      
+      <li><a href="/en/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Redirect Netlify Sites</span></h1>
+
+<h2 class="author">
+
+    Fei Ye
+
+</h2>
+<h2 class="date">2020/03/13</h2>
+</div>
+
+<main>
+<p>Netlify is a great place to host a website directly from github. If you have multiple repositories and want to publish them under the same domain. There are two way to do it. You may also redirect a subdirectory of your personal site to a netlify site. However, it doesn&rsquo;t seem possible to redirect a netlify site to a subdirectory.</p>
+<h2 id="redirect-netlify-sites-to-domains-or-subdomains">Redirect netlify sites to domains or subdomains</h2>
+<p>If you have a personal domain/subdomains, you can easily redirect a netlify site to your domain or a subdomain. In this way, no matter you visit the netlify subdomain or your personal domain/subdomain, the address of the site will be shown as your personal/subdomain.</p>
+<p>First thing that need to be done is to make sure the domain or the subdomain that you want redirect to exists. If not, you need go to your domain provider to create them.</p>
+<p>Second, in your netlify site, go to domain settings, under <code>Custom Domains</code>, click <code>Add custom domain</code>. In the popup windows enter the domain or subdomain name, click <code>Verify</code> and then <code>Yes, add domain</code>.</p>
+<p>Third, you need to create a <code>_redirects</code> file with the following syntax.</p>
+<pre><code># Redirects from what the browser requests to what we serve
+mysite.netlify.com/*  subdomain.mydomain.gTLD/:splat: 301!
+</code></pre><p><strong>This file should be put in the root folder of your <em>netlify site</em>.</strong></p>
+<h2 id="redirect-a-subdirectory-to-a-netlify-site">Redirect a subdirectory to a netlify site</h2>
+<p>If you don&rsquo;t have to subdomains, you may use subdirectories to host multiple netlify sites. In this case, you only need to create <code>_redirects</code> file with the following syntax.</p>
+<pre><code># Redirects from what the browser requests to what we serve
+/subdirectory/*  mysite.netlify.com/:splat: 200
+</code></pre><p><strong>This file should be put in the root folder of your <em>personal domain site</em>.</strong></p>
+<p>In this way, the intended domain name will shown in the address bar. For example, if you visit the site through  <code>mysite.netlify.com</code>, you will see one as the domain name. If you visit the site through <code>mydomain.gTLD/subdirectory</code>, you will see this name.</p>
+<p>For details on redirect methods, examples and syntax, please check the netlify document <a href="https://docs.netlify.com/routing/redirects/#syntax-for-the-redirects-file">Redirects and rewrites</a>.</p>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+</script>
+<script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    }
+</script>
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
+</script>
+
+<script src="/js/check-for-tex.js" defer></script>
+  
+  <hr/>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

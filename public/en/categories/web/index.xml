@@ -11,6 +11,16 @@
     
     
     <item>
+      <title>Redirect Netlify Sites</title>
+      <link>/en/2020/03/redirect-netlify-sites/</link>
+      <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/03/redirect-netlify-sites/</guid>
+      <description>Netlify is a great place to host a website directly from github. If you have multiple repositories and want to publish them under the same domain. There are two way to do it. You may also redirect a subdirectory of your personal site to a netlify site. However, it doesn&amp;rsquo;t seem possible to redirect a netlify site to a subdirectory.
+Redirect netlify sites to domains or subdomains If you have a personal domain/subdomains, you can easily redirect a netlify site to your domain or a subdomain.</description>
+    </item>
+    
+    <item>
       <title>Annotatable Webpages and Annotate Webpages</title>
       <link>/en/2019/04/annotatable-webpages-and-annotate-webpages/</link>
       <pubDate>Fri, 12 Apr 2019 00:00:00 +0000</pubDate>

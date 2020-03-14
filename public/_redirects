@@ -1,2 +1,5 @@
-# Invisbily proxy to a third party API
-/* https://blog.yfei.com/:splat 200
+# Redirect default Netlify subdomain to primary domain
+https://fy-blog.netlify.com/* https://blog.yfei.page/:splat 301!
+
+# These extra rules are required because HTTPS is not forced
+http://fy-blog.netlify.com/* https://blog.yfei.page/:splat 301!
