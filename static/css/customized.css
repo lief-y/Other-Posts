@@ -1,8 +1,23 @@
-p .md-image:only-child{
+p img:only-child{
     width: auto;
     text-align: inherit;
 }
 
 .twocols{
-    columns: 2;
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-gap: 10px;
+    -moz-column-gap: 10px;
+    -webkit-column-gap: 10px;
+    column-width: 45%;
+}
+/* 
+.twocols img {
+    max-width: 50%;
+} */
+
+
+body {
+    max-width: 1080px;
 }

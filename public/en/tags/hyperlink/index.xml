@@ -18,7 +18,7 @@
       <guid>/en/2019/02/webwork-authoring-tips/</guid>
       <description>WebWork Text Display Languages   Original way using TEXT(EV3())
 Example:
-TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;));The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands.END_TEXTRemark:
+TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;)); The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands. END_TEXT Remark:
   In the example two pg macros were used TEXT() and EV3(). Both macros are defined in PGbasicmacros.</description>
     </item>
     

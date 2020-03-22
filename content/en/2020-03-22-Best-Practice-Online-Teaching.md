@@ -46,13 +46,11 @@ Many teachers teach online using certain types of tools. I currently use a cloud
 
 To use word as a whiteboard, you simply need the drawing feature in it. However, the ribbons and tools shown on the top of windows make the screen look crowd. Instead, we can use the `Focus` mode. You may turn the focus mode on from the `View` menu and click the `Focus` icon in the low right corner of the window.
 
-<div clase="twocols">
-
 ![image-20200322114034255](/img/image-20200322114034255.png)
 
-![image-20200322114109767](/img/image-20200322114109767.png)
+  
 
-</div>
+![image-20200322114109767](/img/image-20200322114109767.png)
 
 - Change the layout
 
@@ -113,7 +111,7 @@ To convert a markdown to other format, go to `File` -- `Export` and select the o
 
 To install Pandoc, please read the document `Install and Use Pandoc` from the `Help` menu or Typora website.
 
-<div clase="twocols">
+<div class="twocols">
 
 ![image-20200322114425018](/img/image-20200322114425018.png)
 
