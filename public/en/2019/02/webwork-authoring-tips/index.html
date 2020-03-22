@@ -6,7 +6,7 @@
     <title>WebWork Authoring Tips | </title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-    
+    <link rel="stylesheet" type="text/css" href="css/customized.css"/>
   </head>
 
   
@@ -123,14 +123,14 @@ EOF
 <p>It depends on which language you use to display text, the function should be placed in different environment.</p>
 <ul>
 <li>
-<p>In BEGIN_TEXT … END_TEXT, the function should be placed as</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#f92672">\</span>{ htmlLink(<span style="color:#e6db74">&#34;link&#34;</span>, <span style="color:#e6db74">&#34;display name&#34;</span>, <span style="color:#e6db74">&#34;option&#34;</span>) <span style="color:#f92672">\</span>}
+<p>In <code>BEGIN\_TEXT … END\_TEXT</code>, the function should be placed as</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#f92672">\</span>{ htmlLink(<span style="color:#e6db74">&#34;link&#34;</span>, <span style="color:#e6db74">&#34;display name&#34;</span>, <span style="color:#e6db74">&#34;option&#34;</span>) s<span style="color:#f92672">\</span>}
 </code></pre></div></li>
 </ul>
 <p>There must be a blank space after <code>\{</code> or <code>\}</code>.</p>
 <ul>
 <li>
-<p>In BEGIN_PGML … END_PGML, the function should be placed as</p>
+<p>In <code>BEGIN\_PGML … END\_PGML</code>, the function should be placed as</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">[@ htmlLink(<span style="color:#e6db74">&#34;link&#34;</span>, <span style="color:#e6db74">&#34;display name&#34;</span>, <span style="color:#e6db74">&#34;option&#34;</span>) @<span style="color:#960050;background-color:#1e0010">]*</span>
 </code></pre></div></li>
 </ul>

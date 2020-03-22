@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Tools and Best Practice for Teaching Math Online</title>
+      <link>/en/2020/03/best-practice-online-teaching/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/03/best-practice-online-teaching/</guid>
+      <description>Many teachers teach online using certain types of tools. I currently use a cloud meeting tool. A key feature for cloud meeting tools is to share contents. For math teacher, we frequently need to write math expression which is normally not so easy. It&amp;rsquo;s kind of painful using word. The learning curve of LaTeX is a little bit too steep. Luckily, for beginners, we have Markdown. Together with a handful editor, we can easily create documents for different purpose.</description>
+    </item>
+    
+    <item>
       <title>Useful Online LaTeX and Markdown Editors</title>
       <link>/en/2018/10/useful-online-latex-and-markdown-editors/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>

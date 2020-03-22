@@ -1,0 +1,8 @@
+p .md-image:only-child{
+    width: auto;
+    text-align: inherit;
+}
+
+.twocols{
+    columns: 2;
+}

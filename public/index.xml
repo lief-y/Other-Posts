@@ -6,10 +6,19 @@
     <description>Recent content in About | 关于 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tools and Best Practice for Teaching Math Online</title>
+      <link>/en/2020/03/best-practice-online-teaching/</link>
+      <pubDate>Sun, 22 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/03/best-practice-online-teaching/</guid>
+      <description>Many teachers teach online using certain types of tools. I currently use a cloud meeting tool. A key feature for cloud meeting tools is to share contents. For math teacher, we frequently need to write math expression which is normally not so easy. It&amp;rsquo;s kind of painful using word. The learning curve of LaTeX is a little bit too steep. Luckily, for beginners, we have Markdown. Together with a handful editor, we can easily create documents for different purpose.</description>
+    </item>
     
     <item>
       <title>Redirect Netlify Sites</title>
@@ -126,7 +135,7 @@ Here is an example.
       <guid>/en/2019/02/webwork-authoring-tips/</guid>
       <description>WebWork Text Display Languages   Original way using TEXT(EV3())
 Example:
-TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;)); The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands. END_TEXT Remark:
+TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;));The material in this section is collected into a string which is then passed to the EV3 (evaluation 3 ) routine which handles processing of the sections in curly braces, then does interpolation, and finally processes the LaTeX commands.END_TEXTRemark:
   In the example two pg macros were used TEXT() and EV3(). Both macros are defined in PGbasicmacros.</description>
     </item>
     
@@ -137,9 +146,9 @@ TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;)); The material in this sect
       
       <guid>/en/2019/02/how-to-create-multiple-pages-in-blog-style-with-jekyll/</guid>
       <description>Multiple Blogs on One Site1 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder
-  --blog1 |--_posts --blog2 |--_post   |--_posts |--blog1 |--blog2   The first approach will automatically assign categories to your posts.
+  --blog1|--_posts--blog2|--_post  |--_posts|--blog1|--blog2  The first approach will automatically assign categories to your posts.
 Using the second approach, you will need to manually add category: your_blog_folder_name to Yaml Front Matter in each post.
---- layout: default title: Blog1 category: blog1 --- You also need to modify the default layout template for the category blog1 by adding a filter using post.</description>
+---layout: defaulttitle: Blog1category: blog1---You also need to modify the default layout template for the category blog1 by adding a filter using post.</description>
     </item>
     
     <item>
@@ -149,8 +158,8 @@ Using the second approach, you will need to manually add category: your_blog_fol
       
       <guid>/en/2019/02/make-links-open-in-new-windows/tab-for-markdown/</guid>
       <description>Using jQuery to Open External Links in New Windows1 Creating (static) webpages using markdown is every convenient, for example
-[Queensborough Community College](http://www.qcc.cuny.edu). However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example
-&amp;lt;a href=&amp;#34;http://www.qcc.cuny.edu&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;Queensborough Community College&amp;lt;/a&amp;gt;. When there are many links it will be a little bit painful to create such links using html in a markdown file.</description>
+[Queensborough Community College](http://www.qcc.cuny.edu).However, left clicking a link by default opens it in the same window. If there are only a few links, one may use html codes to open a link in a new window, for example
+&amp;lt;a href=&amp;#34;http://www.qcc.cuny.edu&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;Queensborough Community College&amp;lt;/a&amp;gt;.When there are many links it will be a little bit painful to create such links using html in a markdown file.</description>
     </item>
     
     <item>
@@ -162,7 +171,7 @@ Using the second approach, you will need to manually add category: your_blog_fol
       <description>Don&amp;rsquo;t install R to the default location. Instead, choose a location such as C:\Program Files\R.
 Verdict: no version difference issue
   Create a .Renviron file to your home directory ~/ using the following function:
-# File will be created if it doesn&amp;#39;t exist file.edit(&amp;#39;~/.Renviron&amp;#39;) Add R_LIBS_USER=&amp;quot;C:/R&amp;quot; to .Renviron. This variable will be the library of R packages. It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</description>
+# File will be created if it doesn&amp;#39;t exist file.edit(&amp;#39;~/.Renviron&amp;#39;)Add R_LIBS_USER=&amp;quot;C:/R&amp;quot; to .Renviron. This variable will be the library of R packages. It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</description>
     </item>
     
     <item>

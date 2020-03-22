@@ -6,7 +6,7 @@
     <title>Tips for RStudio Setup for RMarkdown and More | </title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
-    
+    <link rel="stylesheet" type="text/css" href="css/customized.css"/>
   </head>
 
   
@@ -49,9 +49,9 @@
 </li>
 <li>
 <p>Create a <code>.Renviron</code> file to your home directory <code>~/</code> using the following function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># File will be created if it doesn&#39;t exist</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># File will be created if it doesn&#39;t exist</span>
 <span style="color:#a6e22e">file.edit</span>(<span style="color:#e6db74">&#39;~/.Renviron&#39;</span>)
-</code></pre></div><p>Add   <code>R_LIBS_USER=&quot;C:/R&quot;</code> to <code>.Renviron</code>. This variable will be the library of R packages.
+</code></pre></div><p>Add   <code>R_LIBS_USER=&quot;C:/R&quot;</code> to <code>.Renviron</code>. This variable will be the library of R packages. 
 It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</p>
 <p>Remember to restart RStudio before you install new packages to this folder.</p>
 </li>
