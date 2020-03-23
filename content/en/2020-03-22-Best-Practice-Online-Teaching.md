@@ -16,7 +16,9 @@ Many teachers teach online using certain types of tools. I currently use a cloud
 
 - **Hardware:** Graphic tablet.
 
-  Any type of graphic tablet should work, I am using XP Pen.
+  Any type of graphic tablet should work, I am using XP Pen. You may set up the functions for buttons on the pen after you installed the XP Pen driver.
+
+  <img src="/img/image-20200323112244570.png" alt="image-20200323112244570" style="zoom:50%;" />
 
 - **Software:** Most cloud meeting tools have built-in whiteboard which can be used to show your handwriting. However, you may find them not very flexible. Here are some applications that I am using and would like to recommend to you.
 
@@ -47,8 +49,6 @@ Many teachers teach online using certain types of tools. I currently use a cloud
 To use word as a whiteboard, you simply need the drawing feature in it. However, the ribbons and tools shown on the top of windows make the screen look crowd. Instead, we can use the `Focus` mode. You may turn the focus mode on from the `View` menu and click the `Focus` icon in the low right corner of the window.
 
 ![image-20200322114034255](/img/image-20200322114034255.png)
-
-  
 
 ![image-20200322114109767](/img/image-20200322114109767.png)
 
