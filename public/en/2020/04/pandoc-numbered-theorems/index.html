@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Numbered Theorem Environments Using Pandoc | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/customized.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="/js/thm-numbering.js"></script>
+  </head>
+
+  
+
+  <body class="en">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/en/">Blog</a></li>
+      
+      <li><a href="/en/categories/">Categories</a></li>
+      
+      <li><a href="/en/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Create Numbered Theorem Environments Using Pandoc</span></h1>
+
+<h2 class="author">
+
+    Fei Ye
+
+</h2>
+<h2 class="date">2020/04/24</h2>
+</div>
+
+<main>
+<p>When writing a research paper in a single html page, we can use <a href="https://pandoc.org/MANUAL.html#divs-and-spans">Pandoc’s fenced Div blocks</a> to create theorem environments. Using the css pseudo element <code>::before</code> and <code>counter</code> property, we can add theorem name, number, and title to the theorem environment. Here is an example.</p>
+<p>Suppose we have the theorem.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
+::: {.thm title=&#34;(Fundamental Theorem of Algebra)&#34; id=&#34;thm:FTA&#34;}
+Let $p(x)$ be a polynomial of degree $n&gt;0$ with complex coefficients. Then $p(x)$ has exactly $n$ linear factors over the complex number field.
+$$p(x)=a\left(x-{c}_{1}\right)\left(x-{c}_{2}\right)…\left(x-{c}_{n}\right)$$
+where ${c}_{1},{c}_{2},…,{c}_{n}$ are complex numbers and $a$ is the leading coefficient.
+:::
+
+</code></pre></div><p>Then the following css will added theorem name, number and title before the content of the theorem.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
+<span style="color:#f92672">body</span> {
+    <span style="color:#66d9ef">counter-reset</span>: thmnumber;
+}
+.<span style="color:#a6e22e">thm</span> {
+    <span style="color:#66d9ef">counter-increment</span>: thmnumber;
+}
+.<span style="color:#a6e22e">thm</span>::<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;Theorem &#34;</span> counter(thmnumber) <span style="color:#e6db74">&#34; &#34;</span> attr(name);
+}
+
+</code></pre></div><p>To add the section number to the theorem number, we can define a section counter similarly and add to the content of <code>.thm::before</code>.</p>
+<p>Because the <code>counter</code> value can only be used by the <code>content</code> property, using the counter to create the theorem number will not help cross-referencing. Instead, within a single html file, we can use <a href="https://jquery.com/">jQuery</a> to create numbered theorems and make cross-reference available.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span> () {
+    <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.thm&#39;</span>).<span style="color:#a6e22e">each</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">index</span>,<span style="color:#a6e22e">value</span>) {
+        <span style="color:#a6e22e">thmnumber</span><span style="color:#f92672">=</span><span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+        <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;number&#39;</span>, <span style="color:#a6e22e">thmnumber</span>);
+        <span style="color:#a6e22e">thmid</span><span style="color:#f92672">=</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;id&#39;</span>);
+        <span style="color:#a6e22e">thmtitle</span><span style="color:#f92672">=</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;title&#39;</span>);
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">thmtitle</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>) {
+            <span style="color:#a6e22e">thmtitle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>;
+        };
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">thmid</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>) {
+            <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">prepend</span>(<span style="color:#e6db74">&#39;&lt;span&gt;&lt;strong&gt;&#39;</span><span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#39;Theorem &#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">thmnumber</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">thmtitle</span> <span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#39;&lt;/strong&gt;&lt;/span&gt;&#39;</span>);
+        }
+        <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">prepend</span>(<span style="color:#e6db74">&#39;&lt;span id=&#34;&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">thmid</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;&#34;&gt;&lt;strong&gt;&#39;</span><span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#39;Theorem &#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">thmnumber</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">thmtitle</span> <span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#39;&lt;/strong&gt;&lt;/span&gt;&#39;</span>);
+        }
+    });
+})
+</code></pre></div><p>The following are examples.</p>
+<div class="thm" title="(Fundamental Theorem of Algebra)" id="thm:FTA">
+Let $p(x)$ be a polynomial of degree $n>0$ with complex coefficients. Then $p(x)$ has exactly $n$ linear factors over the complex number field.
+$$p(x)=a\left(x-{c}_{1}\right)\left(x-{c}_{2}\right)…\left(x-{c}_{n}\right)$$
+where ${c}_{1},{c}_{2},…,{c}_{n}$ are complex numbers and $a$ is the leading coefficient.
+</div>
+<div class="thm" title="(Pythagorean Theorem)" id="thm:pyThm">
+In a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+</script>
+<script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    }
+</script>
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
+</script>
+
+<script src="/js/check-for-tex.js" defer></script>
+  
+  <hr/>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

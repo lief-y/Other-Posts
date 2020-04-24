@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on </title>
+    <link>/en/tags/css/</link>
+    <description>Recent content in css on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/en/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create Numbered Theorem Environments Using Pandoc</title>
+      <link>/en/2020/04/pandoc-numbered-theorems/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/04/pandoc-numbered-theorems/</guid>
+      <description>When writing a research paper in a single html page, we can use Pandoc’s fenced Div blocks to create theorem environments. Using the css pseudo element ::before and counter property, we can add theorem name, number, and title to the theorem environment. Here is an example.
+Suppose we have the theorem.
+::: {.thm title=&amp;#34;(Fundamental Theorem of Algebra)&amp;#34; id=&amp;#34;thm:FTA&amp;#34;}Let $p(x)$ be a polynomial of degree $n&amp;gt;0$ with complex coefficients. Then $p(x)$ has exactly $n$ linear factors over the complex number field.</description>
+    </item>
+    
+  </channel>
+</rss>

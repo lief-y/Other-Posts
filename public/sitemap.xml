@@ -4,22 +4,27 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/2020/04/pandoc-numbered-theorems/</loc>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/en/categories/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/en/tags/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/en/</loc>
-    <lastmod>2020-03-22T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -147,6 +152,10 @@
   </url>
   
   <url>
+    <loc>/en/tags/css/</loc>
+  </url>
+  
+  <url>
     <loc>/en/tags/fonts/</loc>
   </url>
   
@@ -191,6 +200,10 @@
   </url>
   
   <url>
+    <loc>/en/categories/markdown/</loc>
+  </url>
+  
+  <url>
     <loc>/en/tags/mathematics/</loc>
   </url>
   
@@ -204,6 +217,14 @@
   
   <url>
     <loc>/en/tags/online-teaching/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/tags/pandoc/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/categories/pandoc/</loc>
   </url>
   
   <url>
