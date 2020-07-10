@@ -1,4 +1,4 @@
 ---
-title: "Learning by Doing"
+title: "Learn by Doing"
 ---
 
