@@ -9,7 +9,7 @@ en/tags:
 
 WeBWorK uses of the language perl with extra packages to author questions.
 
-A parameter/variable in Perl starts with "$", for example "$a", "$integer", "$var".
+A parameter/variable in Perl starts with "\$", for example `$a`, `$integer`, `$var`.
 
 Supported by the `PGrandom` package, in WeBWork random variables can be defined.
 
