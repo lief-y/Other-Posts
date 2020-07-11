@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Learning by Doing on </title>
+    <title>Learn by Doing on </title>
     <link>/en/</link>
-    <description>Recent content in Learning by Doing on </description>
+    <description>Recent content in Learn by Doing on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/en/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Randomized Parameters in WebWork</title>
+      <link>/en/2020/07/randomized-parameters-in-webwork/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/07/randomized-parameters-in-webwork/</guid>
+      <description>WeBWorK uses of the language perl with extra packages to author questions.
+A parameter/variable in Perl starts with &amp;ldquo;$&amp;rdquo;, for example $a, $integer, $var.
+Supported by the PGrandom package, in WeBWork random variables can be defined.
+One random number   Generates a random number between the initial and final values in steps of increment.
+random($initial, $final, $increment) If the increment is 0 or less, then random chooses a floating point number between $initial and $final using a small increment.</description>
+    </item>
+    
+    <item>
+      <title>Mathematics Recordings</title>
+      <link>/en/2020/06/math-recordings/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/06/math-recordings/</guid>
+      <description>The post is simply for collecting recordings from famed mathematicians. The list will be kept updated.
+  Prof. Jean Dieudonné: &amp;ldquo;The Historical Development of Algebraic Geometry&amp;rdquo;
+  Serre: Finite groups, Yesterday and Today
+  &amp;ldquo;How to write mathematics badly&amp;rdquo; by Jean-Pierre Serre
+  John Conway: Surreal Numbers - How playing games led to more numbers than anybody ever thought of
+  Differential Topology | Lectures by John W.</description>
+    </item>
     
     <item>
       <title>Create Numbered Theorem Environments Using Pandoc</title>

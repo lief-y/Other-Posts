@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Randomized Parameters in WebWork | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/customized.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="/js/thm-numbering.js"></script>
+  </head>
+
+  
+
+  <body class="en">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/en/">Blog</a></li>
+      
+      <li><a href="/en/categories/">Categories</a></li>
+      
+      <li><a href="/en/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Randomized Parameters in WebWork</span></h1>
+
+<h2 class="author">
+
+    Fei Ye
+
+</h2>
+<h2 class="date">2020/07/10</h2>
+</div>
+
+<main>
+<p>WeBWorK uses of the language perl with extra packages to author questions.</p>
+<p>A parameter/variable in Perl starts with &ldquo;$&rdquo;, for example <code>$a</code>, <code>$integer</code>, <code>$var</code>.</p>
+<p>Supported by the <code>PGrandom</code> package, in WeBWork random variables can be defined.</p>
+<h2 id="one-random-number">One random number</h2>
+<ul>
+<li>
+<p>Generates a random number between the initial and final values in steps of increment.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">random($initial, $final, $increment)
+</code></pre></div><p>If the increment is 0 or less, then random chooses a floating point number between <code>$initial</code> and <code>$final</code> using a small increment.<code>$increment</code> defaults to 1, if it is not supplied as an argument.</p>
+<p>Example: <code>$m=random(-2, 20, 3);</code> generates a number among -2, 1, 4, &hellip;, 19 and stores it in the variable <code>$m</code>. Because the step is 3.</p>
+</li>
+<li>
+<p>Generates a random number between 0 and $final.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">rand($final)
+</code></pre></div><p><code>$final</code> defaults to 1 if that argument is omitted.</p>
+<p>Example: <code>$r=rand(1);</code> generates a number between 0 and 1 and store it in the variable <code>$r</code>.</p>
+</li>
+<li>
+<p>Generate a nonzero random number between the initial and final values.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">non_zero_random($initial,$final);
+</code></pre></div><p>Example: $coef = non_zero_random(2,7);<code>generates a nonzero integer between 2 and 7 and stores it in the variable</code>$coef`.</p>
+</li>
+</ul>
+<h2 id="two-or-more-different-random-numbers">Two or more different random numbers</h2>
+<ul>
+<li>
+<p>Generate two or more different random numbers</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#66d9ef">do</span> { $new<span style="color:#f92672">=</span>random($initial, $final); } <span style="color:#66d9ef">until</span> ($new <span style="color:#f92672">!=</span> $old);
+</code></pre></div><p>$old is a predefined random number.</p>
+<p>Example: <code>do { $new=random(1, 6); } until ($new != 3);</code> generates a number between 1 and 6 but not equal to 3 and store it in the variable <code>$new</code>.</p>
+</li>
+<li>
+<p>Generate a third different random number number</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#66d9ef">do</span> { $third<span style="color:#f92672">=</span>random($initial, $final); } <span style="color:#66d9ef">until</span> (($third <span style="color:#f92672">!=</span> $first) <span style="color:#f92672">and</span> ($third <span style="color:#f92672">!=</span> $second));
+</code></pre></div><p><code>$first</code> and <code>second</code> are predefined random numbers.</p>
+<p>Example: <code>do { $third=random(1, 6); } until (($third != 3) and ($third != 5);</code> generates a number between 1 and 6 but not equal to 3 and 5, and store it in the variable <code>$third</code>.</p>
+</li>
+</ul>
+<h2 id="random-variables">Random variables</h2>
+<ul>
+<li>
+<p>Generate one random variable.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">$var <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable);
+Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>are($var<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span>);
+</code></pre></div><p>In order to use the variable <code>$var</code> in formula, the second line is necessary.</p>
+</li>
+<li>
+<p>Generate two different random variables</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">$vary <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable);
+<span style="color:#66d9ef">do</span> {$vary <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable)} <span style="color:#66d9ef">until</span> ($vary <span style="color:#f92672">!=</span> $varx);
+Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>add($vary<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span>);
+</code></pre></div><p><code>$varx</code> is a predefined variable. Note that <code>add()</code> should be used for extra variables.</p>
+<p>Example: The following codes will generate two different variables <code>$varx</code> and <code>$vary</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">$varx <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable);
+Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>are($vars<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span>);
+<span style="color:#66d9ef">do</span> {$vary <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable)} <span style="color:#66d9ef">until</span> ($vary <span style="color:#f92672">!=</span> $varx);
+Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>add($vary<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span>);
+</code></pre></div></li>
+</ul>
+<h2 id="a-random-element-from-a-list">A random element from a list</h2>
+<ul>
+<li>
+<p>Randomizing from a list</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">list_random($x1, $x2,<span style="color:#f92672">...</span>,$xn);
+</code></pre></div><p>The element <code>$xi</code> can be a number, a letter or an expression.</p>
+<p>Example: <code>$Days = list_random(28, 29, 30, 31)</code> randomly assigns a number from the list to the variable <code>$Days</code>.</p>
+</li>
+<li>
+<p>Randomizing from an array</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">@array<span style="color:#f92672">=</span>($elem1, $elem2, <span style="color:#f92672">...</span>, $elemn);
+$arrayLength<span style="color:#f92672">=</span>scalar(@array);
+$randIndex<span style="color:#f92672">=</span>random(<span style="color:#ae81ff">0</span>,$arrayLength);
+$var<span style="color:#f92672">=</span>$array[$randIndex];
+</code></pre></div><p>Example: Randomly assigns a number or the letter $x$ from the list to the variable <code>$Days</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">@array<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>);
+$arrayLength<span style="color:#f92672">=</span>scalar(@array);
+$randIndex<span style="color:#f92672">=</span>random(<span style="color:#ae81ff">0</span>,$arrayLength);
+$Days<span style="color:#f92672">=</span>$array[$randIndex];
+</code></pre></div></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://webwork.maa.org/wiki/Authors">https://webwork.maa.org/wiki/Authors</a></li>
+<li><a href="https://www.uleth.ca/sites/default/files/2017/09/problemgenerationwithwebwork.pdf">https://www.uleth.ca/sites/default/files/2017/09/problemgenerationwithwebwork.pdf</a></li>
+<li><a href="https://webwork.maa.org/moodle/mod/forum/discuss.php?d=2964">https://webwork.maa.org/moodle/mod/forum/discuss.php?d=2964</a></li>
+<li><a href="https://webwork.maa.org/mediawiki_new/images/a/ab/WeBWorK_Problem_Authoring_Tutorial.pdf">https://webwork.maa.org/mediawiki_new/images/a/ab/WeBWorK_Problem_Authoring_Tutorial.pdf</a></li>
+</ul>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
+</script>
+<script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    }
+</script>
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
+</script>
+
+<script src="/js/check-for-tex.js" defer></script>
+  
+  <hr/>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

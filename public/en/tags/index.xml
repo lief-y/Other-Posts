@@ -6,7 +6,7 @@
     <description>Recent content in En/Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -147,6 +147,15 @@
     </item>
     
     <item>
+      <title>Math</title>
+      <link>/en/tags/math/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mathematics</title>
       <link>/en/tags/mathematics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -188,6 +197,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/en/tags/pandoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PGrandom</title>
+      <link>/en/tags/pgrandom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/tags/pgrandom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recordings</title>
+      <link>/en/tags/recordings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/en/tags/recordings/</guid>
       <description></description>
     </item>
     

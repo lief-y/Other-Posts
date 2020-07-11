@@ -11,6 +11,19 @@
     
     
     <item>
+      <title>Randomized Parameters in WebWork</title>
+      <link>/en/2020/07/randomized-parameters-in-webwork/</link>
+      <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/07/randomized-parameters-in-webwork/</guid>
+      <description>WeBWorK uses of the language perl with extra packages to author questions.
+A parameter/variable in Perl starts with &amp;ldquo;$&amp;rdquo;, for example $a, $integer, $var.
+Supported by the PGrandom package, in WeBWork random variables can be defined.
+One random number   Generates a random number between the initial and final values in steps of increment.
+random($initial, $final, $increment) If the increment is 0 or less, then random chooses a floating point number between $initial and $final using a small increment.</description>
+    </item>
+    
+    <item>
       <title>WebWork Authoring Tips</title>
       <link>/en/2019/02/webwork-authoring-tips/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>

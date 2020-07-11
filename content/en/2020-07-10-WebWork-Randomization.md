@@ -124,3 +124,10 @@ Supported by the `PGrandom` package, in WeBWork random variables can be defined.
   $randIndex=random(0,$arrayLength);
   $Days=$array[$randIndex];
   ```
+
+## References
+
+- <https://webwork.maa.org/wiki/Authors>
+- <https://www.uleth.ca/sites/default/files/2017/09/problemgenerationwithwebwork.pdf>
+- <https://webwork.maa.org/moodle/mod/forum/discuss.php?d=2964>
+- <https://webwork.maa.org/mediawiki_new/images/a/ab/WeBWorK_Problem_Authoring_Tutorial.pdf>

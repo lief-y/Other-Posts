@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Videos on </title>
+    <link>/en/categories/videos/</link>
+    <description>Recent content in Videos on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/en/categories/videos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mathematics Recordings</title>
+      <link>/en/2020/06/math-recordings/</link>
+      <pubDate>Wed, 24 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2020/06/math-recordings/</guid>
+      <description>The post is simply for collecting recordings from famed mathematicians. The list will be kept updated.
+  Prof. Jean Dieudonné: &amp;ldquo;The Historical Development of Algebraic Geometry&amp;rdquo;
+  Serre: Finite groups, Yesterday and Today
+  &amp;ldquo;How to write mathematics badly&amp;rdquo; by Jean-Pierre Serre
+  John Conway: Surreal Numbers - How playing games led to more numbers than anybody ever thought of
+  Differential Topology | Lectures by John W.</description>
+    </item>
+    
+  </channel>
+</rss>
