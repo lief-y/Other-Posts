@@ -67,6 +67,8 @@ Supported by the `PGrandom` package, in WeBWork random variables can be defined.
 
 ## Random variables
 
+To generate a random variable, we can use the `RandomVariableName` function supported by the package `PCCmacros.pl`.
+
 - Generate one random variable.
 
   ```perl
