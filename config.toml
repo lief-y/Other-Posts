@@ -9,6 +9,11 @@ disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
+
+highlight = true
+highlightjsTheme = "Brown Paper"
+highlightLanguages = ["r","yaml","toml","tex","markdown","perl"]
+
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [taxonomies]

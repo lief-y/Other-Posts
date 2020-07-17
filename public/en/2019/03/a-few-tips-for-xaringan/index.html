@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="/css/customized.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="/js/thm-numbering.js"></script>
+
+<link rel="stylesheet" href="/highlight/styles/school-book.css">
+<script src="/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
   </head>
 
   
@@ -48,27 +52,27 @@
 <p>When using <a href="https://slides.yihui.name/xaringan/">Xaringan</a> to create slides, one may include a custom.css or use the <a href="https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html">xaringanthemer</a> package to change styles in whole or by part.</p>
 <p>Recently, I found <a href="https://stackoverflow.com/questions/52656548/xaringan-changing-code-background-for-specific-chunks">another trick</a> that allow you make changes to styles within your rmarkdown file. It&rsquo;s very simple. You simply only need to add a <a href="https://www.w3schools.com/css/">CSS</a> code chunk<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> at the beginning of your content.</p>
 <p>Here is an example.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">```{css, echo=F}
-.remark-slide table, .remark-slide table thead th {
-    border-top: 0px;
-    border-bottom: 0px;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#960050;background-color:#1e0010">```</span>{<span style="color:#960050;background-color:#1e0010">css,</span> <span style="color:#960050;background-color:#1e0010">echo=F</span>}
+.<span style="color:#a6e22e">remark-slide</span> <span style="color:#f92672">table</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">remark-slide</span> <span style="color:#f92672">table</span> <span style="color:#f92672">thead</span> <span style="color:#f92672">th</span> {
+    <span style="color:#66d9ef">border-top</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
 }
-.remark-slide thead, .remark-slide tr:nth-child(even){
-    background-color: white;
+.<span style="color:#a6e22e">remark-slide</span> <span style="color:#f92672">thead</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">remark-slide</span> <span style="color:#f92672">tr</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">even</span><span style="color:#f92672">)</span>{
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
 }
-table{
-    border-collapse: collapse;
+<span style="color:#f92672">table</span>{
+    <span style="color:#66d9ef">border-collapse</span>: <span style="color:#66d9ef">collapse</span>;
 }
-.remark-slide thead:empty {
-    display: none;
+.<span style="color:#a6e22e">remark-slide</span> <span style="color:#f92672">thead</span>:<span style="color:#a6e22e">empty</span> {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
 }
-```
+<span style="color:#960050;background-color:#1e0010">```</span>
 </code></pre></div><p>With the above code, as you can see, the background color, borders, and empty header in tables will be removed.</p>
 <h2 id="identify-html-tags-for-xaringan">Identify html Tags for Xaringan</h2>
 <p>To change the style of a html tag in Xaringan, we have to know the tag name. The tag name can be found in the source of the html file. One easy way to check the source of a webpage is to <code>inspect</code> the page. In Google Chrome, right-clicking the part you saw on the webpage and then clicking <code>inspect</code> will lead you to the source code.</p>
 <h2 id="define-tex-macros">Define TeX Macros</h2>
 <p>Similarly, one may <a href="http://docs.mathjax.org/en/latest/tex.html#defining-tex-macros">define customized tex macros for MathJax</a> at the beginning the content. For example, to define <code>\RR</code> for the blackboard bold $\mathbb{R}$, one may add the following lines in somewhere before the first time you use the macro <code>\RR</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">$$\newcommand{\RR}{\mathbb{R}}$$
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#e6db74">$$</span>\newcommand{\RR}{\mathbb{R}}<span style="color:#e6db74">$$</span>
 </code></pre></div><h2 id="use-mathjax-native-math-delimiters-in-kableextra">Use MathJax Native Math Delimiters in KableExtra</h2>
 <p>When using Xaringan, the math delimiter &lsquo;$&rsquo; &lsquo;$&rsquo; will be translated in to &lsquo;(&rsquo; &lsquo;)'. As part of webpage content, it will be rendered properly by MathJax. However, when using math with KableExtra, the native math delimiter &lsquo;\(&rsquo; &lsquo;\)&rsquo; should be used. Otherwise, there will be an extra pair of single quotations. Here is an example <a href="https://github.com/yihui/xaringan/issues/94">https://github.com/yihui/xaringan/issues/94</a>.</p>
 <section class="footnotes" role="doc-endnotes">

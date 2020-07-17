@@ -11,25 +11,25 @@ After using LaTeX for a long time, you might be bored for default fonts and woul
 
 ## Where to install
 
-To make the fonts installation independent to distribution of TeXLive from different years, fonts should go into the local TEXMF-tree.  If your TeXLive installation is not heavily customized, you will find a folder named `texmf-local ` under the `texlive` folder.  Otherwise, you can find its location with the command 
+To make the fonts installation independent to distribution of TeXLive from different years, fonts should go into the local TEXMF-tree.  If your TeXLive installation is not heavily customized, you will find a folder named `texmf-local ` under the `texlive` folder.  Otherwise, you can find its location with the command
 
-```tex
+```bash
 kpsewhich -expand-var='$TEXMFLOCAL'
 ```
 
-In the following, `texmf-local` will be used for this location.  To install the font, you may copy these subdirectories in your font folder to TEXMFLOCAL. 
+In the following, `texmf-local` will be used for this location.  To install the font, you may copy these subdirectories in your font folder to TEXMFLOCAL.
 
 ## Registering the font map file
 
 The map file `fontname.map` must be registered for use with dvips, pdftex, xdvi. To register a map, you may use the command
 
-```tex
+```bash
 updmap-sys --enable Map=fontname.map
 ```
 
 If your system is Linux or MacOX, use the following command
 
-```tex
+```bash
 sudo updmap-sys --enable Map=fontname.map
 ```
 
@@ -41,7 +41,7 @@ After creating the `updmap.cfg` file, you may need to run `updmap-sys`.
 
 Once you have done with the first two steps, in the command line, run the following command to refresh the file-name database so that the TeX engines will find your fonts.
 
-```tex
+```bash
 mktexlsr
 ```
 

@@ -27,7 +27,7 @@ For more options for bookdown, you may run the following command `getNamespaceEx
 
 One remark has to be made is that by default `distill_article` assigns the vale `TRUE` to `knitr_options$opts_chunk$echo`. To use the theorem environment provided by `bookdown`, one may add the following code chunk right after the yaml header.
 
-````r
+````markdown
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```

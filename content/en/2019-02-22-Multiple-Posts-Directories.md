@@ -12,7 +12,7 @@ en/tags:
 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder
 
 1.  
-    ```
+    ```text
     --blog1
         |--_posts
     --blog2
@@ -20,7 +20,7 @@ Suppose that you have two categories of blogs. There are two ways to create dire
     ```
 
 2.  
-    ```
+    ```text
     |--_posts
         |--blog1
         |--blog2
@@ -40,7 +40,7 @@ category: blog1
 
 You also need to modify the default layout template for the category `blog1` by adding a filter using `post.categories contains 'category name'` to where it is appropriate. For example,
 
-```liquid
+```text
 {% raw %}
 {% for post in site.posts %}
   {% if post.categories contains 'blog1' %}

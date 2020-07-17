@@ -16,7 +16,7 @@ Recently, I found [another trick](https://stackoverflow.com/questions/52656548/x
 
 Here is an example.
 
-````r
+````css
 ```{css, echo=F}
 .remark-slide table, .remark-slide table thead th {
     border-top: 0px;
@@ -44,7 +44,7 @@ To change the style of a html tag in Xaringan, we have to know the tag name. The
 
 Similarly, one may [define customized tex macros for MathJax](http://docs.mathjax.org/en/latest/tex.html#defining-tex-macros) at the beginning the content. For example, to define `\RR` for the blackboard bold $\mathbb{R}$, one may add the following lines in somewhere before the first time you use the macro `\RR`.
 
-```markdown
+```tex
 $$\newcommand{\RR}{\mathbb{R}}$$
 ```
 

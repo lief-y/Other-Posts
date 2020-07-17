@@ -12,6 +12,14 @@ p img:only-child{
     -webkit-column-gap: 10px;
     column-width: 45%;
 }
+
+code {
+    background: linear-gradient(90deg,#00ff80,#2ee5c6);
+}
+
+pre {
+    background-color: lightcyan;
+}
 /* 
 .twocols img {
     max-width: 50%;

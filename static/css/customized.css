@@ -14,12 +14,14 @@ p img:only-child{
 }
 
 code {
-    background: linear-gradient(90deg,#00ff80,#2ee5c6);
+    background: #b6f5f5;
 }
 
-pre {
-    background-color: lightcyan;
-}
+/* pre {
+    background-color: rgb(237, 240, 203);
+    /* background-color: lightcyan; */
+} */
+
 /* 
 .twocols img {
     max-width: 50%;

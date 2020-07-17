@@ -12,11 +12,13 @@ en/tags:
   Verdict: no version difference issue
 
 - Create a `.Renviron` file to your home directory `~/` using the following function:
+  
   ```r
   # File will be created if it doesn't exist
   file.edit('~/.Renviron')
   ```
-  Add   `R_LIBS_USER="C:/R"` to `.Renviron`. This variable will be the library of R packages. 
+
+  Add   `R_LIBS_USER="C:/R"` to `.Renviron`. This variable will be the library of R packages.
   It is extremely useful if you are using a computer with limited rights and anti-virus softwares.
 
   Remember to restart RStudio before you install new packages to this folder.
@@ -26,6 +28,7 @@ en/tags:
   ```r
   file.edit('~/.Rprofile')
   ```
+  
   Add `options(servr.daemon = TRUE)` to the file so that `Infinite Moon Reader` addin won't lock `R` process.
 
 - Using RStudio with VS Code for infinite moon
