@@ -14,7 +14,11 @@ p img:only-child{
 }
 
 code {
-    background: linear-gradient(90deg,#ff6600,#e52ed6);
+    background: linear-gradient(90deg,#00ff80,#2ee5c6);
+}
+
+pre {
+    background-color: lightcyan;
 }
 /* 
 .twocols img {

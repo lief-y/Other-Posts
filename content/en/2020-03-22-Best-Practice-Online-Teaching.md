@@ -16,9 +16,9 @@ Many teachers teach online using certain types of tools. I currently use a cloud
 
 - **Hardware:** Graphic tablet.
 
-  Any type of graphic tablet should work, I am using XP Pen. You may set up the functions for buttons on the pen after you installed the XP Pen driver.
+  Any type of graphic tablet should work. ~~, I am using XP Pen. You may set up the functions for buttons on the pen after you installed the XP Pen driver.~~ <!-- <img src="/img/image-20200323112244570.png" alt="image-20200323112244570" style="zoom:50%;" /> -->
 
-  <img src="/img/image-20200323112244570.png" alt="image-20200323112244570" style="zoom:50%;" />
+  **Update on 07/17/2020:** *The quality and service of XP Pen are really bad. One drop, the tablet is dead. Purchased another one, never received and the company refused to find it or refund for it. No longer recommended. Ordered another one Huion HS611.*
 
 - **Software:** Most cloud meeting tools have built-in whiteboard which can be used to show your handwriting. However, you may find them not very flexible. Here are some applications that I am using and would like to recommend to you.
 
