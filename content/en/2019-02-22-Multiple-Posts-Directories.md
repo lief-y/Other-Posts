@@ -40,7 +40,7 @@ category: blog1
 
 You also need to modify the default layout template for the category `blog1` by adding a filter using `post.categories contains 'category name'` to where it is appropriate. For example,
 
-```text
+```liquid
 {% raw %}
 {% for post in site.posts %}
   {% if post.categories contains 'blog1' %}

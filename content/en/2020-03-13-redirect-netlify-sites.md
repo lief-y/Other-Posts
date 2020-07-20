@@ -23,7 +23,7 @@ Second, in your netlify site, go to domain settings, under `Custom Domains`, cli
 
 Third, you need to create a `_redirects` file with the following syntax.
 
-```netlify
+```bash
 # Redirects from what the browser requests to what we serve
 mysite.netlify.com/*  subdomain.mydomain.gTLD/:splat: 301!
 ```
@@ -34,7 +34,7 @@ mysite.netlify.com/*  subdomain.mydomain.gTLD/:splat: 301!
 
 If you don't have to subdomains, you may use subdirectories to host multiple netlify sites. In this case, you only need to create `_redirects` file with the following syntax.
 
-```netlify
+```bash
 # Redirects from what the browser requests to what we serve
 /subdirectory/*  mysite.netlify.com/:splat: 200
 ```

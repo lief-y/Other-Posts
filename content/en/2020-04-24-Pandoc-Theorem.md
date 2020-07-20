@@ -15,20 +15,17 @@ When writing a research paper in a single html page, we can use [Pandoc’s fenc
 
 Suppose we have the theorem.
 
-```markdown
-
+```tex
 ::: {.thm title="(Fundamental Theorem of Algebra)" id="thm:FTA"}
 Let $p(x)$ be a polynomial of degree $n>0$ with complex coefficients. Then $p(x)$ has exactly $n$ linear factors over the complex number field.
 $$p(x)=a\left(x-{c}_{1}\right)\left(x-{c}_{2}\right)…\left(x-{c}_{n}\right)$$
 where ${c}_{1},{c}_{2},…,{c}_{n}$ are complex numbers and $a$ is the leading coefficient.
 :::
-
 ```
 
 Then the following css will added theorem name, number and title before the content of the theorem.
 
 ```css
-
 body {
     counter-reset: thmnumber;
 }
@@ -38,7 +35,6 @@ body {
 .thm::before {
     content: "Theorem " counter(thmnumber) " " attr(name);
 }
-
 ```
 
 To add the section number to the theorem number, we can define a section counter similarly and add to the content of `.thm::before`.

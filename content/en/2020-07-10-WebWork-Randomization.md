@@ -18,7 +18,7 @@ Supported by the `PGrandom` package, in WeBWork random variables can be defined.
 - Generates a random number between the initial and final values in steps of increment.
   
   ```perl
-  random($initial, $final, $increment)
+  random( $initial, $final, $increment )
   ```
 
    If the increment is 0 or less, then random chooses a floating point number between `$initial` and `$final` using a small increment.`$increment` defaults to 1, if it is not supplied as an argument.
@@ -28,42 +28,42 @@ Supported by the `PGrandom` package, in WeBWork random variables can be defined.
 - Generates a random number between 0 and $final.
 
   ```perl
-  rand($final)
+  rand( $final )
   ```
 
   `$final` defaults to 1 if that argument is omitted.
 
-  Example: `$r=rand(1);` generates a number between 0 and 1 and store it in the variable `$r`.
+  Example: `$r = rand(1);` generates a number between 0 and 1 and store it in the variable `$r`.
 
 - Generate a nonzero random number between the initial and final values.
 
   ```perl
-  non_zero_random($initial,$final);
+  non_zero_random( $initial, $final );
   ```
 
-  Example: $coef = non_zero_random(2,7);` generates a nonzero integer between 2 and 7 and stores it in the variable `$coef`.
+  Example: `$coef = non_zero_random(2,7);` generates a nonzero integer between 2 and 7 and stores it in the variable `$coef`.
 
 ## Two or more different random numbers
 
 - Generate two or more different random numbers
 
   ```perl
-  do { $new=random($initial, $final); } until ($new != $old);
+  do { $new = random($initial, $final); } until ( $new != $old );
   ```
 
   $old is a predefined random number.
 
-  Example: `do { $new=random(1, 6); } until ($new != 3);` generates a number between 1 and 6 but not equal to 3 and store it in the variable `$new`.
+  Example: `do { $new = random(1, 6); } until ( $new != 3 );` generates a number between 1 and 6 but not equal to 3 and store it in the variable `$new`.
 
 - Generate a third different random number number
 
   ```perl
-  do { $third=random($initial, $final); } until (($third != $first) and ($third != $second));
+  do { $third=random( $initial, $final ); } until (( $third != $first ) and ( $third != $second ));
   ```
 
   `$first` and `second` are predefined random numbers.
 
-  Example: `do { $third=random(1, 6); } until (($third != 3) and ($third != 5);` generates a number between 1 and 6 but not equal to 3 and 5, and store it in the variable `$third`.
+  Example: `do { $third = random(1, 6); } until (($third != 3) and ($third != 5);` generates a number between 1 and 6 but not equal to 3 and 5, and store it in the variable `$third`.
 
 ## Random variables
 
@@ -72,8 +72,8 @@ To generate a random variable, we can use the `RandomVariableName` function supp
 - Generate one random variable.
 
   ```perl
-  $var = RandomVariableName(type=>variable);
-  Context()->variables->are($var=>'Real');
+  $var = RandomVariableName( type=>variable );
+  Context()->variables->are( $var=>'Real' );
   ```
 
   In order to use the variable `$var` in formula, the second line is necessary.
@@ -82,8 +82,8 @@ To generate a random variable, we can use the `RandomVariableName` function supp
 
   ```perl
   $vary = RandomVariableName(type=>variable);
-  do {$vary = RandomVariableName(type=>variable)} until ($vary != $varx);
-  Context()->variables->add($vary=>'Real');
+  do { $vary = RandomVariableName(type=>variable) } until ( $vary != $varx );
+  Context()->variables->add( $vary=>'Real' );
   ```
 
   `$varx` is a predefined variable. Note that `add()` should be used for extra variables.
@@ -91,10 +91,10 @@ To generate a random variable, we can use the `RandomVariableName` function supp
   Example: The following codes will generate two different variables `$varx` and `$vary`.
 
   ```perl
-  $varx = RandomVariableName(type=>variable);
-  Context()->variables->are($vars=>'Real');
-  do {$vary = RandomVariableName(type=>variable)} until ($vary != $varx);
-  Context()->variables->add($vary=>'Real');
+  $varx = RandomVariableName( type=>variable );
+  Context()->variables->are( $vars=>'Real' );
+  do { $vary = RandomVariableName(type=>variable )} until ( $vary != $varx );
+  Context()->variables->add( $vary=>'Real' );
   ```
 
 ## A random element from a list
@@ -102,7 +102,7 @@ To generate a random variable, we can use the `RandomVariableName` function supp
 - Randomizing from a list
 
   ```perl
-  list_random($x1, $x2,...,$xn);
+  list_random( $x1, $x2,...,$xn );
   ```
 
   The element `$xi` can be a number, a letter or an expression.
@@ -112,19 +112,19 @@ To generate a random variable, we can use the `RandomVariableName` function supp
 - Randomizing from an array
   
   ```perl
-  @array=($elem1, $elem2, ..., $elemn);
-  $arrayLength=scalar(@array);
-  $randIndex=random(0,$arrayLength);
-  $var=$array[$randIndex];
+  @array = ( $elem1, $elem2, ..., $elemn );
+  $arrayLength = scalar( @array );
+  $randIndex = random(0, $arrayLength);
+  $var = $array[ $randIndex ];
   ```
 
   Example: Randomly assigns a number or the letter $x$ from the list to the variable `$Days`.
 
   ```perl
-  @array=('x', 29, 30, 31);
-  $arrayLength=scalar(@array);
-  $randIndex=random(0,$arrayLength);
-  $Days=$array[$randIndex];
+  @array = ('x', 29, 30, 31);
+  $arrayLength = scalar( @array );
+  $randIndex = random(0, $arrayLength);
+  $Days = $array[ $randIndex ];
   ```
 
 ## References

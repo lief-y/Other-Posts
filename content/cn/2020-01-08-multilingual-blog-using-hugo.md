@@ -28,7 +28,6 @@ cn/ctags:
 一般中英，或者多语言混排，至少有两套导航栏。本博站设置了三套，对应的 `config.tom` 中分别由`[menu.main]`, `[menu.en]`, `[menu.cn]` 来定义：
 
 ```toml
-
 [menu]
     [[menu.main]]
         name = "Home"
@@ -105,15 +104,15 @@ cn/ctags:
 ```
 
 完成这一步，还有两个问题要通过修改布局模板来解决:
+
 - 修改`layout`文件夹下的`list.html`，从而将`[menu.en]`和`[menu.cn]`两个导航正确的显示出来;
 - 修改`layout`文件夹下的`terms.html`，从而能正确显示页面主题。
-
 
 ## 修改`list.html`
 
 在文件夹`/theme/hugo-xmin/layout/_default` 下找到并用文件编辑器打开`list.html`。将
 
-```html+hugo
+```liquid
   <ul>
   {{ $pages := .Pages }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
@@ -122,7 +121,7 @@ cn/ctags:
 
 改成
 
-```html+hugo
+```liquid
 {{ $currentPage := . }}
 {{ if .IsHome }}
 {{ $.Scratch.Set "pages" .Site.RegularPages }}
@@ -132,23 +131,24 @@ cn/ctags:
 <ul>
     {{ range (where ($.Scratch.Get "pages") "Section" "!=" "") }}
 ```
+
 这段修改完全是借鉴了`[hugo-ivy](https://github.com/yihui/hugo-ivy)`的相应设置。
 
 ## 修改`terms.html`
 
 在文件夹`/theme/hugo-xmin/layout/_default` 下找到并用文件编辑器打开`terms.html`。将
 
-```html+hugo
+```liquid
  <h1>{{ .Title }}</h1>
 ```
 
 改成
 
-```html+hugo
+```liquid
 {{ $title:= .Title }}
 {{ if (hasPrefix $title "En/") }}
     {{ $title = (strings.TrimPrefix "En/" $title) }}
-{{ else }}   
+{{ else }}
     {{ $title = "标签" }}
 {{ end }}
 

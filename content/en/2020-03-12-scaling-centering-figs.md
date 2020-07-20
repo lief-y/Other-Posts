@@ -12,7 +12,7 @@ en/tags:
 
 There are different ways to include a picture in Rmarkdown. The basic way is to use `![caption](path/to/picture.extension)`. If the figure is not in an bookdown theorem environment, you may also use `knitr`.
 
-````markdown
+````r
 ```{r figure, echo=FALSE}
 knitr::include_graphics(path/to/picture.extension)
 ```
@@ -26,7 +26,7 @@ Because I normally have to include pictures in theorem environment in bookdown. 
 
 To center and change the dimension globally for pictures for the html output, we may add the following css code chunk at the beginning of your Rmarkdown file.
 
-````markdown
+````css
 ```{css, include=FALSE}
 img {
     display: block;

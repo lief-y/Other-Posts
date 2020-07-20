@@ -22,9 +22,9 @@ Many teachers teach online using certain types of tools. I currently use a cloud
 
 - **Software:** Most cloud meeting tools have built-in whiteboard which can be used to show your handwriting. However, you may find them not very flexible. Here are some applications that I am using and would like to recommend to you.
 
-  - Microsoft Word
+  - Microsoft OneNote (**Updated: 07/19/2020**)
 
-    Can be used as a fancy yet not complicated whiteboard.
+    Can be used as a fancy yet not complicated whiteboard. Moreover, notebooks can be shared with students.
 
   - Snipaste [https://www.snipaste.com/](https://www.snipaste.com/)
 
@@ -42,37 +42,33 @@ Many teachers teach online using certain types of tools. I currently use a cloud
 
     Convert images of math expressions into LaTeX.
 
-## Word
+## OneNote (**Updated: 07/19/2020**)
 
-- Use the focus mode
+- The Structure of Notebooks in OneNote
 
-To use word as a whiteboard, you simply need the drawing feature in it. However, the ribbons and tools shown on the top of windows make the screen look crowd. Instead, we can use the `Focus` mode. You may turn the focus mode on from the `View` menu and click the `Focus` icon in the low right corner of the window.
+  OneNote organizes by the structure `Notebooks->Sections->Pages`. One may use one notebook for one course, a section for a topic and pages for individual lessons. 
 
-![image-20200322114034255](/img/image-20200322114034255.png)
+- Pencil color and eraser can be found under `Draw` menu.
 
-![image-20200322114109767](/img/image-20200322114109767.png)
+  ![image-20200719210251695](/img/image-20200719210251695.png)
 
-- Change the layout
+- Use the `Full Page View` mode
 
-  By default, a new word document had the dimension of a letter paper. The ratio doesn't fit the screen well. The best  size I found is landscape legal paper size with smaller margins. You may make changes under the `Layout` menu.
+  To enter the `Full Page View` mode, simply click the diagonal arrow at the upper right corner of the page.
 
-  ![image-20200322114153812](/img/image-20200322114153812.png)
+  ![image-20200719211635777](/img/image-20200719211635777.png)
 
-- Change the background color in `Design`.
+- Change the background color and style under the `View` menu.
 
-  Darker color may help readers to concentrate. You can change the background color under the `Design` menu.
+  ![image-20200719205827756](/img/image-20200719205827756.png)
 
-  ![image-20200322114209247](/img/image-20200322114209247.png)
+- Share a notebook synchronously with students.
 
-  For example, I uses the 50% darker blue.
+  Go to menu `File`, click `Share->Get a Sharing Link`. Then choose `Create a view link`. Anyone with the shared link can read the notebook online. If the notebook was set up to be synchronized automatically, then updates will show up in the linked file though there will be a delay. 
 
-  ![image-20200322114220244](/img/image-20200322114220244.png)
+  ![image-20200719211828028](/img/image-20200719211828028.png)
 
-- Now you may go to the `Draw` menu to setup your pen/pencil and draw.
-
-  ![image-20200322114232032](/img/image-20200322114232032.png)
-
-**Remark:** *Drawings in word is on the front layer which means you may draw or write over an inserted image.*
+**Remark:** *Drawings in OneNote is on the front layer which means you may draw or write over an inserted image.*
 
 ## Snipaste
 
