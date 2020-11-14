@@ -5,11 +5,7 @@
     <link>/en/categories/resources/</link>
     <description>Recent content in Resources on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/en/categories/resources/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/en/categories/resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Online Videos on Mathematics</title>
       <link>/en/2018/08/online-videos-on-mathematics/</link>

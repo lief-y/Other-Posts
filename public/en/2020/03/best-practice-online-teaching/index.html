@@ -10,9 +10,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="/js/thm-numbering.js"></script>
 
-<link rel="stylesheet" href="/highlight/styles/school-book.css">
-<script src="/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<link href="/css/prism-okaidia.css" rel="stylesheet">
+
   </head>
 
   
@@ -60,8 +59,8 @@
 <p><strong>Software:</strong> Most cloud meeting tools have built-in whiteboard which can be used to show your handwriting. However, you may find them not very flexible. Here are some applications that I am using and would like to recommend to you.</p>
 <ul>
 <li>
-<p>Microsoft Word</p>
-<p>Can be used as a fancy yet not complicated whiteboard.</p>
+<p>Microsoft OneNote (<strong>Updated: 07/19/2020</strong>)</p>
+<p>Can be used as a fancy yet not complicated whiteboard. Moreover, notebooks can be shared with students.</p>
 </li>
 <li>
 <p>Snipaste <a href="https://www.snipaste.com/">https://www.snipaste.com/</a></p>
@@ -82,32 +81,32 @@
 </ul>
 </li>
 </ul>
-<h2 id="word">Word</h2>
-<ul>
-<li>Use the focus mode</li>
-</ul>
-<p>To use word as a whiteboard, you simply need the drawing feature in it. However, the ribbons and tools shown on the top of windows make the screen look crowd. Instead, we can use the <code>Focus</code> mode. You may turn the focus mode on from the <code>View</code> menu and click the <code>Focus</code> icon in the low right corner of the window.</p>
-<p><img src="/img/image-20200322114034255.png" alt="image-20200322114034255"></p>
-<p><img src="/img/image-20200322114109767.png" alt="image-20200322114109767"></p>
+<h2 id="onenote-updated-07192020">OneNote (<strong>Updated: 07/19/2020</strong>)</h2>
 <ul>
 <li>
-<p>Change the layout</p>
-<p>By default, a new word document had the dimension of a letter paper. The ratio doesn&rsquo;t fit the screen well. The best  size I found is landscape legal paper size with smaller margins. You may make changes under the <code>Layout</code> menu.</p>
-<p><img src="/img/image-20200322114153812.png" alt="image-20200322114153812"></p>
+<p>The Structure of Notebooks in OneNote</p>
+<p>OneNote organizes by the structure <code>Notebooks-&gt;Sections-&gt;Pages</code>. One may use one notebook for one course, a section for a topic and pages for individual lessons.</p>
 </li>
 <li>
-<p>Change the background color in <code>Design</code>.</p>
-<p>Darker color may help readers to concentrate. You can change the background color under the <code>Design</code> menu.</p>
-<p><img src="/img/image-20200322114209247.png" alt="image-20200322114209247"></p>
-<p>For example, I uses the 50% darker blue.</p>
-<p><img src="/img/image-20200322114220244.png" alt="image-20200322114220244"></p>
+<p>Pencil color and eraser can be found under <code>Draw</code> menu.</p>
+<p><img src="/img/image-20200719210251695.png" alt="image-20200719210251695"></p>
 </li>
 <li>
-<p>Now you may go to the <code>Draw</code> menu to setup your pen/pencil and draw.</p>
-<p><img src="/img/image-20200322114232032.png" alt="image-20200322114232032"></p>
+<p>Use the <code>Full Page View</code> mode</p>
+<p>To enter the <code>Full Page View</code> mode, simply click the diagonal arrow at the upper right corner of the page.</p>
+<p><img src="/img/image-20200719211635777.png" alt="image-20200719211635777"></p>
+</li>
+<li>
+<p>Change the background color and style under the <code>View</code> menu.</p>
+<p><img src="/img/image-20200719205827756.png" alt="image-20200719205827756"></p>
+</li>
+<li>
+<p>Share a notebook synchronously with students.</p>
+<p>Go to menu <code>File</code>, click <code>Share-&gt;Get a Sharing Link</code>. Then choose <code>Create a view link</code>. Anyone with the shared link can read the notebook online. If the notebook was set up to be synchronized automatically, then updates will show up in the linked file though there will be a delay.</p>
+<p><img src="/img/image-20200719211828028.png" alt="image-20200719211828028"></p>
 </li>
 </ul>
-<p><strong>Remark:</strong> <em>Drawings in word is on the front layer which means you may draw or write over an inserted image.</em></p>
+<p><strong>Remark:</strong> <em>Drawings in OneNote is on the front layer which means you may draw or write over an inserted image.</em></p>
 <h2 id="snipaste">Snipaste</h2>
 <p>All images in the above sections were created by Snipaste. After the application was installed, start the application, press <code>F1</code> to start snipping, then click the save or copy icon in the lower right corner to save or copy the screenshot. If you need add some explanations, use the control panel to add details. If you are not satisfied with the screenshot, press <code>Esc</code> key to abort. For more key binding, please read the document <a href="https://docs.snipaste.com/key-bindings">Snipaste Key-bindings</a>.</p>
 <p><img src="/img/image-20200322114352404.png" alt="image-20200322114352404"></p>
@@ -140,8 +139,18 @@
 
 </main>
 
+<section class="comments">
+  <script src="https://utteranc.es/client.js"
+  repo="fyemath/Other-blogs-comments"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</section>
+
   <footer>
-  <script src="//yihui.name/js/math-code.js"></script>
+  <script src="https://yihui.name/js/math-code.js"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
 </script>
@@ -152,15 +161,20 @@
         }
     }
 </script>
-<script async src="//yihui.name/js/center-img.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-
-<script>
-hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
-</script>
 
 <script src="/js/check-for-tex.js" defer></script>
+
+
+<script async src="https://yihui.org/js/center-img.js"></script>
+
+<script src="/js/prism.js"></script>
+
+
+
+
+
+
+
   
   <hr/>
   © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>

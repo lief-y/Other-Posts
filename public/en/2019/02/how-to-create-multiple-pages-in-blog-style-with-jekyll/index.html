@@ -10,9 +10,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="/js/thm-numbering.js"></script>
 
-<link rel="stylesheet" href="/highlight/styles/school-book.css">
-<script src="/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<link href="/css/prism-okaidia.css" rel="stylesheet">
+
   </head>
 
   
@@ -52,23 +51,23 @@
 <p>Suppose that you have two categories of blogs. There are two ways to create directories in your website folder</p>
 <ol>
 <li>
-<pre><code>--blog1
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">--blog1
     |--_posts
 --blog2
     |--_post
-</code></pre></li>
+</code></pre></div></li>
 <li>
-<pre><code>|--_posts
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">|--_posts
     |--blog1
     |--blog2
-</code></pre></li>
+</code></pre></div></li>
 </ol>
 <p>The first approach will automatically assign categories to your posts.</p>
 <p>Using the second approach, you will need to manually add <code>category: your_blog_folder_name</code> to <code>Yaml Front Matter</code> in each post.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
-<span style="color:#66d9ef">layout</span>: default
-<span style="color:#66d9ef">title</span>: Blog1
-<span style="color:#66d9ef">category</span>: blog1
+<span style="color:#f92672">layout</span>: <span style="color:#ae81ff">default</span>
+<span style="color:#f92672">title</span>: <span style="color:#ae81ff">Blog1</span>
+<span style="color:#f92672">category</span>: <span style="color:#ae81ff">blog1</span>
 ---
 </code></pre></div><p>You also need to modify the default layout template for the category <code>blog1</code> by adding a filter using <code>post.categories contains 'category name'</code> to where it is appropriate. For example,</p>
 <pre><code class="language-liquid" data-lang="liquid">{% raw %}
@@ -95,8 +94,18 @@
 
 </main>
 
+<section class="comments">
+  <script src="https://utteranc.es/client.js"
+  repo="fyemath/Other-blogs-comments"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</section>
+
   <footer>
-  <script src="//yihui.name/js/math-code.js"></script>
+  <script src="https://yihui.name/js/math-code.js"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
 </script>
@@ -107,15 +116,20 @@
         }
     }
 </script>
-<script async src="//yihui.name/js/center-img.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-
-<script>
-hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
-</script>
 
 <script src="/js/check-for-tex.js" defer></script>
+
+
+<script async src="https://yihui.org/js/center-img.js"></script>
+
+<script src="/js/prism.js"></script>
+
+
+
+
+
+
+
   
   <hr/>
   © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>

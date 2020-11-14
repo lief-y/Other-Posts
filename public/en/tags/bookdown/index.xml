@@ -5,11 +5,7 @@
     <link>/en/tags/bookdown/</link>
     <description>Recent content in Bookdown on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/en/tags/bookdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/en/tags/bookdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redirect Netlify Sites</title>
       <link>/en/2020/03/redirect-netlify-sites/</link>
@@ -27,7 +23,7 @@ Redirect netlify sites to domains or subdomains If you have a personal domain/su
       
       <guid>/en/2020/03/scaling-centering-figs/</guid>
       <description>There are different ways to include a picture in Rmarkdown. The basic way is to use ![caption](path/to/picture.extension). If the figure is not in an bookdown theorem environment, you may also use knitr.
-```{r figure, echo=FALSE}knitr::include_graphics(path/to/picture.extension)```The way using knitr to include graphics provide more options to control the dimension and position of a figure. For details, you may read Yihui&amp;rsquo;s knitr manual on plots.
+```{r figure, echo=FALSE} knitr::include_graphics(path/to/picture.extension) ``` The way using knitr to include graphics provide more options to control the dimension and position of a figure. For details, you may read Yihui&amp;rsquo;s knitr manual on plots.
 Because I normally have to include pictures in theorem environment in bookdown.</description>
     </item>
     

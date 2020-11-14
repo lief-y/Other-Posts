@@ -10,9 +10,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="/js/thm-numbering.js"></script>
 
-<link rel="stylesheet" href="/highlight/styles/school-book.css">
-<script src="/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<link href="/css/prism-okaidia.css" rel="stylesheet">
+
   </head>
 
   
@@ -50,16 +49,13 @@
 <main>
 <p>When writing a research paper in a single html page, we can use <a href="https://pandoc.org/MANUAL.html#divs-and-spans">Pandoc’s fenced Div blocks</a> to create theorem environments. Using the css pseudo element <code>::before</code> and <code>counter</code> property, we can add theorem name, number, and title to the theorem environment. Here is an example.</p>
 <p>Suppose we have the theorem.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
-::: {.thm title=&#34;(Fundamental Theorem of Algebra)&#34; id=&#34;thm:FTA&#34;}
-Let $p(x)$ be a polynomial of degree $n&gt;0$ with complex coefficients. Then $p(x)$ has exactly $n$ linear factors over the complex number field.
-$$p(x)=a\left(x-{c}_{1}\right)\left(x-{c}_{2}\right)…\left(x-{c}_{n}\right)$$
-where ${c}_{1},{c}_{2},…,{c}_{n}$ are complex numbers and $a$ is the leading coefficient.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex">::: {.thm title=&#34;(Fundamental Theorem of Algebra)&#34; id=&#34;thm:FTA&#34;}
+Let <span style="color:#e6db74">$</span>p<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span> be a polynomial of degree <span style="color:#e6db74">$</span>n&gt;<span style="color:#ae81ff">0</span><span style="color:#e6db74">$</span> with complex coefficients. Then <span style="color:#e6db74">$</span>p<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span> has exactly <span style="color:#e6db74">$</span>n<span style="color:#e6db74">$</span> linear factors over the complex number field.
+<span style="color:#e6db74">$$</span>p<span style="color:#f92672">(</span>x<span style="color:#f92672">)=</span>a\left<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>{c}_{<span style="color:#ae81ff">1</span>}\right<span style="color:#f92672">)</span>\left<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>{c}_{<span style="color:#ae81ff">2</span>}\right<span style="color:#f92672">)</span>…\left<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>{c}_{n}\right<span style="color:#f92672">)</span><span style="color:#e6db74">$$</span>
+where <span style="color:#e6db74">$</span>{c}_{<span style="color:#ae81ff">1</span>},{c}_{<span style="color:#ae81ff">2</span>},…,{c}_{n}<span style="color:#e6db74">$</span> are complex numbers and <span style="color:#e6db74">$</span>a<span style="color:#e6db74">$</span> is the leading coefficient.
 :::
-
 </code></pre></div><p>Then the following css will added theorem name, number and title before the content of the theorem.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
-<span style="color:#f92672">body</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
     <span style="color:#66d9ef">counter-reset</span>: thmnumber;
 }
 .<span style="color:#a6e22e">thm</span> {
@@ -68,7 +64,6 @@ where ${c}_{1},{c}_{2},…,{c}_{n}$ are complex numbers and $a$ is the leading c
 .<span style="color:#a6e22e">thm</span>::<span style="color:#a6e22e">before</span> {
     <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;Theorem &#34;</span> counter(thmnumber) <span style="color:#e6db74">&#34; &#34;</span> attr(name);
 }
-
 </code></pre></div><p>To add the section number to the theorem number, we can define a section counter similarly and add to the content of <code>.thm::before</code>.</p>
 <p>Because the <code>counter</code> value can only be used by the <code>content</code> property, using the counter to create the theorem number will not help cross-referencing. Instead, within a single html file, we can use <a href="https://jquery.com/">jQuery</a> to create numbered theorems and make cross-reference available.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span> () {
@@ -104,8 +99,18 @@ In a right triangle, the square of the hypotenuse is equal to the sum of the squ
 
 </main>
 
+<section class="comments">
+  <script src="https://utteranc.es/client.js"
+  repo="fyemath/Other-blogs-comments"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</section>
+
   <footer>
-  <script src="//yihui.name/js/math-code.js"></script>
+  <script src="https://yihui.name/js/math-code.js"></script>
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.0/es5/latest?tex-mml-chtml.js">
 </script>
@@ -116,15 +121,20 @@ In a right triangle, the square of the hypotenuse is equal to the sum of the squ
         }
     }
 </script>
-<script async src="//yihui.name/js/center-img.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-
-<script>
-hljs.configure({languages: ["r","yaml","toml","tex","markdown"]});
-</script>
 
 <script src="/js/check-for-tex.js" defer></script>
+
+
+<script async src="https://yihui.org/js/center-img.js"></script>
+
+<script src="/js/prism.js"></script>
+
+
+
+
+
+
+
   
   <hr/>
   © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>

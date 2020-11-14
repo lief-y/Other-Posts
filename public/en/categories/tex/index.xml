@@ -5,11 +5,7 @@
     <link>/en/categories/tex/</link>
     <description>Recent content in TeX on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/en/categories/tex/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/en/categories/tex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to install fonts in TeXLive</title>
       <link>/en/2019/05/how-to-install-fonts-in-texlive/</link>

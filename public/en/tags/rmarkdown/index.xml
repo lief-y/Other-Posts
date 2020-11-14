@@ -5,11 +5,7 @@
     <link>/en/tags/rmarkdown/</link>
     <description>Recent content in Rmarkdown on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/en/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/en/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scaling and Centering Figures for Rmarkdown</title>
       <link>/en/2020/03/scaling-centering-figs/</link>
@@ -17,7 +13,7 @@
       
       <guid>/en/2020/03/scaling-centering-figs/</guid>
       <description>There are different ways to include a picture in Rmarkdown. The basic way is to use ![caption](path/to/picture.extension). If the figure is not in an bookdown theorem environment, you may also use knitr.
-```{r figure, echo=FALSE}knitr::include_graphics(path/to/picture.extension)```The way using knitr to include graphics provide more options to control the dimension and position of a figure. For details, you may read Yihui&amp;rsquo;s knitr manual on plots.
+```{r figure, echo=FALSE} knitr::include_graphics(path/to/picture.extension) ``` The way using knitr to include graphics provide more options to control the dimension and position of a figure. For details, you may read Yihui&amp;rsquo;s knitr manual on plots.
 Because I normally have to include pictures in theorem environment in bookdown.</description>
     </item>
     
@@ -48,7 +44,7 @@ Because I normally have to include pictures in theorem environment in bookdown.<
       <description>Add CSS Codes within RMarkdown When using Xaringan to create slides, one may include a custom.css or use the xaringanthemer package to change styles in whole or by part.
 Recently, I found another trick that allow you make changes to styles within your rmarkdown file. It&amp;rsquo;s very simple. You simply only need to add a CSS code chunk1 at the beginning of your content.
 Here is an example.
-```{css, echo=F}.</description>
+```{css, echo=F} .</description>
     </item>
     
     <item>

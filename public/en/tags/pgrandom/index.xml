@@ -5,11 +5,7 @@
     <link>/en/tags/pgrandom/</link>
     <description>Recent content in PGrandom on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="/en/tags/pgrandom/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en-us</language><atom:link href="/en/tags/pgrandom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Randomized Parameters in WebWork</title>
       <link>/en/2020/07/randomized-parameters-in-webwork/</link>
@@ -20,7 +16,7 @@
 A parameter/variable in Perl starts with &amp;ldquo;$&amp;rdquo;, for example $a, $integer, $var.
 Supported by the PGrandom package, in WeBWork random variables can be defined.
 One random number   Generates a random number between the initial and final values in steps of increment.
-random($initial, $final, $increment) If the increment is 0 or less, then random chooses a floating point number between $initial and $final using a small increment.</description>
+random( $initial, $final, $increment ) If the increment is 0 or less, then random chooses a floating point number between $initial and $final using a small increment.</description>
     </item>
     
   </channel>
