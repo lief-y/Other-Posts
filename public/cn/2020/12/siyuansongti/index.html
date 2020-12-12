@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>在网页中使用思源宋体 | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="/css/customized.css" type="text/css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="/js/thm-numbering.js"></script>
+
+<link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
+
+<link href="/css/fonts-customized.css" type="text/css" rel="stylesheet"/>
+
+<link rel="preload" as="font" href="/css/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf" type="font/otf" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf" type="font/otf" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+  </head>
+
+  
+
+  <body class="cn">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">首页</a></li>
+      
+      <li><a href="/cn/">博客</a></li>
+      
+      <li><a href="/cn/ctags/">标签</a></li>
+      
+      <li><a href="/en/">English</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">在网页中使用思源宋体</span></h1>
+
+<h2 class="author">
+
+    Fei Ye
+
+</h2>
+<h2 class="date">2020/12/12</h2>
+</div>
+
+<main>
+<h2 id="前言">前言</h2>
+<p>昨天从<a href="https://d.cosx.org/d/421962-yihuicss/6">益辉的回复中</a>我了解到了开源字体：<a href="https://source.typekit.com/source-han-serif/cn/">思源宋体</a>。于是就尝试了一把。由于adobe需要注册才能使用<a href="https://fonts.adobe.com/typekit">Typekit</a>加载网络字体，而我一向不喜欢这种需要注册才能用的服务，所以就尝试了直接把字体上传的服务器的方法。对于英文字体，为了提升加载速度，通常大家会用一些字体转换软件或在线服务把开源字体转换成<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF">The Web Open Font Format (WOFF)</a>。然而不知道啥原因，对于思源宋体，我试过的几个在线转换的服务都不成功。另一方面，虽然思源宋体是开源的(<a href="https://github.com/adobe-fonts/source-han-serif/blob/master/LICENSE.txt">SIL Open Font License 1.1</a>)，但是进行转换的时候，可能会改变原有的字体信息，从而需要进一步的处理(c参见<a href="https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web#1b11b702">OFL-FAQ Question 2.1-2.3</a>). 因此，我决定牺牲掉一些性能，直接使用opentype和truetype的字体。这些字体可以直接从网上现在。为了避免注册登录adobe，我决定从Google Fonts下载等价的字体：<a href="https://fonts.google.com/specimen/Noto+Serif+SC#standard-styles">Noto Serif SC</a>对应于思源宋体; <a href="https://fonts.google.com/specimen/Noto+Sans+SC">Noto Sans SC</a>对应于思源黑体。对于无法访问Google的用户，也可以从第三方下载，例如<a href="https://wordshub.github.io/free-font/">https://wordshub.github.io/free-font/</a>.</p>
+<h2 id="设置字体">设置字体</h2>
+<p>如何下载并设置网络字体，网上有很多教程。关键点是加载和调用。这两项都可以通过CSS来设置。</p>
+<p>假设相关字体已经被下载并解压了，且字体所在的文件夹的名字是<code>fonts</code>.</p>
+<ul>
+<li>
+<p>将包含字体的文件夹<code>fonts</code>放到网站的一个容易找到的目录。例如本站将其置于<code>CSS</code>文件夹下。</p>
+</li>
+<li>
+<p>设置CSS加载调用字体。为此，可以将如下的CSS代码存为一个.css文件，例如<code>fontssc.css</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">font-face</span> {
+<span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SiYuanSong&#39;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif CN&#39;</span><span style="color:#f92672">),</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif SC&#39;</span><span style="color:#f92672">),</span> <span style="color:#75715e">/*如果可能，调用本地字体*/</span>
+  <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;opentype&#39;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">font-weight</span><span style="color:#f92672">:</span> <span style="color:#f92672">400</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">font-style</span><span style="color:#f92672">:</span> <span style="color:#f92672">normal</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">font-display</span><span style="color:#f92672">:</span> <span style="color:#f92672">swap</span><span style="color:#f92672">;</span>
+}
+
+@<span style="color:#66d9ef">font-face</span> {
+  <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SiYuanSong&#39;</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif CN&#39;</span><span style="color:#f92672">),</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif SC&#39;</span><span style="color:#f92672">),</span> <span style="color:#75715e">/*如果可能，调用本地字体*/</span>
+    <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;opentype&#39;</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">font-weight</span><span style="color:#f92672">:</span> <span style="color:#f92672">700</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">font-style</span><span style="color:#f92672">:</span> <span style="color:#f92672">normal</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">font-display</span><span style="color:#f92672">:</span> <span style="color:#f92672">swap</span><span style="color:#f92672">;</span>
+}
+
+<span style="color:#f92672">body</span>{
+  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;SiYuanSong&#39;</span>, <span style="color:#66d9ef">serif</span>;
+}
+</code></pre></div></li>
+<li>
+<p>在网页的<code>&lt;head&gt;...&lt;/head&gt;</code>里面加入下面一行即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/fonts-customized.css&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>/&gt;
+</code></pre></div></li>
+</ul>
+<h2 id="后记">后记</h2>
+<ul>
+<li>
+<p>为了增强网页打开后的刷新速度，可以用<code>rel=&quot;preload&quot;</code>来预加载字体。具体来说，将下面的代码加入<code>&lt;head&gt;...&lt;/head&gt;</code>里面即可。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font/otf&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font/otf&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+</code></pre></div></li>
+<li>
+<p>如果网页是中英混排，且只希望读者在阅读英文时加载中文字体，可以参见<a href="https://yihui.org/cn/2017/04/source-han-serif/#fn:-1">益辉的解决办法</a>。</p>
+</li>
+<li>
+<p>在使用上面提供的代码时，请注意修改相应的路径和文件名。</p>
+</li>
+</ul>
+
+</main>
+
+<section class="comments">
+  <script src="https://utteranc.es/client.js"
+  repo="fyemath/Other-blogs-comments"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</section>
+
+  <footer>
+  <script src="https://yihui.name/js/math-code.js"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    }
+</script>
+
+<script src="/js/check-for-tex.js" defer></script>
+
+
+<script async src="https://yihui.org/js/center-img.js"></script>
+
+<script src="/js/prism.js"></script>
+
+
+
+
+
+
+
+  
+  <hr/>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

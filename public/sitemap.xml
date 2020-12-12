@@ -4,7 +4,22 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/ctags/</loc>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/2020/12/siyuansongti/</loc>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/</loc>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -63,17 +78,7 @@
   </url>
   
   <url>
-    <loc>/cn/ctags/</loc>
-    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/cn/2020/01/multilingual-blog-using-hugo/</loc>
-    <lastmod>2020-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cn/</loc>
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -167,6 +172,10 @@
   
   <url>
     <loc>/en/tags/fonts/</loc>
+  </url>
+  
+  <url>
+    <loc>/cn/ctags/fonts/</loc>
   </url>
   
   <url>
@@ -307,6 +316,10 @@
   
   <url>
     <loc>/en/categories/web/</loc>
+  </url>
+  
+  <url>
+    <loc>/cn/ctags/web/</loc>
   </url>
   
   <url>
