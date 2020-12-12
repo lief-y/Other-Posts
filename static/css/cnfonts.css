@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'SiYuanSongTi';
+  src: local('Source HanSerif CN'), local('Source HanSerif SC'), local('Source HanSerif'),
+    url('SourceHanSerif/SourceHanSerifCN-Regular.woff2') format('woff2'),
+    url('SourceHanSerif/SourceHanSerifCN-Regular.woff') format('woff'),
+    url('SourceHanSerif/SourceHanSerifCN-Regular.otf') format('opentype'),
+    url('SourceHanSerif/SourceHanSerifCN-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SiYuanSongHei';
+  src: local('Source HanSerif CN'), local('Source HanSerif SC'), local('Source HanSerif'),
+    url('SourceHanSerif/SourceHanSerifCN-Bold.woff') format('woff'),
+    url('SourceHanSerif/SourceHanSerifCN-Bold.woff2') format('woff2'),
+    url('SourceHanSerif/SourceHanSerifCN-Bold.otf') format('opentype'),
+    url('SourceHanSerif/SourceHanSerifCN-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&display=swap');
+
+body {
+  font-family: Lucida Bright, Helvetica, Candara, Calibri, Arial, sans-serif, 'SiYuanSongTi', 'SiYuanSongHei', 'Noto Serif SC', STXihei, SimSun, '宋体', Heiti, 'Microsoft JhengHei', 'Microsoft YaHei', '黑体', serif;
+}
+
