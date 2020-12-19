@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Knitr Code Chunk Labeling Issues | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="/css/customized.css" type="text/css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="/js/thm-numbering.js"></script>
+
+<link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
+
+<link href="/css/fonts-customized.css" type="text/css" rel="stylesheet"/>
+
+<link rel="preload" as="font" href="/css/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf" type="font/otf" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf" type="font/otf" crossorigin="anonymous">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+  </head>
+
+  
+
+  <body class="en">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/en/">Blog</a></li>
+      
+      <li><a href="/en/categories/">Categories</a></li>
+      
+      <li><a href="/en/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Knitr Code Chunk Labeling Issues</span></h1>
+
+<h2 class="author">
+
+    Fei Ye
+
+</h2>
+<h2 class="date">2020/12/18</h2>
+</div>
+
+<main>
+<p>When using Rmarkdown, we are recommended to assign to each code chunk an unique label that only contains alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-).</p>
+<p>I never had taken the recommendation in serious consideration until I noticed that the string &ldquo;unnamed_code_chunk&rdquo; appeared in each theorem environment in the output pdf file. The reason that the string appears is because the underscore &ldquo;_&rdquo; is a special character in LaTeX. By its design, only absolutely &ldquo;safe&rdquo; characters, alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-), are allowed in chunk labels. Indeed, to be &ldquo;safer&rdquo;, code chunk labels should contain only alphanumeric characters and without any space.</p>
+<p>When using Bookdown, if one still wants to let the system automatically label code chunk, for pdf, one solution is to use the  <code>bookdown.post.latex</code> option as seen in my other blog <a href="https://blog.yfei.page/en/2020/02/clean-latex-commands/">Clean LaTeX Commands For R Bookdown</a>. More precisely, the following option should remove the lines in LaTeX containing the string &ldquo;unnamed_code_chunk&rdquo;.</p>
+<pre><code>```{r postlatex}
+options(bookdown.post.latex = function(x) {
+  # x is the content of the LaTeX output file  
+  # Remove unnamed_chunk row
+  unnamed.chunk &lt;- grep(&quot;label\\{.*unnamed-chunk&quot;, x)
+  x&lt;-x[-c(unnamed.chunk)]
+```
+</code></pre><p>When rendering pdf articles, one may consider <a href="https://blog.yfei.page/en/2020/01/port-bookdown/">Port Bookdown to Other Rmarkdown Format</a>.</p>
+
+</main>
+
+<section class="comments">
+  <script src="https://utteranc.es/client.js"
+  repo="fyemath/Other-blogs-comments"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</section>
+
+  <footer>
+  <script src="https://yihui.name/js/math-code.js"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+    MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    }
+</script>
+
+<script src="/js/check-for-tex.js" defer></script>
+
+
+<script async src="https://yihui.org/js/center-img.js"></script>
+
+<script src="/js/prism.js"></script>
+
+
+
+
+
+
+
+  
+  <hr/>
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+</html>
+

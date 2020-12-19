@@ -4,7 +4,27 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/categories/</loc>
+    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/</loc>
+    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/2020/12/knitr-code-chunk-labeling-issues/</loc>
+    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/</loc>
+    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -20,21 +40,6 @@
   <url>
     <loc>/cn/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/categories/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/tags/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/</loc>
-    <lastmod>2020-07-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -167,6 +172,10 @@
   </url>
   
   <url>
+    <loc>/en/tags/code-chunk/</loc>
+  </url>
+  
+  <url>
     <loc>/en/tags/css/</loc>
   </url>
   
@@ -268,6 +277,10 @@
   
   <url>
     <loc>/en/tags/rmarkdown/</loc>
+  </url>
+  
+  <url>
+    <loc>/en/categories/rmarkdown/</loc>
   </url>
   
   <url>
