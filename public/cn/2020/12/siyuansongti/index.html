@@ -53,7 +53,7 @@
 
 <main>
 <h2 id="前言">前言</h2>
-<p>昨天从<a href="https://d.cosx.org/d/421962-yihuicss/6">益辉的回复中</a>我了解到了开源字体：<a href="https://source.typekit.com/source-han-serif/cn/">思源宋体</a>。于是就尝试了一把。由于adobe需要注册才能使用<a href="https://fonts.adobe.com/typekit">Typekit</a>加载网络字体，而我一向不喜欢这种需要注册才能用的服务，所以就尝试了直接把字体上传的服务器的方法。对于英文字体，为了提升加载速度，通常大家会用一些字体转换软件或在线服务把开源字体转换成<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF">The Web Open Font Format (WOFF)</a>。然而不知道啥原因，对于思源宋体，我试过的几个在线转换的服务都不成功。另一方面，虽然思源宋体是开源的(<a href="https://github.com/adobe-fonts/source-han-serif/blob/master/LICENSE.txt">SIL Open Font License 1.1</a>)，但是进行转换的时候，可能会改变原有的字体信息，从而需要进一步的处理(c参见<a href="https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web#1b11b702">OFL-FAQ Question 2.1-2.3</a>). 因此，我决定牺牲掉一些性能，直接使用opentype和truetype的字体。这些字体可以直接从网上现在。为了避免注册登录adobe，我决定从Google Fonts下载等价的字体：<a href="https://fonts.google.com/specimen/Noto+Serif+SC#standard-styles">Noto Serif SC</a>对应于思源宋体; <a href="https://fonts.google.com/specimen/Noto+Sans+SC">Noto Sans SC</a>对应于思源黑体。对于无法访问Google的用户，也可以从第三方下载，例如<a href="https://wordshub.github.io/free-font/">https://wordshub.github.io/free-font/</a>.</p>
+<p>昨天从<a href="https://d.cosx.org/d/421962-yihuicss/6">益辉的回复中</a>我了解到了开源字体：<a href="https://source.typekit.com/source-han-serif/cn/">思源宋体</a>。于是就尝试了一把。由于adobe需要注册才能使用<a href="https://fonts.adobe.com/typekit">Typekit</a>加载网络字体，而我一向不喜欢这种需要注册才能用的服务，所以就尝试了直接把字体上传的服务器的方法。对于英文字体，为了提升加载速度，通常大家会用一些字体转换软件或在线服务把开源字体转换成<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF">The Web Open Font Format (WOFF)</a>。然而不知道啥原因，对于思源宋体，我试过的几个在线转换的服务都不成功。另一方面，虽然思源宋体是开源的(<a href="https://github.com/adobe-fonts/source-han-serif/blob/master/LICENSE.txt">SIL Open Font License 1.1</a>)，但是进行转换的时候，可能会改变原有的字体信息，从而需要进一步的处理(参见<a href="https://scripts.sil.org/cms/scripts/page.php?item_id=OFL-FAQ_web#1b11b702">OFL-FAQ Question 2.1-2.3</a>). 因此，我决定牺牲掉一些性能，直接使用opentype和truetype的字体。这些字体可以直接从网上现在。为了避免注册登录adobe，我决定从Google Fonts下载等价的字体：<a href="https://fonts.google.com/specimen/Noto+Serif+SC#standard-styles">Noto Serif SC</a>对应于思源宋体; <a href="https://fonts.google.com/specimen/Noto+Sans+SC">Noto Sans SC</a>对应于思源黑体。对于无法访问Google的用户，也可以从第三方下载，例如<a href="https://wordshub.github.io/free-font/">https://wordshub.github.io/free-font/</a>.</p>
 <h2 id="设置字体">设置字体</h2>
 <p>如何下载并设置网络字体，网上有很多教程。关键点是加载和调用。这两项都可以通过CSS来设置。</p>
 <p>假设相关字体已经被下载并解压了，且字体所在的文件夹的名字是<code>fonts</code>.</p>
@@ -104,6 +104,8 @@
 <p>在使用上面提供的代码时，请注意修改相应的路径和文件名。</p>
 </li>
 </ul>
+<h2 id="补充20201221">补充（2020/12/21）</h2>
+<p>网上介绍的用于生成中文网络字体的工具大多基于百度的<a href="https://github.com/ecomfe/fontmin">fontmin</a>。 经测试，这些字体对于抽取整个网站字体并制作字体子集并不容易。经过的搜索和测试，终于找到一款可以很容易将ttf转换成woff的工具：<a href="https://github.com/fontello/ttf2woff">ttf2woff</a>。通过<a href="https://github.com/fontforge/fontforge">fontforge</a>对比信息，似乎ttf2woff仅仅是压缩了字体，所以应该可以放心使用。</p>
 
 </main>
 
