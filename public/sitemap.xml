@@ -4,7 +4,22 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-12-18T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/ctags/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/2020/12/dutch-baby-pancake/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/</loc>
+    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -28,17 +43,7 @@
   </url>
   
   <url>
-    <loc>/cn/ctags/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/cn/2020/12/siyuansongti/</loc>
-    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cn/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -169,6 +174,10 @@
   
   <url>
     <loc>/cn/ctags/bread/</loc>
+  </url>
+  
+  <url>
+    <loc>/cn/ctags/breakfirst/</loc>
   </url>
   
   <url>
