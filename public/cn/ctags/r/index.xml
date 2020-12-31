@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on </title>
+    <link>/cn/ctags/r/</link>
+    <description>Recent content in R on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/cn/ctags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 VS Code 中使用 R 的几个技巧</title>
+      <link>/cn/2020/12/vscode-r/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/2020/12/vscode-r/</guid>
+      <description>与 Rstudio 相比，VS Code 提供了更便捷有效的编辑环境。对于经常写 markdown 或者 Rmarkdown 温度的人来说，VS Code 应该是个更好的选择。而要将 markdown，尤其是 Rmarkdown 生成为</description>
+    </item>
+    
+  </channel>
+</rss>

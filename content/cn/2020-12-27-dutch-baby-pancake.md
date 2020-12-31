@@ -1,13 +1,11 @@
 ---
-title: "荷兰煎饼(Dutch Baby Pancake)"
+title: "荷兰煎饼"
 date: '2020-12-27'
 cn/ctags: Breakfirst
 slug: "dutch-baby-pancake"
 ---
 
-# 快手早餐之荷兰煎饼
-
-如果你有铸铁锅，且有30-40分钟时间，那么荷兰煎饼绝对是简单又好吃的早餐选择之一。
+如果你有铸铁锅，且有30-40分钟时间，那么荷兰煎饼(Dutch Baby Pancake)绝对是简单又好吃的早餐选择之一。
 
 ## 食材及用量
 

@@ -7,7 +7,7 @@ en/tags:
     - Word
 ---
 
-# Some VBA Codes for Formating Tables
+## Some VBA Codes for Formating Tables
 
 - Step 1: In `Word` -> `File` -> `Options` -> `Customize Ribbon`, check `Developer` in 'Customize the ribbon' and click ok.
 - Step 2: In Ribbons, find and click `Developer` -> `Visual Basic` (`Alt`+`F11`).

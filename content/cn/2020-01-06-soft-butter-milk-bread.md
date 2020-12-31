@@ -5,8 +5,6 @@ cn/ctags: Bread
 slug: "soft-butter-milk-bread"
 ---
 
-# 松软蛋奶牛油包
-
 ## 食材及用量
 
 1. 面粉: 3 杯 （略微多点少点没关系）。

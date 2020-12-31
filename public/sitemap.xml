@@ -4,21 +4,26 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/cn/ctags/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/cn/2020/12/dutch-baby-pancake/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+    <loc>/cn/2020/12/vscode-r/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/cn/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cn/2020/12/dutch-baby-pancake/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -277,6 +282,10 @@
   </url>
   
   <url>
+    <loc>/cn/ctags/r/</loc>
+  </url>
+  
+  <url>
     <loc>/en/tags/recordings/</loc>
   </url>
   
@@ -334,6 +343,10 @@
   
   <url>
     <loc>/en/categories/visual-basic/</loc>
+  </url>
+  
+  <url>
+    <loc>/cn/ctags/vs-code/</loc>
   </url>
   
   <url>

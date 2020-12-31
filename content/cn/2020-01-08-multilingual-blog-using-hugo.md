@@ -7,8 +7,6 @@ cn/ctags:
   - Blogdown
 ---
 
-# 用Blogdown/Hugo创建中英混合博客
-
 熟悉或者不熟悉 RStudio, 你都可以很快的用[blogdown](https://bookdown.org/yihui/blogdown/)来创建一个私人博客。头一次创建，最容易当然是导入模板。以下我们将以[yihui/hugo-xmin](https://github.com/yihui/hugo-xmin)为例，简述一下怎样修改模板，从而创建如本博客网站的中英混合博客。由于经验有限，这里只能介绍两个方面的修改。这两方面的修改分别参考了[谢益辉的主页](https://github.com/yihui/yihui.org)和GitHub上关于Hugo 的[Option to change taxonomies URL](https://github.com/gohugoio/hugo/issues/1208#issuecomment-219126178)的讨论。
 
 ## 文件结构
