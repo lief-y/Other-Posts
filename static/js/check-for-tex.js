@@ -5,11 +5,17 @@
       window.MathJax = {
         tex: {
           inlineMath: {'[+]': [['$', '$']]}
+        },
+        svg: {
+          fontCache: 'global'
         }
       };
     }
+    // var script = document.createElement('script');
+    // script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+    // document.head.appendChild(script);
     var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
     document.head.appendChild(script);
   }
 })();

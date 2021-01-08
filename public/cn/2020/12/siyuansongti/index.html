@@ -12,12 +12,32 @@
 
 <link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
-<link href="/css/fonts-customized.css" type="text/css" rel="stylesheet"/>
+<link href="/css/fonts-en-cn.css" type="text/css" rel="stylesheet"/>
 
-<link rel="preload" as="font" href="/css/fonts/SiYuanSong/SiYuanSongRegular.woff" type="font/woff" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/SiYuanSong/SiYuanSongBold.woff" type="font/woff" crossorigin="anonymous">
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff" type="font/woff" crossorigin="anonymous">
+
+
+
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
+
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
+
+
 
   </head>
 
@@ -106,6 +126,9 @@
 </ul>
 <h2 id="补充20201221">补充（2020/12/21）</h2>
 <p>网上介绍的用于生成中文网络字体的工具大多基于百度的<a href="https://github.com/ecomfe/fontmin">fontmin</a>。 经测试，这些字体对于抽取整个网站字体并制作字体子集并不容易。经过的搜索和测试，终于找到一款可以很容易将ttf转换成woff的工具：<a href="https://github.com/fontello/ttf2woff">ttf2woff</a>。通过<a href="https://github.com/fontforge/fontforge">fontforge</a>对比信息，似乎ttf2woff仅仅是压缩了字体，所以应该可以放心使用。</p>
+<h2 id="补充202118">补充（2021/1/8）</h2>
+<p>今天在 <a href="https://matze.rocks/posts/self_host_google_fonts/">Host Google webfonts yourself</a> 这篇博客中了解到了一款生成网页版 google 字体的在线工具 <a href="https://google-webfonts-helper.herokuapp.com/fonts">google-webfonts-helper
+A Hassle-Free Way to Self-Host Google Fonts</a>。试用了一下，下载下来的字体比用 fontforge 转换得到的字体文件小。所以速度上还是优势的。特此推荐。</p>
 
 </main>
 
@@ -120,17 +143,8 @@
 </section>
 
   <footer>
-  <script src="https://yihui.name/js/math-code.js"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-<script>
-    MathJax = {
-        tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-    }
-</script>
+  
+
 
 <script src="/js/check-for-tex.js" defer></script>
 

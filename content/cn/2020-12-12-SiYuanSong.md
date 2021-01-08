@@ -67,3 +67,8 @@ cn/ctags:
 ## 补充（2020/12/21）
 
 网上介绍的用于生成中文网络字体的工具大多基于百度的[fontmin](https://github.com/ecomfe/fontmin)。 经测试，这些字体对于抽取整个网站字体并制作字体子集并不容易。经过的搜索和测试，终于找到一款可以很容易将ttf转换成woff的工具：[ttf2woff](https://github.com/fontello/ttf2woff)。通过[fontforge](https://github.com/fontforge/fontforge)对比信息，似乎ttf2woff仅仅是压缩了字体，所以应该可以放心使用。
+
+## 补充（2021/1/8）
+
+今天在 [Host Google webfonts yourself](https://matze.rocks/posts/self_host_google_fonts/) 这篇博客中了解到了一款生成网页版 google 字体的在线工具 [google-webfonts-helper
+A Hassle-Free Way to Self-Host Google Fonts](https://google-webfonts-helper.herokuapp.com/fonts)。试用了一下，下载下来的字体比用 fontforge 转换得到的字体文件小。所以速度上还是优势的。特此推荐。
