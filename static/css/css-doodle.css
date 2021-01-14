@@ -1,0 +1,46 @@
+:root {
+  --rule: (
+    @grid: 1 / 100% 36vh;
+    background-size: 100%;
+    /* background-repeat: repeat; */
+    background-image: @doodle(
+      @grid: 8 / 100vmax;
+      @shape: clover 5;
+      background: hsla(
+        calc(100 - @i * 4), 70%, 68%, @r.8
+      );
+      transform:
+        scale(@r(.8, 1.6))
+        translate(@m2.@r(±50%));
+    );
+  );
+}
+
+css-doodle[as-bg] {
+  position: relative;
+  z-index: -1;
+  margin: -0.5px;
+}
+
+.article-title {
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+.article-title .article-meta {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  z-index: 3;
+  line-height: 1.2;
+  background: rgba(102, 230, 247, 0.2);
+}
+
+[click-to-update] {
+  cursor: pointer;
+}
