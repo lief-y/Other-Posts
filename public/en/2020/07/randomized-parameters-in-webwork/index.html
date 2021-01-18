@@ -9,6 +9,7 @@
     <link href="/css/customized.css" type="text/css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="/js/thm-numbering.js"></script>
+<script src="/js/article-meta-height.js"></script>
 
 <link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
@@ -20,28 +21,29 @@
 
 
 
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff" type="font/woff" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff" type="font/woff" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff" type="font/woff" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff" type="font/woff" crossorigin="anonymous">
 
 
 
-<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
-
-<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
 
 
+
+
+
+<script>
+  :root {
+    --header-height: 0px;
+  }
+</script>
+
+<script>
+  $(document).ready(divHeight);
+  $(window).on('resize', divHeight);
+
+  function divHeight() {
+    var height = $(".header h1").outerHeight(true)  + "px";
+    document.documentElement.style.setProperty('--header-height', height);
+  }
+</script>
 
   </head>
 
@@ -71,7 +73,6 @@
   <css-doodle use="var(--rule)" as-bg="" click-to-update=""></css-doodle>
   <div class="article-meta">
     <h1><span class="title">Randomized Parameters in WebWork</span></h1>
-
     <h2 class="author">
     
         Fei Ye
@@ -188,7 +189,6 @@ $Days <span style="color:#f92672">=</span> $array[ $randIndex ];
 
 
 <script src="/js/check-for-tex.js" defer></script>
-
 
 <script async src="https://yihui.org/js/center-img.js"></script>
 

@@ -173,4 +173,3 @@ background-image: @css-doodle(
 1. 为了方便维护，CSS-Doodle 作者 [Yuan Chuan](https://github.com/yuanchuan) 为 `css-doodle` 设置了一个 `use` 属性。利用该属性，可以将 css-doodle 作图代码放入一个 CSS 变量，如 `--rule`，之后可以用 `use="var(--rule)"` 调用。详情请见 [CSS-Doodle Attributes: use](https://css-doodle.com/#attribute-use).
 
 2. 如果用 CSS 设置元素块的格式，需要小心选用选择器才能实现元素块儿的重叠。
-

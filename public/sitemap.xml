@@ -4,7 +4,27 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2021-01-14T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/categories/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/tags/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/en/2021/01/setting-the-height-of-div-dynamically-using-js/</loc>
+    <lastmod>2021-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,21 +44,6 @@
   
   <url>
     <loc>/en/2021/01/choosing-the-right-markdown-editor-for-math/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/categories/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/tags/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/en/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   

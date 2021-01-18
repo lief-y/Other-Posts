@@ -7,6 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/en/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Setting the Height of Div Dynamically Using JS</title>
+      <link>/en/2021/01/setting-the-height-of-div-dynamically-using-js/</link>
+      <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2021/01/setting-the-height-of-div-dynamically-using-js/</guid>
+      <description>When using CSS-Doodle to create the background, one can use the CSS overlay trick (see for example How TO - Overlay). However, to create the CSS-Doodle background in the size of the text content. One can use CSS together with JS.
+Here is an example.
+&amp;lt;head&amp;gt; &amp;lt;script&amp;gt; :root { --header-height: 0px; } &amp;lt;/script&amp;gt; &amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js&amp;#34;&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;script&amp;gt; $(document).ready(function() { var height = $(&amp;#34;.header h1&amp;#34;).outerHeight(true) + &amp;#34;px&amp;#34;; document.documentElement.style.setProperty(&amp;#39;--header-height&amp;#39;, height); }); &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;div class=&amp;#34;container&amp;#34; style=&amp;#34;position: relative; z-index: -1; margin: -0.</description>
+    </item>
+    
+    <item>
       <title>Redirect Netlify Sites</title>
       <link>/en/2020/03/redirect-netlify-sites/</link>
       <pubDate>Fri, 13 Mar 2020 00:00:00 +0000</pubDate>

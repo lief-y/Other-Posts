@@ -1,6 +1,7 @@
 <link href="/css/customized.css" type="text/css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="/js/thm-numbering.js"></script>
+<script src="/js/article-meta-height.js"></script>
 
 <link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
@@ -11,7 +12,7 @@
 <script src="https://unpkg.com/css-doodle@0.13.2/css-doodle.min.js"></script>
 
 <!-- reload en fonts to accelerate refreshing rate -->
-
+<!-- 
 <link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff2" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff" type="font/woff" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff2" type="font/woff2" crossorigin="anonymous">
@@ -19,10 +20,10 @@
 <link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff2" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff" type="font/woff" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff" type="font/woff" crossorigin="anonymous"> -->
 
 <!-- reload cn fonts to accelerate refreshing rate -->
-
+<!-- 
 <link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
@@ -31,6 +32,24 @@
 <link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
 <link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous"> -->
 
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+
+<!-- For the post on dynamically setting height of div -->
+
+<script>
+  :root {
+    --header-height: 0px;
+  }
+</script>
+
+<script>
+  $(document).ready(divHeight);
+  $(window).on('resize', divHeight);
+
+  function divHeight() {
+    var height = $(".header h1").outerHeight(true)  + "px";
+    document.documentElement.style.setProperty('--header-height', height);
+  }
+</script>

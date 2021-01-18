@@ -1,13 +1,14 @@
 :root {
+  --bg-height: 0px;
   --rule: (
-    @grid: 1 / 100% 36vh;
+    @grid: 1 / 100vmax;
     background-size: 100%;
     /* background-repeat: repeat; */
     background-image: @doodle(
-      @grid: 8 / 100vmax;
+      @grid: 8 / 100vw;
       @shape: clover 5;
       background: hsla(
-        calc(100 - @i * 4), 70%, 68%, @r.8
+        calc(120 - @i * 4), 70%, 68%, @r.8
       );
       transform:
         scale(@r(.8, 1.6))
@@ -20,6 +21,7 @@ css-doodle[as-bg] {
   position: relative;
   z-index: -1;
   margin: -0.5px;
+  height: var(--bg-height);
 }
 
 .article-title {
@@ -35,7 +37,7 @@ css-doodle[as-bg] {
   left: 0px;
   bottom: 0px;
   /* top: 50%; */
-  /* transform: translateY(-50%); */
+  /* transform: translateY(10%); */
   z-index: 3;
   line-height: 1.2;
   background: rgba(102, 230, 247, 0.2);
