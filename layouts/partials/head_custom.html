@@ -39,17 +39,13 @@
 <!-- For the post on dynamically setting height of div -->
 
 <script>
-  :root {
-    --header-height: 0px;
-  }
-</script>
+  $(':root').css('--header-height', '0 px');
 
-<script>
   $(document).ready(divHeight);
   $(window).on('resize', divHeight);
 
   function divHeight() {
-    var height = $(".header h1").outerHeight(true)  + "px";
-    document.documentElement.style.setProperty('--header-height', height);
+    var dheight = $(".header h1").outerHeight(true)  + "px";
+    document.documentElement.style.setProperty('--header-height', dheight);
   }
 </script>

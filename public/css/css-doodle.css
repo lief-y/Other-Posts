@@ -3,7 +3,6 @@
   --rule: (
     @grid: 1 / 100vmax;
     background-size: 100%;
-    /* background-repeat: repeat; */
     background-image: @doodle(
       @grid: 8 / 100vw;
       @shape: clover 5;

@@ -13,7 +13,7 @@ When using [CSS-Doodle](https://css-doodle.com/) to create the background, one c
 
 Here is an example.
 
-```html
+````html
 <head>
   <script>
     :root {
@@ -25,57 +25,49 @@ Here is an example.
   <script>
     $(document).ready(function() {
       var height = $(".header h1").outerHeight(true)  + "px";
-      document.documentElement.style.setProperty('--header-height', height);
+      document.documentElement.style.setProperty('--header-height', height));
     });
   </script>
 </head>
 
-<div class="container" style="position: relative; z-index: -1; margin: -0.5px; height: var(--header-height);">
-  <css-doodle style="position: relative; z-index: -1; margin: -0.5px; height: var(--header-height);">
+<div class="container" style="width: 100%; overflow: hidden; z-index: 2; position: relative;">
+  <css-doodle style="position: relative; z-index: 1; height: calc(var(--header-height) + 1vh);">
     :doodle {
-      @grid: 8 / 100%;
-      @shape: circle;
+    @grid: 20 / 100vmax;
+    background: rgb(67, 134, 143, 0.3);
+    font-family: sans-serif;
     }
-
-    transition: .2s @r(.6s);
-    border-radius: @pick(100% 0, 0 100%);
-
-    will-change: transform;
-    transform: scale(@r(.25, 1.25));
-
-    background: hsla(
-      calc(240 - 6 * @row * @col),
-      70%, 68%, @r.8
-    );
+    :after {
+      content: \@hex.@r(0x2500, 0x257f);
+      color: hsla(@r360, 70%, 70%, @r.9);
+      font-size: 5vmax;
+    }
   </css-doodle>
-  <div class="header" style="position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; z-index: 3; text-align: center; height: 10em">
-    <h1>This is the Title of the post.</h1>
+
+  <div class="header" style="position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; z-index: 3; text-align: center;">
+    <h1 style="font-size: calc(24px + 1vh);">This is the Title of the post.</h1>
   </div>
 </div>
-```
+````
 
 The above code will be rendered as follow.
 
-<div class="container" style="position: relative; z-index: -1; margin: -0.5px; height: var(--header-height);">
-  <css-doodle style="position: relative; z-index: -1; margin: -0.5px; height: var(--header-height);">
+<div class="container" style="width: 100%; overflow: hidden; z-index: 2; position: relative;">
+  <css-doodle style="position: relative; z-index: 1; height: calc(var(--header-height) + 1vh);">
     :doodle {
-      @grid: 8 / 100%;
-      @shape: circle;
+    @grid: 20 / 100vmax;
+    background: rgb(67, 134, 143, 0.3);
+    font-family: sans-serif;
     }
-
-    transition: .2s @r(.6s);
-    border-radius: @pick(100% 0, 0 100%);
-
-    will-change: transform;
-    transform: scale(@r(.25, 1.25));
-
-    background: hsla(
-      calc(240 - 6 * @row * @col),
-      70%, 68%, @r.8
-    );
+    :after {
+      content: \@hex.@r(0x2500, 0x257f);
+      color: hsla(@r360, 70%, 70%, @r.9);
+      font-size: 5vmax;
+    }
   </css-doodle>
-  <div class="header" style="position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; z-index: 3; text-align: center; height: 3em">
-    <h1>This is the Title of the post.</h1>
+
+  <div class="header" style="position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; z-index: 3; text-align: center;">
+    <h1 style="font-size: calc(24px + 1vh);">This is the Title of the post.</h1>
   </div>
 </div>
 
