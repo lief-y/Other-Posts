@@ -17,6 +17,24 @@ code {
     background: #b6f5f5;
 }
 
-body {
-    max-width: 1080px;
+main {
+  margin-left: 2em;
+  margin-right: 2em;
 }
+
+.page>h1, .page>ul {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+body {    
+  background: var(--bgurl) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 1080px;
+  min-height: 100%;
+}
+
+
