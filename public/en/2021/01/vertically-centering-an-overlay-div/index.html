@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vertically Centering an Overlay Div | </title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="/css/customized.css" type="text/css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+<script src="/js/thm-numbering.js"></script>
+<script src="/js/article-meta-height.js"></script>
+
+<script src="/js/background-by-season.js"></script>
+
+<link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
+
+<link href="/css/fonts-en-cn.css" type="text/css" rel="stylesheet"/>
+
+<link href="/css/css-doodle.css" type="text/css" rel="stylesheet"/>
+
+<script src="https://unpkg.com/css-doodle@0.13.2/css-doodle.min.js"></script>
+
+
+
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-regular.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-italic.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans/noto-sans-v11-latin_greek-700italic.woff" type="font/woff" crossorigin="anonymous">
+
+
+
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-sans-sc/noto-sans-sc-v12-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
+
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-regular.woff" type="font/woff" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff2" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" as="font" href="/css/fonts/noto-serif-sc/noto-serif-sc-v8-chinese-simplified-700.woff" type="font/woff" crossorigin="anonymous">
+
+
+
+
+
+<script>
+  $(':root').css('--header-height', '0 px');
+
+  $(document).ready(divHeight);
+  $(window).on('resize', divHeight);
+
+  function divHeight() {
+    var dheight = $(".header h1").outerHeight(true)  + "px";
+    document.documentElement.style.setProperty('--header-height', dheight);
+  }
+</script>
+
+  </head>
+
+  
+
+  <body class="en">
+    <nav>
+    <ul class="menu">
+    
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/en/">Blog</a></li>
+      
+      <li><a href="/en/categories/">Categories</a></li>
+      
+      <li><a href="/en/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">中文</a></li>
+      
+    </ul>
+    </nav>
+    <hr/>
+
+<div class="page">
+
+<div class="article-title">
+  <css-doodle use="var(--rule)" as-bg="" click-to-update=""></css-doodle>
+  <div class="article-meta">
+    <h1><span class="title">Vertically Centering an Overlay Div</span></h1>
+    <h2 class="author">
+    
+        Fei Ye
+    
+    </h2>
+    <h2 class="date">2021/01/22</h2>
+  </div>
+</div>
+
+<main>
+<p>To vertically centering a div that overlays over another div, a simple solution is to set style of the top layer to <code>top: 0; left:0; bottom:0; right:0;</code>. However, it doesn&rsquo;t seem work well if the background layer is scrollable. Here is another solution for vertically centering an overlay div is to use <code>top: calc(50%-0.5*div.height)</code>, where the div.height is the height of the foreground div which can be calculated dynamically using javascript. The following is the complete example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span> &gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Vertical Centering Overlay&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./style.css&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bg-layer&#34;</span>&gt;
+    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.pixabay.com/photo/2014/04/14/20/11/flowers-324175_1280.jpg&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fg-layer&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt; Title &lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt; Author &lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt; Date &lt;/<span style="color:#f92672">h2</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>  <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./script.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">container</span> {
+  <span style="color:#75715e">/* placing the container on the middle layer */</span>
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">2</span>;
+}
+
+.<span style="color:#a6e22e">bg-layer</span> {
+  <span style="color:#75715e">/* placing the div on background layer */</span>
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1</span>;
+}
+
+.<span style="color:#a6e22e">fg-layer</span> {
+  <span style="color:#75715e">/* placing the div on foreground layer */</span>
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">3</span>;
+  <span style="color:#75715e">/* the following centers the div vertically */</span>
+  <span style="color:#66d9ef">top</span>: calc(<span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>div<span style="color:#f92672">-</span>height));
+  <span style="color:#75715e">/* the following centers the div horizontally */</span>
+  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fg</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;.fg-layer&#34;</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">0.5</span><span style="color:#f92672">*</span><span style="color:#a6e22e">fg</span>.<span style="color:#a6e22e">offsetHeight</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;px&#34;</span>;
+   document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#34;--div-height&#34;</span>, <span style="color:#a6e22e">height</span>);
+</code></pre></div><p>For more information getting height of div, you may read the post <a href="https://www.techiedelight.com/get-height-of-div-element-javascript/">How to get height of a div element with JavaScript/jQuery</a>.</p>
+<p>You can check out the effect of the above example in CodePen <a href="https://codepen.io/fyye/pen/abmMdeB">Overlay</a>.</p>
+
+</main>
+
+<section class="comments">
+  <script src="https://utteranc.es/client.js"
+  repo="fyemath/Other-blogs-comments"
+  issue-term="pathname"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+</section>
+
+
+</div>
+
+<hr>
+  <footer>
+  
+  © <a href="https://yfei.page">Fei Ye</a> 2019-now | <a href="https://github.com/fyemath">Github</a>
+  
+  </footer>
+  </body>
+  
+
+
+<script src="/js/check-for-tex.js" defer></script>
+<script async src="https://yihui.org/js/center-img.js"></script>
+<script src="/js/prism.js"></script>
+
+
+
+
+
+
+
+</html>
+

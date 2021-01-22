@@ -1,5 +1,5 @@
 ---
-title: "Vertical Centering an Overlay Div"
+title: "Vertically Centering an Overlay Div"
 author: Fei Ye
 date: "2021-01-22"
 en/categories: 
