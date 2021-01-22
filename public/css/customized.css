@@ -22,9 +22,25 @@ main {
   margin-right: 2em;
 }
 
-.page>h1, .page>ul {
+nav li, footer {
+  background-color: rgb(233, 246, 241);
+}
+
+.page {
+  background-color: rgb(233, 246, 241);
+}
+
+.page {
+  padding-bottom: 0.67em;
+}
+
+.page-title>h1, .page>ul {
   margin-left: 1em;
-  margin-right: 1em;
+}
+
+.page-title{
+  text-decoration: none;
+  padding: 2px;
 }
 
 body {    

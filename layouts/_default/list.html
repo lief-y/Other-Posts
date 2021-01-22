@@ -1,7 +1,12 @@
 {{ partial "header.html" . }}
 
+<div class="page">
+
+
 {{if not .IsHome }}
-<h1>{{ .Title | markdownify }}</h1>
+<div class="page-title">
+  <h1>{{ .Title | markdownify }}</h1>
+</div>
 {{ end }}
 
 {{ .Content }}
@@ -21,4 +26,7 @@
   {{ end }}
 </ul>
 
+</div>
+
 {{ partial "footer.html" . }}
+

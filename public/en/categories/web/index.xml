@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/en/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Vertical Centering an Overlay Div</title>
+      <link>/en/2021/01/vertical-centering-an-overlay-div/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/en/2021/01/vertical-centering-an-overlay-div/</guid>
+      <description>To vertically centering a div that overlays over another div, a simple solution is to set style of the top layer to top: 0; left:0; bottom:0; right:0;. However, it doesn&amp;rsquo;t seem work well if the background layer is scrollable. Here is another solution for vertically centering an overlay div is to use top: calc(50%-0.5*div.height), where the div.height is the height of the foreground div which can be calculated dynamically using javascript.</description>
+    </item>
+    
+    <item>
       <title>Setting the Height of Div Dynamically Using JS</title>
       <link>/en/2021/01/setting-the-height-of-div-dynamically-using-js/</link>
       <pubDate>Sun, 17 Jan 2021 00:00:00 +0000</pubDate>

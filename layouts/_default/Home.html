@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 
+<div class="page">
+
 <div class="article-meta">
 <h1><span class="title">{{ .Title | markdownify }}</span></h1>
-
 <h2 class="author">
 {{ if .Params.author }}
     {{ .Params.author }}
@@ -16,5 +17,7 @@
 <main>
 {{ .Content }}
 </main>
+
+</div>
 
 {{ partial "footer.html" . }}

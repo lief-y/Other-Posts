@@ -1,4 +1,4 @@
-window.addEventListener('load', (event) => {
+window.addEventListener('DOMContentLoaded', (event) => {
   var today = new Date();
   var month = today.getMonth() + 1;
   
@@ -26,7 +26,7 @@ window.addEventListener('load', (event) => {
   document.documentElement.style.setProperty("--bgurl", imgurl);
 });
 
-$(document).ready(function(){
-  $("body").wrapInner('<div class="page" style="background-color: rgb(233, 246, 241);"></div>'); 
-  
-});
+// $(document).ready(function(){
+//   $("body").wrapInner('<div class="page" style="background-color: rgb(233, 246, 241);"></div>'); 
+// });
+

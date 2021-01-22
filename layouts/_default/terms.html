@@ -1,13 +1,16 @@
 {{ partial "header.html" . }}
 
-{{ $title:= .Title }}
-{{ if (hasPrefix $title "En/") }}
-    {{ $title = (strings.TrimPrefix "En/" $title) }}
-{{ else }}   
-    {{ $title = "分类" }}
-{{ end }}
-
-<h1>{{ $title }}</h1>
+<div class="page">
+  <div class="page-title">
+    {{ $title:= .Title }}
+    {{ if (hasPrefix $title "En/") }}
+        {{ $title = (strings.TrimPrefix "En/" $title) }}
+    {{ else }}   
+        {{ $title = "分类" }}
+    {{ end }}
+    
+    <h1>{{ $title }}</h1>
+  </div>
 
 <ul class="terms">
   {{ range .Data.Terms }}
@@ -17,4 +20,7 @@
   {{ end }}
 </ul>
 
+</div>
+
 {{ partial "footer.html" . }}
+
