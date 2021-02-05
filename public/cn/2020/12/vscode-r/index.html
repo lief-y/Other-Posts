@@ -119,7 +119,7 @@
 <li>
 <p>设置 R 插件的 R 语言的路径。</p>
 <p>安装 R 语言时如果选择默认选项，那么 R 语言会被写入到注册表，从而系统会自动搜索到。R 插件默认会使用系统提供的 R 语言路径。所以，如果不想用 Radian 作为 R 终端，那么这一步设置可以略过。</p>
-<p>如要使用 Radian 作为 R 终端，可以在 VS Code 中打开设置(快捷键 <code>Ctrl+,</code>)。在扩展(Extensions)中先找到 R 再找到 RTerm:Windows, 然后将 Radian 的路径添加到其中即可。可参见下图。</p>
+<p>如要使用 Radian 作为 R 终端，可以在 VS Code 中打开设置 (快捷键  <code>Ctrl+,</code>)。在扩展 (Extensions) 中先找到 R 再找到 RTerm:Windows, 然后将 Radian 的路径添加到其中即可。可参见下图。</p>
 <p><img src="/img/RTermWin.png" alt=""></p>
 </li>
 <li>
@@ -135,7 +135,7 @@
 </code></pre></div><p>该命令会将自定义的 R 包路径 <code>~/RLibary</code> 添加到原有的 R 包路径列表中。且 <code>&quot;~/RLibary&quot;</code> 在前面，意味着该路径为新安装 R 包时的首选路径。</p>
 <h3 id="快捷键设置">快捷键设置</h3>
 <p>VS Code 的提供了定义快捷键的功能，且能方便的找到文件及文件夹的路径。当处理 Rmarkdown 文档，Bookdown 书籍，Blogdown 博客时，可以先设置好一些快捷键例如。</p>
-<p>首先在 VS Code 中打开快捷键设置页面(快捷键：Ctrl+K Ctrl+S)。点击右上角的图标打开 JSON 文件。然后将下面代码添加进去即可。</p>
+<p>首先在 VS Code 中打开快捷键设置页面 (快捷键：Ctrl+K Ctrl+S)。点击右上角的图标打开 JSON 文件。然后将下面代码添加进去即可。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;rmarkdown render&#34;</span>,
   <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+alt+i&#34;</span>,

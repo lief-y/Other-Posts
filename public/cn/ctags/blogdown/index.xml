@@ -12,7 +12,7 @@
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/cn/2020/01/multilingual-blog-using-hugo/</guid>
-      <description>熟悉或者不熟悉 RStudio, 你都可以很快的用blogdown来创建一个私人博客。头一次创建，最容易当然是导入模板。以下我们将以yihui/hugo-xm</description>
+      <description>熟悉或者不熟悉 RStudio, 你都可以很快的用 blogdown 来创建一个私人博客。头一次创建，最容易当然是导入模板。以下我们将以 yihui/hugo-xmin 为例，简述一下怎样修改模板，从而创建如</description>
     </item>
     
   </channel>

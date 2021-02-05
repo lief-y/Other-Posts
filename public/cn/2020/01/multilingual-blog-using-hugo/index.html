@@ -97,15 +97,15 @@
 </div>
 
 <main>
-<p>熟悉或者不熟悉 RStudio, 你都可以很快的用<a href="https://bookdown.org/yihui/blogdown/">blogdown</a>来创建一个私人博客。头一次创建，最容易当然是导入模板。以下我们将以<a href="https://github.com/yihui/hugo-xmin">yihui/hugo-xmin</a>为例，简述一下怎样修改模板，从而创建如本博客网站的中英混合博客。由于经验有限，这里只能介绍两个方面的修改。这两方面的修改分别参考了<a href="https://github.com/yihui/yihui.org">谢益辉的主页</a>和GitHub上关于Hugo 的<a href="https://github.com/gohugoio/hugo/issues/1208#issuecomment-219126178">Option to change taxonomies URL</a>的讨论。</p>
+<p>熟悉或者不熟悉 RStudio, 你都可以很快的用 <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> 来创建一个私人博客。头一次创建，最容易当然是导入模板。以下我们将以 <a href="https://github.com/yihui/hugo-xmin">yihui/hugo-xmin</a> 为例，简述一下怎样修改模板，从而创建如本博客网站的中英混合博客。由于经验有限，这里只能介绍两个方面的修改。这两方面的修改分别参考了<a href="https://github.com/yihui/yihui.org">谢益辉的主页</a>和GitHub上关于Hugo 的 <a href="https://github.com/gohugoio/hugo/issues/1208#issuecomment-219126178">Option to change taxonomies URL</a> 的讨论。</p>
 <h2 id="文件结构">文件结构</h2>
-<p>默认的博客源文件(md 文件)一般都放在<code>content\post</code>文件夹里。对于双语博客，我倾向于一种语言一个文件夹，所以我的<code>content</code> 目录下面设置了两文件夹: <code>en</code>和<code>cn</code>,前一个放英文，后一个放中文。对应的，在<code>config.toml</code> 文件下做如下设置</p>
+<p>默认的博客源文件(md 文件)一般都放在 <code>content\post</code> 文件夹里。对于双语博客，我倾向于一种语言一个文件夹，所以我的 <code>content</code> 目录下面设置了两文件夹: <code>en</code> 和 <code>cn</code>,前一个放英文，后一个放中文。对应的，在 <code>config.toml</code> 文件下做如下设置</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">permalinks</span>]
     <span style="color:#a6e22e">en</span> = <span style="color:#e6db74">&#34;en/:year/:month/:day/:slug/&#34;</span>
     <span style="color:#a6e22e">cn</span> = <span style="color:#e6db74">&#34;cn/:year/:month/:day/:slug/&#34;</span>
-</code></pre></div><p>这样设置的目的是使生成的html文件分别仍然在相应的文件加下。另外，<em>每个文件夹需要有一个空的 <code>_index.md</code>文件</em>。</p>
+</code></pre></div><p>这样设置的目的是使生成的 html 文件分别仍然在相应的文件加下。另外，<em>每个文件夹需要有一个空的 <code>_index.md</code> 文件</em>。</p>
 <h2 id="博客导航栏">博客导航栏</h2>
-<p>一般中英，或者多语言混排，至少有两套导航栏。本博站设置了三套，对应的 <code>config.tom</code> 中分别由<code>[menu.main]</code>, <code>[menu.en]</code>, <code>[menu.cn]</code> 来定义：</p>
+<p>一般中英，或者多语言混排，至少有两套导航栏。本博站设置了三套，对应的 <code>config.tom</code> 中分别由 <code>[menu.main]</code>, <code>[menu.en]</code>, <code>[menu.cn]</code> 来定义：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">menu</span>]
     [[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
         <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Home&#34;</span>
@@ -156,12 +156,12 @@
         <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;English&#34;</span>
         <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/en/&#34;</span>
         <span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">4</span>
-</code></pre></div><p>注意导航里关于分类的目录项我也都设置到了相应的子目录。然而，要使得生成的html及相关的文件夹也分别在<code>en</code>和<code>cn</code>文件夹里，还需要更改默认的<code>[taxonomies]</code>：</p>
+</code></pre></div><p>注意导航里关于分类的目录项我也都设置到了相应的子目录。然而，要使得生成的 html 及相关的文件夹也分别在 <code>en</code> 和 <code>cn</code> 文件夹里，还需要更改默认的 <code>[taxonomies]</code>：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">taxonomies</span>]
     <span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;en/categories&#34;</span>
     <span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;en/tags&#34;</span>
     <span style="color:#a6e22e">ctag</span> = <span style="color:#e6db74">&#34;cn/ctags&#34;</span>
-</code></pre></div><p>需要注意的是，在为博客源文件添加分类或标签时，要保留<code>en/</code>和<code>cn/</code>。例如</p>
+</code></pre></div><p>需要注意的是，在为博客源文件添加分类或标签时，要保留 <code>en/</code> 和 <code>cn/</code>。例如</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">---
 <span style="color:#f92672">title</span>: <span style="color:#ae81ff">用Hugo创建中英混合博客</span>
 <span style="color:#f92672">author</span>: <span style="color:#ae81ff">Fei Ye</span>
@@ -173,11 +173,11 @@
 ---
 </code></pre></div><p>完成这一步，还有两个问题要通过修改布局模板来解决:</p>
 <ul>
-<li>修改<code>layout</code>文件夹下的<code>list.html</code>，从而将<code>[menu.en]</code>和<code>[menu.cn]</code>两个导航正确的显示出来;</li>
-<li>修改<code>layout</code>文件夹下的<code>terms.html</code>，从而能正确显示页面主题。</li>
+<li>修改 <code>layout</code> 文件夹下的 <code>list.html</code>，从而将 <code>[menu.en]</code> 和 <code>[menu.cn]</code> 两个导航正确的显示出来;</li>
+<li>修改 <code>layout</code> 文件夹下的 <code>terms.html</code>，从而能正确显示页面主题。</li>
 </ul>
-<h2 id="修改listhtml">修改<code>list.html</code></h2>
-<p>在文件夹<code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开<code>list.html</code>。将</p>
+<h2 id="修改-listhtml">修改 <code>list.html</code></h2>
+<p>在文件夹 <code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开 <code>list.html</code>。将</p>
 <pre><code class="language-liquid" data-lang="liquid">  &lt;ul&gt;
   {{ $pages := .Pages }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
@@ -191,9 +191,9 @@
 {{ end }}
 &lt;ul&gt;
     {{ range (where ($.Scratch.Get &quot;pages&quot;) &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
-</code></pre><p>这段修改完全是借鉴了<code>[hugo-ivy](https://github.com/yihui/hugo-ivy)</code>的相应设置。</p>
-<h2 id="修改termshtml">修改<code>terms.html</code></h2>
-<p>在文件夹<code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开<code>terms.html</code>。将</p>
+</code></pre><p>这段修改完全是借鉴了 <code>[hugo-ivy](https://github.com/yihui/hugo-ivy)</code> 的相应设置。</p>
+<h2 id="修改-termshtml">修改 <code>terms.html</code></h2>
+<p>在文件夹 <code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开 <code>terms.html</code>。将</p>
 <pre><code class="language-liquid" data-lang="liquid"> &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
 </code></pre><p>改成</p>
 <pre><code class="language-liquid" data-lang="liquid">{{ $title:= .Title }}
@@ -204,9 +204,9 @@
 {{ end }}
 
 &lt;h1&gt;{{ $title }}&lt;/h1&gt;
-</code></pre><p>如果中文相应的还有分类，则需要额外加一个<code>{{ else if (condition) }}</code> 手动定义。如果未做修改，你会发现，生成的分类或者标签页面的主题显示为<code>En/...</code>或者<code>Cn/...</code>。</p>
+</code></pre><p>如果中文相应的还有分类，则需要额外加一个 <code>{{ else if (condition) }}</code> 手动定义。如果未做修改，你会发现，生成的分类或者标签页面的主题显示为 <code>En/...</code> 或者 <code>Cn/...</code>。</p>
 <h2 id="结语">结语</h2>
-<p>最后这两步或许有更简单的方法实现。如果您有好的办法，请移步<a href="https://github.com/fyemath/Other-Posts">本博客的github仓库</a>提交建议或合并。谢谢！</p>
+<p>最后这两步或许有更简单的方法实现。如果您有好的办法，请移步<a href="https://github.com/fyemath/Other-Posts">本博客的 github 仓库</a>提交建议或合并。谢谢！</p>
 
 </main>
 
