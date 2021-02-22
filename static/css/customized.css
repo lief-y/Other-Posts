@@ -53,4 +53,6 @@ body {
   min-height: 100%;
 }
 
-
+main p:first-of-type{
+  padding-top: 1.25rem;
+}
