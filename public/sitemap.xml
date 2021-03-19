@@ -1,412 +1,233 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/</loc>
-    <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/cn/ctags/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/cn/2021/03/waffles/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/cn/</loc>
+    <lastmod>2021-03-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/en/categories/</loc>
     <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/</loc>
     <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/</loc>
     <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2021/01/vertically-centering-an-overlay-div/</loc>
     <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2021/01/setting-the-height-of-div-dynamically-using-js/</loc>
     <lastmod>2021-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cn/ctags/</loc>
-    <lastmod>2021-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/2021/01/css-doodle/</loc>
     <lastmod>2021-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/cn/</loc>
-    <lastmod>2021-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2021/01/choosing-the-right-markdown-editor-for-math/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/2020/12/vscode-r/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/2020/12/dutch-baby-pancake/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/12/knitr-code-chunk-labeling-issues/</loc>
     <lastmod>2020-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/2020/12/siyuansongti/</loc>
     <lastmod>2020-12-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/07/randomized-parameters-in-webwork/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/06/math-recordings/</loc>
     <lastmod>2020-06-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/04/pandoc-numbered-theorems/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/03/best-practice-online-teaching/</loc>
     <lastmod>2020-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/03/redirect-netlify-sites/</loc>
     <lastmod>2020-03-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/03/scaling-centering-figs/</loc>
     <lastmod>2020-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/02/clean-latex-commands/</loc>
     <lastmod>2020-02-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2020/01/port-bookdown/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/2020/01/multilingual-blog-using-hugo/</loc>
     <lastmod>2020-01-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/2020/01/soft-butter-milk-bread/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/08/the-tikzdevice-for-r-users/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/05/how-to-install-fonts-in-texlive/</loc>
     <lastmod>2019-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/04/annotatable-webpages-and-annotate-webpages/</loc>
     <lastmod>2019-04-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/03/a-few-tips-for-xaringan/</loc>
     <lastmod>2019-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/02/some-vba-codes-for-formating-tables/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/02/webwork-authoring-tips/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/02/how-to-create-multiple-pages-in-blog-style-with-jekyll/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/02/make-links-open-in-new-windows/tab-for-markdown/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2019/02/tips-for-rstudio-setup-for-rmarkdown-and-more/</loc>
     <lastmod>2019-02-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2018/10/useful-online-latex-and-markdown-editors/</loc>
     <lastmod>2018-10-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/2018/08/online-videos-on-mathematics/</loc>
     <lastmod>2018-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/annotation/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/blog/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/blogdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/blogdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/bookdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/bread/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/breakfirst/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/code-chunk/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/css/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/css/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/fonts/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/fonts/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/html/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/hugo/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/hugo/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/hyperlink/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/hypothesis/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/jekyll/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/jquery/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/js/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/katex/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/knitr/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/latex/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/markdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/markdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/math/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/mathematics/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/mathjax/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/netlify/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/online/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/online-teaching/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/pandoc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/pandoc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/pgrandom/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/r/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/r/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/recordings/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/resources/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/rmarkdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/rmarkdown/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/rstudio/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/slides/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/tex/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/texlive/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/tikz/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/tikzdevice/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/tools/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/vba/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/videos/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/videos/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/visual-basic/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/vs-code/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/web/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/cn/ctags/web/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/webwork/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/categories/webwork/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/word/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/en/tags/xaringan/</loc>
+  </url><url>
+    <loc>/cn/ctags/%E6%97%A9%E9%A4%90/</loc>
+  </url><url>
+    <loc>/cn/ctags/%E9%A3%9F%E8%B0%B1/</loc>
   </url>
-  
 </urlset>
