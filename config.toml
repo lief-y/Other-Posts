@@ -96,3 +96,11 @@ pygmentsStyle = "monokai"
 
 [frontmatter]
   lastmod = [":fileModTime", "lastmod"]
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+pygmentsStyle = "monokai"

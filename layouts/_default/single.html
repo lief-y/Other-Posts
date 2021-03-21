@@ -26,7 +26,7 @@
 
 {{ if ne $lastmod $date }}
   <hr>
-  <p class="update"> Edited on {{ .Lastmod.Year }} 年 {{ printf "%d" .Lastmod.Month }} 月 {{ .Lastmod.Day }} 日</p>
+  <p class="update"> Edited on {{ .Lastmod.Format "2006/01/02" }}</p>
   <hr>
 {{ end }}
 

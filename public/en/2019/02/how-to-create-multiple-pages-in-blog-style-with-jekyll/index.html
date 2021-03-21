@@ -15,6 +15,8 @@
 
 <link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
+<link href="/css/syntax.css" type="text/css" rel="stylesheet"/>
+
 <link href="/css/fonts-en-cn.css" type="text/css" rel="stylesheet"/>
 
 <link href="/css/css-doodle.css" type="text/css" rel="stylesheet"/>
@@ -125,16 +127,16 @@
 </span><span class="w"></span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l">blog1</span><span class="w">
 </span><span class="w"></span><span class="nn">---</span><span class="w">
 </span></code></pre></div><p>You also need to modify the default layout template for the category <code>blog1</code> by adding a filter using <code>post.categories contains 'category name'</code> to where it is appropriate. For example,</p>
-<pre><code class="language-liquid" data-lang="liquid">{% raw %}
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{% raw %}
 {% for post in site.posts %}
-  {% if post.categories contains 'blog1' %}
+  {% if post.categories contains &#39;blog1&#39; %}
 
 [{{ post.title }}]({{ post.url }})
 
   {% endif %}
 {% endfor %}
 {% endraw %}
-</code></pre><p>See Jekyll help document on <a href="https://jekyllrb.com/docs/posts/">Posts</a> for more information on how to modify a template</p>
+</code></pre></div><p>See Jekyll help document on <a href="https://jekyllrb.com/docs/posts/">Posts</a> for more information on how to modify a template</p>
 <hr>
 <hr>
 <p>Updated on 3/14/2020.</p>
@@ -151,7 +153,7 @@
 
 
   <hr>
-  <p class="update"> Edited on 2020 年 7 月 19 日</p>
+  <p class="update"> Edited on 2020/07/19</p>
   <hr>
 
 

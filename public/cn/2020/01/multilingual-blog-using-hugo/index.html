@@ -15,6 +15,8 @@
 
 <link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
+<link href="/css/syntax.css" type="text/css" rel="stylesheet"/>
+
 <link href="/css/fonts-en-cn.css" type="text/css" rel="stylesheet"/>
 
 <link href="/css/css-doodle.css" type="text/css" rel="stylesheet"/>
@@ -181,33 +183,33 @@
 </ul>
 <h2 id="修改-listhtml">修改 <code>list.html</code></h2>
 <p>在文件夹 <code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开 <code>list.html</code>。将</p>
-<pre><code class="language-liquid" data-lang="liquid">  &lt;ul&gt;
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">  &lt;ul&gt;
   {{ $pages := .Pages }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-  {{ range (where $pages &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
-</code></pre><p>改成</p>
-<pre><code class="language-liquid" data-lang="liquid">{{ $currentPage := . }}
+  {{ range (where $pages &#34;Section&#34; &#34;!=&#34; &#34;&#34;) }}
+</code></pre></div><p>改成</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{{ $currentPage := . }}
 {{ if .IsHome }}
-{{ $.Scratch.Set &quot;pages&quot; .Site.RegularPages }}
+{{ $.Scratch.Set &#34;pages&#34; .Site.RegularPages }}
 {{ else }}
-{{ $.Scratch.Set &quot;pages&quot; .Pages }}
+{{ $.Scratch.Set &#34;pages&#34; .Pages }}
 {{ end }}
 &lt;ul&gt;
-    {{ range (where ($.Scratch.Get &quot;pages&quot;) &quot;Section&quot; &quot;!=&quot; &quot;&quot;) }}
-</code></pre><p>这段修改完全是借鉴了 <code>[hugo-ivy](https://github.com/yihui/hugo-ivy)</code> 的相应设置。</p>
+    {{ range (where ($.Scratch.Get &#34;pages&#34;) &#34;Section&#34; &#34;!=&#34; &#34;&#34;) }}
+</code></pre></div><p>这段修改完全是借鉴了 <code>[hugo-ivy](https://github.com/yihui/hugo-ivy)</code> 的相应设置。</p>
 <h2 id="修改-termshtml">修改 <code>terms.html</code></h2>
 <p>在文件夹 <code>/theme/hugo-xmin/layout/_default</code> 下找到并用文件编辑器打开 <code>terms.html</code>。将</p>
-<pre><code class="language-liquid" data-lang="liquid"> &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
-</code></pre><p>改成</p>
-<pre><code class="language-liquid" data-lang="liquid">{{ $title:= .Title }}
-{{ if (hasPrefix $title &quot;En/&quot;) }}
-    {{ $title = (strings.TrimPrefix &quot;En/&quot; $title) }}
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"> &lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+</code></pre></div><p>改成</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{{ $title:= .Title }}
+{{ if (hasPrefix $title &#34;En/&#34;) }}
+    {{ $title = (strings.TrimPrefix &#34;En/&#34; $title) }}
 {{ else }}
-    {{ $title = &quot;标签&quot; }}
+    {{ $title = &#34;标签&#34; }}
 {{ end }}
 
 &lt;h1&gt;{{ $title }}&lt;/h1&gt;
-</code></pre><p>如果中文相应的还有分类，则需要额外加一个 <code>{{ else if (condition) }}</code> 手动定义。如果未做修改，你会发现，生成的分类或者标签页面的主题显示为 <code>En/...</code> 或者 <code>Cn/...</code>。</p>
+</code></pre></div><p>如果中文相应的还有分类，则需要额外加一个 <code>{{ else if (condition) }}</code> 手动定义。如果未做修改，你会发现，生成的分类或者标签页面的主题显示为 <code>En/...</code> 或者 <code>Cn/...</code>。</p>
 <h2 id="结语">结语</h2>
 <p>最后这两步或许有更简单的方法实现。如果您有好的办法，请移步<a href="https://github.com/fyemath/Other-Posts">本博客的 github 仓库</a>提交建议或合并。谢谢！</p>
 
@@ -215,7 +217,7 @@
 
 
   <hr>
-  <p class="update"> Edited on 2021 年 2 月 22 日</p>
+  <p class="update"> Edited on 2021/02/22</p>
   <hr>
 
 

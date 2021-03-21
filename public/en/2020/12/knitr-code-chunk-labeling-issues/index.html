@@ -15,6 +15,8 @@
 
 <link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
+<link href="/css/syntax.css" type="text/css" rel="stylesheet"/>
+
 <link href="/css/fonts-en-cn.css" type="text/css" rel="stylesheet"/>
 
 <link href="/css/css-doodle.css" type="text/css" rel="stylesheet"/>
@@ -105,14 +107,14 @@
 <p>When using Rmarkdown, we are recommended to assign to each code chunk an unique label that only contains alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-).</p>
 <p>I never had taken the recommendation in serious consideration until I noticed that the string &ldquo;unnamed_code_chunk&rdquo; appeared in each theorem environment in the output pdf file. The reason that the string appears is because the underscore &ldquo;_&rdquo; is a special character in LaTeX. By its design, only absolutely &ldquo;safe&rdquo; characters, alphanumeric characters (a-z, A-Z, 0-9), slashes (/), or dashes (-), are allowed in chunk labels. Indeed, to be &ldquo;safer&rdquo;, code chunk labels should contain only alphanumeric characters and without any space.</p>
 <p>When using Bookdown, if one still wants to let the system automatically label code chunk, for pdf, one solution is to use the  <code>bookdown.post.latex</code> option as seen in my other blog <a href="https://blog.yfei.page/en/2020/02/clean-latex-commands/">Clean LaTeX Commands For R Bookdown</a>. More precisely, the following option should remove the lines in LaTeX containing the string &ldquo;unnamed_code_chunk&rdquo;.</p>
-<pre><code>```{r postlatex}
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">```{r postlatex}
 options(bookdown.post.latex = function(x) {
   # x is the content of the LaTeX output file  
   # Remove unnamed_chunk row
-  unnamed.chunk &lt;- grep(&quot;label\\{.*unnamed-chunk&quot;, x)
+  unnamed.chunk &lt;- grep(&#34;label\\{.*unnamed-chunk&#34;, x)
   x&lt;-x[-c(unnamed.chunk)]
 ```
-</code></pre><p>When rendering pdf articles, one may consider <a href="https://blog.yfei.page/en/2020/01/port-bookdown/">Port Bookdown to Other Rmarkdown Format</a>.</p>
+</code></pre></div><p>When rendering pdf articles, one may consider <a href="https://blog.yfei.page/en/2020/01/port-bookdown/">Port Bookdown to Other Rmarkdown Format</a>.</p>
 
 </main>
 

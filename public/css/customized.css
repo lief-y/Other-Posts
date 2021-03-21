@@ -62,3 +62,15 @@ p.update {
   font-style: italic;
   text-align: center;
 }
+
+.menu a {
+  font-size: larger;
+}
+
+.menu {
+  background: none;
+}
+
+footer {
+  text-align: center;
+}
