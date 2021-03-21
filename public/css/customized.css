@@ -56,3 +56,8 @@ body {
 main p:first-of-type{
   padding-top: 1.25rem;
 }
+
+.update {
+  font-size: smaller;
+  font-style: italic;
+}

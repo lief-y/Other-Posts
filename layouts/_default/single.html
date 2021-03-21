@@ -13,7 +13,8 @@
         {{ .Site.Params.author }}
     {{ end }}
     </h2>
-    {{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+    {{ if .Params.date }}<h3 class="date">{{ .Date.Format "2006/01/02" }}</h3>{{ end }}
+    {{ if ne .Lastmod .Date }}<h3 class="update"> Last Modified on {{ .Lastmod.Format "2006/01/02" }}</h3>{{ end }}
   </div>
 </div>
 
