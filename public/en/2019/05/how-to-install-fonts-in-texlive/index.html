@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,7 +98,6 @@
     
     </h2>
     <h3 class="date">2019/05/04</h3>
-    
   </div>
 </div>
 
@@ -103,23 +105,29 @@
 <p>After using LaTeX for a long time, you might be bored for default fonts and would like to install some new good looking fonts. If you will use XeTeX engine to compile your tex file, you don&rsquo;t have to worry about the installation. However, for pdfTeX engine, we do need a proper installation. If you use TeXLive like I do, you will complete the installation easily in three steps.</p>
 <h2 id="where-to-install">Where to install</h2>
 <p>To make the fonts installation independent to distribution of TeXLive from different years, fonts should go into the local TEXMF-tree.  If your TeXLive installation is not heavily customized, you will find a folder named <code>texmf-local </code> under the <code>texlive</code> folder.  Otherwise, you can find its location with the command</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">kpsewhich -expand-var<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;$TEXMFLOCAL&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">kpsewhich -expand-var<span class="o">=</span><span class="s1">&#39;$TEXMFLOCAL&#39;</span>
 </code></pre></div><p>In the following, <code>texmf-local</code> will be used for this location.  To install the font, you may copy these subdirectories in your font folder to TEXMFLOCAL.</p>
 <h2 id="registering-the-font-map-file">Registering the font map file</h2>
 <p>The map file <code>fontname.map</code> must be registered for use with dvips, pdftex, xdvi. To register a map, you may use the command</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">updmap-sys --enable Map<span style="color:#f92672">=</span>fontname.map
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">updmap-sys --enable <span class="nv">Map</span><span class="o">=</span>fontname.map
 </code></pre></div><p>If your system is Linux or MacOX, use the following command</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo updmap-sys --enable Map<span style="color:#f92672">=</span>fontname.map
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo updmap-sys --enable <span class="nv">Map</span><span class="o">=</span>fontname.map
 </code></pre></div><p><strong>Remark:</strong> 👍 👍 👍 Another way to register a font map is to modify the <code>undmap.cfg</code> file in the <code>web2c</code> folder (create the folder and/or file under <code>texmf-local</code> if they do not exist) by adding a line <code>Map fontname.map</code>. The benefit of this method is that the font will be ready to use if you install a new version of TeXLive.</p>
 <p>After creating the <code>updmap.cfg</code> file, you may need to run <code>updmap-sys</code>.</p>
 <h2 id="refresh-the-file-name-database">Refresh the file-name database</h2>
 <p>Once you have done with the first two steps, in the command line, run the following command to refresh the file-name database so that the TeX engines will find your fonts.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mktexlsr
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mktexlsr
 </code></pre></div><h2 id="final-remark">Final remark</h2>
 <p>For more information on how to install fonts manually or how to create TeX compatible fonts,  you may check the following two webpages <a href="https://tex.stackexchange.com/questions/88423/manual-font-installation">Manual font installation</a> and <a href="https://github.com/sebschub/FontPro">FontPro</a>.</p>
 <p>Enjoy TeXing!</p>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 7 月 17 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

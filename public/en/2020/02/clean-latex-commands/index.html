@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,22 +98,27 @@
     
     </h2>
     <h3 class="date">2020/02/27</h3>
-    
   </div>
 </div>
 
 <main>
 <p>When using LaTeX template with customized theorem environments in R bookdown, you may see an error say a thereom environment is defined. Checking the output LaTex files, you will find that bookdown generated theorem enviroment at the end of the LaTeX preamble. To solve the problem, currently, one may use the magical <code>bookdown.post.latex</code> option. Adding the following code at the beginning of the index.Rmd file will remove the injected theorem environments.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r">```{r remove_amsmath, include=FALSE}
-options(bookdown.post.latex = function(x) {
-    start_row &lt;- grep(&#34;package\\{amsthm&#34;, x)
-    end_row &lt;- grep(&#34;newtheorem\\*\\{solution&#34;, x)
-    x&lt;-x[-c(start_row:end_row)]
-})
-```
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="n">```{r remove_amsmath, include=FALSE}
+</span><span class="n">options(bookdown.post.latex = function(x) {
+</span><span class="n">    start_row &lt;- grep(&#34;package\\{amsthm&#34;, x)
+</span><span class="n">    end_row &lt;- grep(&#34;newtheorem\\*\\{solution&#34;, x)
+</span><span class="n">    x&lt;-x[-c(start_row:end_row)]
+</span><span class="n">})
+</span><span class="n">```</span>
 </code></pre></div><p>I learned the option from the source file of Yihui&rsquo;s book <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a> and the codes from the Github issue <a href="https://github.com/rstudio/bookdown/issues/417">pdf_book is trying inject latex code to use package amsthm #417</a>.</p>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 7 月 19 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

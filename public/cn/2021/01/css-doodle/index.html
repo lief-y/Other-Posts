@@ -81,6 +81,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -93,7 +96,6 @@
     
     </h2>
     <h3 class="date">2021/01/14</h3>
-    
   </div>
 </div>
 
@@ -102,88 +104,88 @@
 <p>尽管官方教程已经非常清楚，但对于本人这种不太熟悉 CSS 的，学起来还是花了点时间。为了避免忘记，特以上图为例，简单解释一下实现方法，以求抛砖引玉。</p>
 <h2 id="css-doodle-作图">CSS-Doodle 作图</h2>
 <p>要在网页中显示 CSS-Doodle 图形，需要调用 css-doodle.js. 最简单的方法是将下面的代码加入到网页的 <code>&lt;head&gt;...&lt;/head&gt;</code> 中。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/css-doodle@0.13.4/css-doodle.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://unpkg.com/css-doodle@0.13.4/css-doodle.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div><p>由于 CSS-Doodle 的设计是基于 CSS 的，所以用 CSS-Doodle 作图时，既可以用 CSS 本身的语法，也可以用 CSS-Doodle 自身的语法 (详情可见 <a href="https://css-doodle.com/#usage">CSS-Doodle Usage</a>)。 但是代码要放入一个特殊的元素块：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&lt;</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#75715e">/* 作图代码 */</span>
-<span style="color:#f92672">&lt;/</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
+  <span class="c">/* 作图代码 */</span>
+<span class="o">&lt;/</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
 </code></pre></div><p>例如，上面的图形，是由下面的代码生成的。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&lt;</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
-  :<span style="color:#a6e22e">doodle</span> {
-    <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#66d9ef">grid</span>: <span style="color:#ae81ff">8</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vmax</span>;
-  }
-  @<span style="color:#66d9ef">shape</span><span style="color:#f92672">:</span> <span style="color:#f92672">clover</span> <span style="color:#f92672">5</span>;
-  <span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">hsla</span><span style="color:#f92672">(</span>
-    <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100</span> <span style="color:#f92672">-</span> @<span style="color:#66d9ef">i</span> <span style="color:#f92672">*</span> <span style="color:#f92672">4</span><span style="color:#f92672">),</span> <span style="color:#f92672">70</span><span style="color:#f92672">%,</span> <span style="color:#f92672">68</span><span style="color:#f92672">%,</span> @<span style="color:#66d9ef">r</span>.<span style="color:#a6e22e">8</span>
-  <span style="color:#f92672">)</span>;
-  <span style="color:#f92672">transform</span><span style="color:#f92672">:</span>
-    <span style="color:#f92672">scale</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span>.<span style="color:#a6e22e">8</span><span style="color:#f92672">,</span> <span style="color:#f92672">1</span>.<span style="color:#a6e22e">6</span><span style="color:#f92672">))</span>
-    <span style="color:#f92672">translate</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">m2</span><span style="color:#f92672">.</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">±</span><span style="color:#f92672">50</span><span style="color:#f92672">%))</span>;
-<span style="color:#f92672">&lt;/</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
+  <span class="p">:</span><span class="nd">doodle</span> <span class="p">{</span>
+    <span class="err">@</span><span class="k">grid</span><span class="p">:</span> <span class="mi">8</span> <span class="o">/</span> <span class="mi">100</span><span class="kt">vmax</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">@</span><span class="k">shape</span><span class="o">:</span> <span class="nt">clover</span> <span class="nt">5</span><span class="p">;</span>
+  <span class="nt">background</span><span class="o">:</span> <span class="nt">hsla</span><span class="o">(</span>
+    <span class="nt">calc</span><span class="o">(</span><span class="nt">100</span> <span class="nt">-</span> <span class="p">@</span><span class="k">i</span> <span class="o">*</span> <span class="nt">4</span><span class="o">),</span> <span class="nt">70</span><span class="o">%,</span> <span class="nt">68</span><span class="o">%,</span> <span class="p">@</span><span class="k">r</span><span class="p">.</span><span class="nc">8</span>
+  <span class="o">)</span><span class="p">;</span>
+  <span class="nt">transform</span><span class="o">:</span>
+    <span class="nt">scale</span><span class="o">(</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="p">.</span><span class="nc">8</span><span class="o">,</span> <span class="nt">1</span><span class="p">.</span><span class="nc">6</span><span class="o">))</span>
+    <span class="nt">translate</span><span class="o">(</span><span class="p">@</span><span class="k">m2</span><span class="o">.</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="err">±</span><span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+<span class="o">&lt;/</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
 </code></pre></div><h2 id="用-css-doodle-图形做背景">用 CSS-Doodle 图形做背景</h2>
 <p>由于 <code>&lt;css-doodle&gt;...&lt;/css-doodle&gt;</code> 是一个独立的元素块。要将生成的图形做为另一个元素块儿的背景，一个方法是单独生成一个图片，然后截屏；另一个方法是用下面的代码将图形输出为背景图像。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">background-image</span><span style="color:#f92672">:</span> @<span style="color:#66d9ef">css-doodle</span><span style="color:#f92672">(</span>
-<span style="color:#75715e">/* 作图代码 */</span>
-<span style="color:#f92672">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">background-image</span><span class="o">:</span> <span class="p">@</span><span class="k">css-doodle</span><span class="o">(</span>
+<span class="c">/* 作图代码 */</span>
+<span class="o">)</span>
 </code></pre></div><p>需要注意的是，<code>css-doodle</code> 元素块在设计上依赖 <code>grid</code> 来生成重复的图形，所以在用上述方法的时候，可以在 <code>css-doodle</code> 元素块中加上下面这一行。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">1</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100</span><span style="color:#f92672">%</span> <span style="color:#f92672">100vh</span>; <span style="color:#75715e">/* 斜杠后为 grid 的宽度和长度*/</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">100</span><span class="o">%</span> <span class="nt">100vh</span><span class="p">;</span> <span class="c">/* 斜杠后为 grid 的宽度和长度*/</span>
 </code></pre></div><p>另外，也可以加上背景色并显示背景的大小。</p>
 <p>把上面这些代码合起来即可作为背景使用了。但是需要注意的是，该背景实际上是 <code>css-doodle</code> 元素块儿的背景。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&lt;</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
-    @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">1</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100</span><span style="color:#f92672">%</span> <span style="color:#f92672">100vh</span>;
-    <span style="color:#f92672">background-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">100</span><span style="color:#f92672">%;</span>
-    <span style="color:#f92672">background-image</span><span style="color:#f92672">:</span> @<span style="color:#66d9ef">doodle</span><span style="color:#f92672">(</span>
-      @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">8</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100vmax</span>;
-      @<span style="color:#66d9ef">shape</span><span style="color:#f92672">:</span> <span style="color:#f92672">clover</span> <span style="color:#f92672">5</span>;
-      <span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">hsla</span><span style="color:#f92672">(</span>
-        <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100</span> <span style="color:#f92672">-</span> @<span style="color:#66d9ef">i</span> <span style="color:#f92672">*</span> <span style="color:#f92672">4</span><span style="color:#f92672">),</span> <span style="color:#f92672">70</span><span style="color:#f92672">%,</span> <span style="color:#f92672">68</span><span style="color:#f92672">%,</span> @<span style="color:#66d9ef">r</span>.<span style="color:#a6e22e">8</span>
-      <span style="color:#f92672">)</span>;
-      <span style="color:#f92672">transform</span><span style="color:#f92672">:</span>
-        <span style="color:#f92672">scale</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span>.<span style="color:#a6e22e">8</span><span style="color:#f92672">,</span> <span style="color:#f92672">1</span>.<span style="color:#a6e22e">6</span><span style="color:#f92672">))</span>
-        <span style="color:#f92672">translate</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">m2</span><span style="color:#f92672">.</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">±</span><span style="color:#f92672">50</span><span style="color:#f92672">%))</span>;
-    <span style="color:#f92672">)</span>;
-<span style="color:#f92672">&lt;/</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
+    <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">100</span><span class="o">%</span> <span class="nt">100vh</span><span class="p">;</span>
+    <span class="nt">background-size</span><span class="o">:</span> <span class="nt">100</span><span class="o">%;</span>
+    <span class="nt">background-image</span><span class="o">:</span> <span class="p">@</span><span class="k">doodle</span><span class="o">(</span>
+      <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">8</span> <span class="o">/</span> <span class="nt">100vmax</span><span class="p">;</span>
+      <span class="p">@</span><span class="k">shape</span><span class="o">:</span> <span class="nt">clover</span> <span class="nt">5</span><span class="p">;</span>
+      <span class="nt">background</span><span class="o">:</span> <span class="nt">hsla</span><span class="o">(</span>
+        <span class="nt">calc</span><span class="o">(</span><span class="nt">100</span> <span class="nt">-</span> <span class="p">@</span><span class="k">i</span> <span class="o">*</span> <span class="nt">4</span><span class="o">),</span> <span class="nt">70</span><span class="o">%,</span> <span class="nt">68</span><span class="o">%,</span> <span class="p">@</span><span class="k">r</span><span class="p">.</span><span class="nc">8</span>
+      <span class="o">)</span><span class="p">;</span>
+      <span class="nt">transform</span><span class="o">:</span>
+        <span class="nt">scale</span><span class="o">(</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="p">.</span><span class="nc">8</span><span class="o">,</span> <span class="nt">1</span><span class="p">.</span><span class="nc">6</span><span class="o">))</span>
+        <span class="nt">translate</span><span class="o">(</span><span class="p">@</span><span class="k">m2</span><span class="o">.</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="err">±</span><span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+    <span class="o">)</span><span class="p">;</span>
+<span class="o">&lt;/</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
 </code></pre></div><h2 id="元素块重叠">元素块重叠</h2>
 <p>要将 <code>css-doodle</code> 元素块儿作为别的元素块儿的背景，可以使用 <code>z-index</code>。例如将 <code>css-doodle</code> 的 <code>z-index</code> 设置为 -1。将要覆盖在上面的元素块儿的 <code>z-index</code> 设置为正整数。另外还需要适当的调整覆盖在 <code>css-doodle</code> 上的元素块儿的边距。这些都可以用 CSS 实现。例如, 下面的代码</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">
-<span style="color:#f92672">&lt;</span><span style="color:#f92672">div</span> <span style="color:#f92672">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 100%; overflow: hidden; z-index: 2; position: relative;&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#f92672">&lt;</span><span style="color:#f92672">css-doodle</span> <span style="color:#f92672">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;position: relative; z-index: 1; margin: -0.5px;&#34;</span><span style="color:#f92672">&gt;</span>
-    @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">1</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100</span><span style="color:#f92672">%</span> <span style="color:#f92672">100vh</span>;
-    <span style="color:#f92672">background-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">100</span><span style="color:#f92672">%;</span>
-    <span style="color:#f92672">background-image</span><span style="color:#f92672">:</span> @<span style="color:#66d9ef">doodle</span><span style="color:#f92672">(</span>
-      @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">8</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100vmax</span>;
-      @<span style="color:#66d9ef">shape</span><span style="color:#f92672">:</span> <span style="color:#f92672">clover</span> <span style="color:#f92672">5</span>;
-      <span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">hsla</span><span style="color:#f92672">(</span>
-        <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100</span> <span style="color:#f92672">-</span> @<span style="color:#66d9ef">i</span> <span style="color:#f92672">*</span> <span style="color:#f92672">4</span><span style="color:#f92672">),</span> <span style="color:#f92672">70</span><span style="color:#f92672">%,</span> <span style="color:#f92672">68</span><span style="color:#f92672">%,</span> @<span style="color:#66d9ef">r</span>.<span style="color:#a6e22e">8</span>
-      <span style="color:#f92672">)</span>;
-      <span style="color:#f92672">transform</span><span style="color:#f92672">:</span>
-        <span style="color:#f92672">scale</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span>.<span style="color:#a6e22e">8</span><span style="color:#f92672">,</span> <span style="color:#f92672">1</span>.<span style="color:#a6e22e">6</span><span style="color:#f92672">))</span>
-        <span style="color:#f92672">translate</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">m2</span><span style="color:#f92672">.</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">±</span><span style="color:#f92672">50</span><span style="color:#f92672">%))</span>;
-    <span style="color:#f92672">)</span>;
-  <span style="color:#f92672">&lt;/</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css">
+<span class="o">&lt;</span><span class="nt">div</span> <span class="nt">style</span><span class="o">=</span><span class="s2">&#34;width: 100%; overflow: hidden; z-index: 2; position: relative;&#34;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nt">css-doodle</span> <span class="nt">style</span><span class="o">=</span><span class="s2">&#34;position: relative; z-index: 1; margin: -0.5px;&#34;</span><span class="o">&gt;</span>
+    <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">100</span><span class="o">%</span> <span class="nt">100vh</span><span class="p">;</span>
+    <span class="nt">background-size</span><span class="o">:</span> <span class="nt">100</span><span class="o">%;</span>
+    <span class="nt">background-image</span><span class="o">:</span> <span class="p">@</span><span class="k">doodle</span><span class="o">(</span>
+      <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">8</span> <span class="o">/</span> <span class="nt">100vmax</span><span class="p">;</span>
+      <span class="p">@</span><span class="k">shape</span><span class="o">:</span> <span class="nt">clover</span> <span class="nt">5</span><span class="p">;</span>
+      <span class="nt">background</span><span class="o">:</span> <span class="nt">hsla</span><span class="o">(</span>
+        <span class="nt">calc</span><span class="o">(</span><span class="nt">100</span> <span class="nt">-</span> <span class="p">@</span><span class="k">i</span> <span class="o">*</span> <span class="nt">4</span><span class="o">),</span> <span class="nt">70</span><span class="o">%,</span> <span class="nt">68</span><span class="o">%,</span> <span class="p">@</span><span class="k">r</span><span class="p">.</span><span class="nc">8</span>
+      <span class="o">)</span><span class="p">;</span>
+      <span class="nt">transform</span><span class="o">:</span>
+        <span class="nt">scale</span><span class="o">(</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="p">.</span><span class="nc">8</span><span class="o">,</span> <span class="nt">1</span><span class="p">.</span><span class="nc">6</span><span class="o">))</span>
+        <span class="nt">translate</span><span class="o">(</span><span class="p">@</span><span class="k">m2</span><span class="o">.</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="err">±</span><span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+    <span class="o">)</span><span class="p">;</span>
+  <span class="o">&lt;/</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
 
-  <span style="color:#f92672">&lt;</span><span style="color:#f92672">div</span> <span style="color:#f92672">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;position: absolute; top: 50%; left: 50%;
-</span><span style="color:#e6db74">   transform: translate(-50%, -50%); z-index: 3;&#34;</span><span style="color:#f92672">&gt;</span>
+  <span class="o">&lt;</span><span class="nt">div</span> <span class="nt">style</span><span class="o">=</span><span class="s2">&#34;position: absolute; top: 50%; left: 50%;
+</span><span class="s2">   transform: translate(-50%, -50%); z-index: 3;&#34;</span><span class="o">&gt;</span>
 
-  <span style="color:#960050;background-color:#1e0010">```</span><span style="color:#f92672">css</span>
-  <span style="color:#f92672">&lt;</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
-    @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">1</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100</span><span style="color:#f92672">%</span> <span style="color:#f92672">100vh</span>;
-    <span style="color:#f92672">background-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">100</span><span style="color:#f92672">%</span>;
-    <span style="color:#f92672">background-image</span><span style="color:#f92672">:</span> @<span style="color:#66d9ef">doodle</span><span style="color:#f92672">(</span>
-      @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">8</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100vmax</span>;
-      @<span style="color:#66d9ef">shape</span><span style="color:#f92672">:</span> <span style="color:#f92672">clover</span> <span style="color:#f92672">5</span>;
-      <span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">hsla</span><span style="color:#f92672">(</span>
-        <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100</span> <span style="color:#f92672">-</span> @<span style="color:#66d9ef">i</span> <span style="color:#f92672">*</span> <span style="color:#f92672">4</span><span style="color:#f92672">),</span> <span style="color:#f92672">70</span><span style="color:#f92672">%,</span> <span style="color:#f92672">68</span><span style="color:#f92672">%,</span> @<span style="color:#66d9ef">r</span>.<span style="color:#a6e22e">8</span>
-      <span style="color:#f92672">)</span>;
-      <span style="color:#f92672">transform</span><span style="color:#f92672">:</span>
-        <span style="color:#f92672">scale</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span>.<span style="color:#a6e22e">8</span><span style="color:#f92672">,</span> <span style="color:#f92672">1</span>.<span style="color:#a6e22e">6</span><span style="color:#f92672">))</span>
-        <span style="color:#f92672">translate</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">m2</span><span style="color:#f92672">.</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">±</span><span style="color:#f92672">50</span><span style="color:#f92672">%))</span>;
-    <span style="color:#f92672">)</span>;
-  <span style="color:#f92672">&lt;/</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#960050;background-color:#1e0010">```</span>
+  <span class="err">```</span><span class="nt">css</span>
+  <span class="o">&lt;</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
+    <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">100</span><span class="o">%</span> <span class="nt">100vh</span><span class="p">;</span>
+    <span class="nt">background-size</span><span class="o">:</span> <span class="nt">100</span><span class="o">%</span><span class="p">;</span>
+    <span class="nt">background-image</span><span class="o">:</span> <span class="p">@</span><span class="k">doodle</span><span class="o">(</span>
+      <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">8</span> <span class="o">/</span> <span class="nt">100vmax</span><span class="p">;</span>
+      <span class="p">@</span><span class="k">shape</span><span class="o">:</span> <span class="nt">clover</span> <span class="nt">5</span><span class="p">;</span>
+      <span class="nt">background</span><span class="o">:</span> <span class="nt">hsla</span><span class="o">(</span>
+        <span class="nt">calc</span><span class="o">(</span><span class="nt">100</span> <span class="nt">-</span> <span class="p">@</span><span class="k">i</span> <span class="o">*</span> <span class="nt">4</span><span class="o">),</span> <span class="nt">70</span><span class="o">%,</span> <span class="nt">68</span><span class="o">%,</span> <span class="p">@</span><span class="k">r</span><span class="p">.</span><span class="nc">8</span>
+      <span class="o">)</span><span class="p">;</span>
+      <span class="nt">transform</span><span class="o">:</span>
+        <span class="nt">scale</span><span class="o">(</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="p">.</span><span class="nc">8</span><span class="o">,</span> <span class="nt">1</span><span class="p">.</span><span class="nc">6</span><span class="o">))</span>
+        <span class="nt">translate</span><span class="o">(</span><span class="p">@</span><span class="k">m2</span><span class="o">.</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="err">±</span><span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+    <span class="o">)</span><span class="p">;</span>
+  <span class="o">&lt;/</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
+  <span class="err">```</span>
 
-  <span style="color:#f92672">&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;/</span><span style="color:#f92672">div</span><span style="color:#f92672">&gt;</span>
+  <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
 
 </code></pre></div><p>上面的 html+CSS 代码的效果如下</p>
 <div style="width: 100%; overflow: hidden; z-index: 2; position: relative;">
@@ -202,20 +204,20 @@
     );
   </css-doodle>
   <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3;">
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">&lt;</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
-  @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">1</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100</span><span style="color:#f92672">%</span> <span style="color:#f92672">100vh</span>;
-  <span style="color:#f92672">background-size</span><span style="color:#f92672">:</span> <span style="color:#f92672">100</span><span style="color:#f92672">%;</span>
-  <span style="color:#f92672">background-image</span><span style="color:#f92672">:</span> @<span style="color:#66d9ef">doodle</span><span style="color:#f92672">(</span>
-    @<span style="color:#66d9ef">grid</span><span style="color:#f92672">:</span> <span style="color:#f92672">8</span> <span style="color:#f92672">/</span> <span style="color:#f92672">100vmax</span>;
-    @<span style="color:#66d9ef">shape</span><span style="color:#f92672">:</span> <span style="color:#f92672">clover</span> <span style="color:#f92672">5</span>;
-    <span style="color:#f92672">background</span><span style="color:#f92672">:</span> <span style="color:#f92672">hsla</span><span style="color:#f92672">(</span>
-      <span style="color:#f92672">calc</span><span style="color:#f92672">(</span><span style="color:#f92672">100</span> <span style="color:#f92672">-</span> @<span style="color:#66d9ef">i</span> <span style="color:#f92672">*</span> <span style="color:#f92672">4</span><span style="color:#f92672">),</span> <span style="color:#f92672">70</span><span style="color:#f92672">%,</span> <span style="color:#f92672">68</span><span style="color:#f92672">%,</span> @<span style="color:#66d9ef">r</span>.<span style="color:#a6e22e">8</span>
-    <span style="color:#f92672">)</span>;
-    <span style="color:#f92672">transform</span><span style="color:#f92672">:</span>
-      <span style="color:#f92672">scale</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span>.<span style="color:#a6e22e">8</span><span style="color:#f92672">,</span> <span style="color:#f92672">1</span>.<span style="color:#a6e22e">6</span><span style="color:#f92672">))</span>
-      <span style="color:#f92672">translate</span><span style="color:#f92672">(</span>@<span style="color:#66d9ef">m2</span><span style="color:#f92672">.</span>@<span style="color:#66d9ef">r</span><span style="color:#f92672">(</span><span style="color:#960050;background-color:#1e0010">±</span><span style="color:#f92672">50</span><span style="color:#f92672">%))</span>;
-  <span style="color:#f92672">)</span>;
-<span style="color:#f92672">&lt;/</span><span style="color:#f92672">css-doodle</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
+  <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">1</span> <span class="o">/</span> <span class="nt">100</span><span class="o">%</span> <span class="nt">100vh</span><span class="p">;</span>
+  <span class="nt">background-size</span><span class="o">:</span> <span class="nt">100</span><span class="o">%;</span>
+  <span class="nt">background-image</span><span class="o">:</span> <span class="p">@</span><span class="k">doodle</span><span class="o">(</span>
+    <span class="p">@</span><span class="k">grid</span><span class="o">:</span> <span class="nt">8</span> <span class="o">/</span> <span class="nt">100vmax</span><span class="p">;</span>
+    <span class="p">@</span><span class="k">shape</span><span class="o">:</span> <span class="nt">clover</span> <span class="nt">5</span><span class="p">;</span>
+    <span class="nt">background</span><span class="o">:</span> <span class="nt">hsla</span><span class="o">(</span>
+      <span class="nt">calc</span><span class="o">(</span><span class="nt">100</span> <span class="nt">-</span> <span class="p">@</span><span class="k">i</span> <span class="o">*</span> <span class="nt">4</span><span class="o">),</span> <span class="nt">70</span><span class="o">%,</span> <span class="nt">68</span><span class="o">%,</span> <span class="p">@</span><span class="k">r</span><span class="p">.</span><span class="nc">8</span>
+    <span class="o">)</span><span class="p">;</span>
+    <span class="nt">transform</span><span class="o">:</span>
+      <span class="nt">scale</span><span class="o">(</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="p">.</span><span class="nc">8</span><span class="o">,</span> <span class="nt">1</span><span class="p">.</span><span class="nc">6</span><span class="o">))</span>
+      <span class="nt">translate</span><span class="o">(</span><span class="p">@</span><span class="k">m2</span><span class="o">.</span><span class="p">@</span><span class="k">r</span><span class="o">(</span><span class="err">±</span><span class="nt">50</span><span class="o">%))</span><span class="p">;</span>
+  <span class="o">)</span><span class="p">;</span>
+<span class="o">&lt;/</span><span class="nt">css-doodle</span><span class="o">&gt;</span>
 </code></pre></div>  </div>
 </div>
 <h2 id="后记">后记</h2>
@@ -229,6 +231,12 @@
 </ol>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2021 年 1 月 17 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

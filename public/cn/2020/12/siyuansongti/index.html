@@ -81,6 +81,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -93,7 +96,6 @@
     
     </h2>
     <h3 class="date">2020/12/12</h3>
-    
   </div>
 </div>
 
@@ -109,39 +111,39 @@
 </li>
 <li>
 <p>设置 CSS 加载调用字体。为此，可以将如下的 CSS 代码存为一个 .css 文件，例如<code>fontssc.css</code>。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">@<span style="color:#66d9ef">font-face</span> {
-<span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SiYuanSong&#39;</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif CN&#39;</span><span style="color:#f92672">),</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif SC&#39;</span><span style="color:#f92672">),</span> <span style="color:#75715e">/*如果可能，调用本地字体*/</span>
-  <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;opentype&#39;</span><span style="color:#f92672">);</span>
-  <span style="color:#f92672">font-weight</span><span style="color:#f92672">:</span> <span style="color:#f92672">400</span><span style="color:#f92672">;</span>
-  <span style="color:#f92672">font-style</span><span style="color:#f92672">:</span> <span style="color:#f92672">normal</span><span style="color:#f92672">;</span>
-  <span style="color:#f92672">font-display</span><span style="color:#f92672">:</span> <span style="color:#f92672">swap</span><span style="color:#f92672">;</span>
-}
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+<span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;SiYuanSong&#39;</span><span class="o">;</span>
+<span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Source Han Serif CN&#39;</span><span class="o">),</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Source Han Serif SC&#39;</span><span class="o">),</span> <span class="c">/*如果可能，调用本地字体*/</span>
+  <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;opentype&#39;</span><span class="o">);</span>
+  <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">400</span><span class="o">;</span>
+  <span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+  <span class="nt">font-display</span><span class="o">:</span> <span class="nt">swap</span><span class="o">;</span>
+<span class="p">}</span>
 
-@<span style="color:#66d9ef">font-face</span> {
-  <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;SiYuanSong&#39;</span><span style="color:#f92672">;</span>
-  <span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif CN&#39;</span><span style="color:#f92672">),</span> <span style="color:#f92672">local</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Source Han Serif SC&#39;</span><span style="color:#f92672">),</span> <span style="color:#75715e">/*如果可能，调用本地字体*/</span>
-    <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf&#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;opentype&#39;</span><span style="color:#f92672">);</span>
-  <span style="color:#f92672">font-weight</span><span style="color:#f92672">:</span> <span style="color:#f92672">700</span><span style="color:#f92672">;</span>
-  <span style="color:#f92672">font-style</span><span style="color:#f92672">:</span> <span style="color:#f92672">normal</span><span style="color:#f92672">;</span>
-  <span style="color:#f92672">font-display</span><span style="color:#f92672">:</span> <span style="color:#f92672">swap</span><span style="color:#f92672">;</span>
-}
+<span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+  <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;SiYuanSong&#39;</span><span class="o">;</span>
+  <span class="nt">src</span><span class="o">:</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Source Han Serif CN&#39;</span><span class="o">),</span> <span class="nt">local</span><span class="o">(</span><span class="s1">&#39;Source Han Serif SC&#39;</span><span class="o">),</span> <span class="c">/*如果可能，调用本地字体*/</span>
+    <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;opentype&#39;</span><span class="o">);</span>
+  <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">700</span><span class="o">;</span>
+  <span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+  <span class="nt">font-display</span><span class="o">:</span> <span class="nt">swap</span><span class="o">;</span>
+<span class="p">}</span>
 
-<span style="color:#f92672">body</span>{
-  <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;SiYuanSong&#39;</span>, <span style="color:#66d9ef">serif</span>;
-}
+<span class="nt">body</span><span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;SiYuanSong&#39;</span><span class="p">,</span> <span class="kc">serif</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></li>
 <li>
 <p>在网页的 <code>&lt;head&gt;...&lt;/head&gt;</code> 里面加入下面一行即可。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/fonts-customized.css&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span>/&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/fonts-customized.css&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span><span class="p">/&gt;</span>
 </code></pre></div></li>
 </ul>
 <h2 id="后记">后记</h2>
 <ul>
 <li>
 <p>为了增强网页打开后的刷新速度，可以用 <code>rel=&quot;preload&quot;</code> 来预加载字体。具体来说，将下面的代码加入 <code>&lt;head&gt;...&lt;/head&gt;</code> 里面即可。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font/otf&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;preload&#34;</span> <span style="color:#a6e22e">as</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/css/fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font/otf&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/fonts/Noto_Serif_SC/NotoSerifSC-Regular.otf&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/otf&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;preload&#34;</span> <span class="na">as</span><span class="o">=</span><span class="s">&#34;font&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/css/fonts/Noto_Serif_SC/NotoSerifSC-Bold.otf&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;font/otf&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </code></pre></div></li>
 <li>
 <p>如果网页是中英混排，且只希望读者在阅读英文时加载中文字体，可以参见<a href="https://yihui.org/cn/2017/04/source-han-serif/#fn:-1">益辉的解决办法</a>。</p>
@@ -157,6 +159,12 @@
 A Hassle-Free Way to Self-Host Google Fonts</a>。试用了一下，下载下来的字体比用 fontforge 转换得到的字体文件小。所以速度上还是优势的。特此推荐。</p>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2021 年 2 月 22 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

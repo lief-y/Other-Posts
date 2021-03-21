@@ -5,8 +5,16 @@
     <link>/</link>
     <description>Recent content in About | 关于 on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自动添加博客页面更新日期</title>
+      <link>/cn/2021/03/lastmod-hugo/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/2021/03/lastmod-hugo/</guid>
+      <description>Hugo 提供了一个 .LastMod 变量，可以用来给页面自动添加一个更新日期。该变量在使用的时候，默认的首选值时 git 提交日期。默认的取值顺利和方式可以在 config.yaml (config.toml) 里面修改</description>
+    </item>
+    
     <item>
       <title>广式肠粉</title>
       <link>/cn/2021/03/rice-rolls/</link>
@@ -279,7 +287,7 @@ TEXT(EV3(&amp;lt;&amp;lt;&amp;#39;END_TEXT&amp;#39;)); The material in this sect
       <description>Multiple Blogs on One Site1 Suppose that you have two categories of blogs. There are two ways to create directories in your website folder
   --blog1 |--_posts --blog2 |--_post   |--_posts |--blog1 |--blog2   The first approach will automatically assign categories to your posts.
 Using the second approach, you will need to manually add category: your_blog_folder_name to Yaml Front Matter in each post.
---- layout: default title: Blog1 category: blog1 --- You also need to modify the default layout template for the category blog1 by adding a filter using post.</description>
+---layout:defaulttitle:Blog1category:blog1---You also need to modify the default layout template for the category blog1 by adding a filter using post.</description>
     </item>
     
     <item>

@@ -1,5 +1,8 @@
 {{ partial "header.html" . }}
 
+{{ $date := (.Date.Format "2006/01/02") }}
+{{ $lastmod := (.Lastmod.Format "2006/01/02") }}
+
 <div class="page">
 
 <div class="article-title">
@@ -14,13 +17,18 @@
     {{ end }}
     </h2>
     {{ if .Params.date }}<h3 class="date">{{ .Date.Format "2006/01/02" }}</h3>{{ end }}
-    {{ if ne .Lastmod .Date }}<h3 class="update"> Last Modified on {{ .Lastmod.Format "2006/01/02" }}</h3>{{ end }}
   </div>
 </div>
 
 <main>
 {{ .Content }}
 </main>
+
+{{ if ne $lastmod $date }}
+  <hr>
+  <p class="update"> Edited on {{ .Lastmod.Year }} 年 {{ printf "%d" .Lastmod.Month }} 月 {{ .Lastmod.Day }} 日</p>
+  <hr>
+{{ end }}
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,7 +98,6 @@
     
     </h2>
     <h3 class="date">2019/02/28</h3>
-    
   </div>
 </div>
 
@@ -107,30 +109,30 @@
 <li>Step 3: In the pop out windows, click <code>Module</code> on the <code>Insert tab</code>, copy and paste the following VBA code into the Module window and click the <code>Run</code> tab (<code>F5</code>) to run the macro.</li>
 </ul>
 <h2 id="set-table-column-width">Set table column width</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">resizeTables</span>()
-<span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> Table <span style="color:#f92672">In</span> ActiveDocument.Tables                     <span style="color:#75715e">&#39;Loop all tables in the active document
-</span><span style="color:#75715e"></span>    Table.PreferredWidthType <span style="color:#f92672">=</span> wdPreferredWidthPercent      <span style="color:#75715e">&#39;Accept preferred widths as a percentage of window width,
-</span><span style="color:#75715e"></span>    Table.PreferredWidth <span style="color:#f92672">=</span> 100                              <span style="color:#75715e">&#39;Set table width=100%
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">Resume</span> <span style="color:#66d9ef">Next</span>
-    Table.Columns(1).PreferredWidth <span style="color:#f92672">=</span> 50                    <span style="color:#75715e">&#39;Set Column 1 width to 45%.
-</span><span style="color:#75715e"></span>    Table.Columns(2).PreferredWidth <span style="color:#f92672">=</span> 10                    <span style="color:#75715e">&#39;Set Column 2 width to 10%
-</span><span style="color:#75715e"></span>    Table.Columns(3).PreferredWidth <span style="color:#f92672">=</span> 40                    <span style="color:#75715e">&#39;Set Column 3 width to 45%
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">On</span> <span style="color:#66d9ef">Error</span> <span style="color:#66d9ef">GoTo</span> 0                                         <span style="color:#75715e">&#39;Apply to table with less columns
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">Next</span>
-<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+<div class="highlight"><pre class="chroma"><code class="language-vb" data-lang="vb"><span class="k">Sub</span> <span class="nf">resizeTables</span><span class="p">()</span>
+<span class="k">For</span> <span class="k">Each</span> <span class="n">Table</span> <span class="ow">In</span> <span class="n">ActiveDocument</span><span class="p">.</span><span class="n">Tables</span>                     <span class="c">&#39;Loop all tables in the active document
+</span><span class="c"></span>    <span class="n">Table</span><span class="p">.</span><span class="n">PreferredWidthType</span> <span class="o">=</span> <span class="n">wdPreferredWidthPercent</span>      <span class="c">&#39;Accept preferred widths as a percentage of window width,
+</span><span class="c"></span>    <span class="n">Table</span><span class="p">.</span><span class="n">PreferredWidth</span> <span class="o">=</span> <span class="n">100</span>                              <span class="c">&#39;Set table width=100%
+</span><span class="c"></span>    <span class="k">On</span> <span class="k">Error</span> <span class="k">Resume</span> <span class="k">Next</span>
+    <span class="n">Table</span><span class="p">.</span><span class="n">Columns</span><span class="p">(</span><span class="n">1</span><span class="p">).</span><span class="n">PreferredWidth</span> <span class="o">=</span> <span class="n">50</span>                    <span class="c">&#39;Set Column 1 width to 45%.
+</span><span class="c"></span>    <span class="n">Table</span><span class="p">.</span><span class="n">Columns</span><span class="p">(</span><span class="n">2</span><span class="p">).</span><span class="n">PreferredWidth</span> <span class="o">=</span> <span class="n">10</span>                    <span class="c">&#39;Set Column 2 width to 10%
+</span><span class="c"></span>    <span class="n">Table</span><span class="p">.</span><span class="n">Columns</span><span class="p">(</span><span class="n">3</span><span class="p">).</span><span class="n">PreferredWidth</span> <span class="o">=</span> <span class="n">40</span>                    <span class="c">&#39;Set Column 3 width to 45%
+</span><span class="c"></span>    <span class="k">On</span> <span class="k">Error</span> <span class="k">GoTo</span> <span class="n">0</span>                                         <span class="c">&#39;Apply to table with less columns
+</span><span class="c"></span><span class="k">Next</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </code></pre></div><h2 id="add-border-lines">Add Border Lines</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">addborderTables</span>()
-    <span style="color:#66d9ef">For</span> <span style="color:#66d9ef">Each</span> Table <span style="color:#f92672">In</span> ActiveDocument.Tables                 <span style="color:#75715e">&#39;Loop all tables in the active document
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">With</span> Table.Borders                                  <span style="color:#75715e">&#39;Choose table border for action
-</span><span style="color:#75715e"></span>            .InsideLineStyle <span style="color:#f92672">=</span> wdLineStyleSingle            <span style="color:#75715e">&#39;Inside line style
-</span><span style="color:#75715e"></span>            .OutsideLineStyle <span style="color:#f92672">=</span> wdLineStyleSingle           <span style="color:#75715e">&#39;Outside line style
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-        <span style="color:#66d9ef">With</span> Table.Rows(1).Borders(wdBorderBottom)          <span style="color:#75715e">&#39;Choose row(1) bottom line for action
-</span><span style="color:#75715e"></span>            .LineStyle <span style="color:#f92672">=</span> wdLineStyleDouble                  <span style="color:#75715e">&#39;Set line style to double line
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">With</span>
-        Table.Rows(1).Range.Font.Bold <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>                <span style="color:#75715e">&#39;Set fonts in row(1) to bold
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">Next</span>
-<span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
+<div class="highlight"><pre class="chroma"><code class="language-vb" data-lang="vb"><span class="k">Sub</span> <span class="nf">addborderTables</span><span class="p">()</span>
+    <span class="k">For</span> <span class="k">Each</span> <span class="n">Table</span> <span class="ow">In</span> <span class="n">ActiveDocument</span><span class="p">.</span><span class="n">Tables</span>                 <span class="c">&#39;Loop all tables in the active document
+</span><span class="c"></span>        <span class="k">With</span> <span class="n">Table</span><span class="p">.</span><span class="n">Borders</span>                                  <span class="c">&#39;Choose table border for action
+</span><span class="c"></span>            <span class="p">.</span><span class="n">InsideLineStyle</span> <span class="o">=</span> <span class="n">wdLineStyleSingle</span>            <span class="c">&#39;Inside line style
+</span><span class="c"></span>            <span class="p">.</span><span class="n">OutsideLineStyle</span> <span class="o">=</span> <span class="n">wdLineStyleSingle</span>           <span class="c">&#39;Outside line style
+</span><span class="c"></span>        <span class="k">End</span> <span class="k">With</span>
+        <span class="k">With</span> <span class="n">Table</span><span class="p">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">1</span><span class="p">).</span><span class="n">Borders</span><span class="p">(</span><span class="n">wdBorderBottom</span><span class="p">)</span>          <span class="c">&#39;Choose row(1) bottom line for action
+</span><span class="c"></span>            <span class="p">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">wdLineStyleDouble</span>                  <span class="c">&#39;Set line style to double line
+</span><span class="c"></span>        <span class="k">End</span> <span class="k">With</span>
+        <span class="n">Table</span><span class="p">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">1</span><span class="p">).</span><span class="n">Range</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="k">True</span>                <span class="c">&#39;Set fonts in row(1) to bold
+</span><span class="c"></span>    <span class="k">Next</span>
+<span class="k">End</span> <span class="k">Sub</span>
 </code></pre></div><h2 id="useful-websites">Useful Websites</h2>
 <ul>
 <li>
@@ -142,6 +144,12 @@
 </ul>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 12 月 27 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

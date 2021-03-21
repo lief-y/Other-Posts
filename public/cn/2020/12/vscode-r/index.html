@@ -81,6 +81,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -93,7 +96,6 @@
     
     </h2>
     <h3 class="date">2020/12/31</h3>
-    
   </div>
 </div>
 
@@ -132,36 +134,42 @@
 <h2 id="使用技巧">使用技巧</h2>
 <h3 id="r-包的安装位置">R 包的安装位置</h3>
 <p>R 包的默认安装路径可能需要管理员权限。为了避免这个问题，也为了在安装新版本是不用再重新安装 R 包，最后的办法是把 R 包放在一个不需要管理员权限，且易于管理的文件夹。例如 <code>~/RLibary</code>。为此，可以利用下面的命令对 R 做一点设置：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">.libPaths</span>( <span style="color:#a6e22e">c</span>( <span style="color:#e6db74">&#34;~/RLibary&#34;</span> , <span style="color:#a6e22e">.libPaths</span>() ) )
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">.libPaths</span><span class="p">(</span> <span class="nf">c</span><span class="p">(</span> <span class="s">&#34;~/RLibary&#34;</span> <span class="p">,</span> <span class="nf">.libPaths</span><span class="p">()</span> <span class="p">)</span> <span class="p">)</span>
 </code></pre></div><p>该命令会将自定义的 R 包路径 <code>~/RLibary</code> 添加到原有的 R 包路径列表中。且 <code>&quot;~/RLibary&quot;</code> 在前面，意味着该路径为新安装 R 包时的首选路径。</p>
 <h3 id="快捷键设置">快捷键设置</h3>
 <p>VS Code 的提供了定义快捷键的功能，且能方便的找到文件及文件夹的路径。当处理 Rmarkdown 文档，Bookdown 书籍，Blogdown 博客时，可以先设置好一些快捷键例如。</p>
 <p>首先在 VS Code 中打开快捷键设置页面 (快捷键：Ctrl+K Ctrl+S)。点击右上角的图标打开 JSON 文件。然后将下面代码添加进去即可。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;rmarkdown render&#34;</span>,
-  <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+alt+i&#34;</span>,
-  <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;r.runCommandWithEditorPath&#34;</span>,
-  <span style="color:#f92672">&#34;when&#34;</span>: <span style="color:#e6db74">&#34;editorTextFocus&#34;</span>,
-  <span style="color:#f92672">&#34;args&#34;</span>: <span style="color:#e6db74">&#34;rmarkdown::render(\&#34;$$\&#34;, clean = TRUE)&#34;</span>
-}<span style="color:#960050;background-color:#1e0010">,</span>
-{
-  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;bookdown to html&#34;</span>,
-  <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+alt+u&#34;</span>,
-  <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;r.runCommandWithEditorPath&#34;</span>,
-  <span style="color:#f92672">&#34;when&#34;</span>: <span style="color:#e6db74">&#34;editorTextFocus&#34;</span>,
-  <span style="color:#f92672">&#34;args&#34;</span>: <span style="color:#e6db74">&#34;bookdown::render_book(\&#34;$$\&#34;)&#34;</span>
-}<span style="color:#960050;background-color:#1e0010">,</span>
-  {
-  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;blogdown&#34;</span>,
-  <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;ctrl+alt+y&#34;</span>,
-  <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;r.runCommand&#34;</span>,
-  <span style="color:#f92672">&#34;when&#34;</span>: <span style="color:#e6db74">&#34;editorTextFocus&#34;</span>,
-  <span style="color:#f92672">&#34;args&#34;</span>: <span style="color:#e6db74">&#34;blogdown::serve_site()&#34;</span>
-}
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;rmarkdown render&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+alt+i&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;r.runCommandWithEditorPath&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;args&#34;</span><span class="p">:</span> <span class="s2">&#34;rmarkdown::render(\&#34;$$\&#34;, clean = TRUE)&#34;</span>
+<span class="p">}</span><span class="err">,</span>
+<span class="p">{</span>
+  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;bookdown to html&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+alt+u&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;r.runCommandWithEditorPath&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;args&#34;</span><span class="p">:</span> <span class="s2">&#34;bookdown::render_book(\&#34;$$\&#34;)&#34;</span>
+<span class="p">}</span><span class="err">,</span>
+  <span class="p">{</span>
+  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;blogdown&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;key&#34;</span><span class="p">:</span> <span class="s2">&#34;ctrl+alt+y&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;command&#34;</span><span class="p">:</span> <span class="s2">&#34;r.runCommand&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;when&#34;</span><span class="p">:</span> <span class="s2">&#34;editorTextFocus&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;args&#34;</span><span class="p">:</span> <span class="s2">&#34;blogdown::serve_site()&#34;</span>
+<span class="p">}</span>
 </code></pre></div><p><strong>注意事项 1：</strong> 对于 blogdown 和 bookdown，由于编译时文件需要关联起来处理，因此要在 VS Code 中打开 R 项目的根目录文件夹 (快捷键：Ctrl+K Ctrl+O)。然后再利用快捷键运行命令。</p>
 <p><strong>注意事项 2：</strong> 如果上面的快捷键跟电脑上的其它软件有冲突，则应做相应的修改。</p>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2021 年 2 月 22 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

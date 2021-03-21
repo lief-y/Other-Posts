@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,31 +98,30 @@
     
     </h2>
     <h3 class="date">2021/01/17</h3>
-    
   </div>
 </div>
 
 <main>
 <p>When using <a href="https://css-doodle.com/">CSS-Doodle</a> to create the background, one can use the CSS overlay trick (see for example <a href="https://www.w3schools.com/howto/howto_css_overlay.asp">How TO - Overlay</a>). However, to create the CSS-Doodle background in the size of the text content. One can use CSS together with JS.</p>
 <p>Here is an example.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
-  &lt;<span style="color:#f92672">script</span>&gt;
-    <span style="color:#f92672">:</span><span style="color:#a6e22e">root</span> {
-      <span style="color:#f92672">--</span><span style="color:#a6e22e">header</span><span style="color:#f92672">-</span><span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span><span style="color:#a6e22e">px</span>;
-    }
-  &lt;/<span style="color:#f92672">script</span>&gt;
-  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js&#34;</span>&gt;
-  &lt;/<span style="color:#f92672">script</span>&gt;
-  &lt;<span style="color:#f92672">script</span>&gt;
-    <span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span>() {
-      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;.header h1&#34;</span>).<span style="color:#a6e22e">outerHeight</span>(<span style="color:#66d9ef">true</span>)  <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;px&#34;</span>;
-      document.<span style="color:#a6e22e">documentElement</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">setProperty</span>(<span style="color:#e6db74">&#39;--header-height&#39;</span>, <span style="color:#a6e22e">height</span>));
-    });
-  &lt;/<span style="color:#f92672">script</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="o">:</span><span class="nx">root</span> <span class="p">{</span>
+      <span class="o">--</span><span class="nx">header</span><span class="o">-</span><span class="nx">height</span><span class="o">:</span> <span class="mi">0</span><span class="nx">px</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;.header h1&#34;</span><span class="p">).</span><span class="nx">outerHeight</span><span class="p">(</span><span class="kc">true</span><span class="p">)</span>  <span class="o">+</span> <span class="s2">&#34;px&#34;</span><span class="p">;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">setProperty</span><span class="p">(</span><span class="s1">&#39;--header-height&#39;</span><span class="p">,</span> <span class="nx">height</span><span class="p">));</span>
+    <span class="p">});</span>
+  <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 
-&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 100%; overflow: hidden; z-index: 2; position: relative;&#34;</span>&gt;
-  &lt;<span style="color:#f92672">css-doodle</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;position: relative; z-index: 1; height: calc(var(--header-height) + 1vh);&#34;</span>&gt;
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%; overflow: hidden; z-index: 2; position: relative;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">css-doodle</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: relative; z-index: 1; height: calc(var(--header-height) + 1vh);&#34;</span><span class="p">&gt;</span>
     :doodle {
     @grid: 20 / 100vmax;
     background: rgb(67, 134, 143, 0.3);
@@ -130,12 +132,12 @@
       color: hsla(@r360, 70%, 70%, @r.9);
       font-size: 5vmax;
     }
-  &lt;/<span style="color:#f92672">css-doodle</span>&gt;
+  <span class="p">&lt;/</span><span class="nt">css-doodle</span><span class="p">&gt;</span>
 
-  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;header&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; z-index: 3; text-align: center;&#34;</span>&gt;
-    &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;font-size: calc(24px + 1vh);&#34;</span>&gt;This is the Title of the post.&lt;/<span style="color:#f92672">h1</span>&gt;
-  &lt;/<span style="color:#f92672">div</span>&gt;
-&lt;/<span style="color:#f92672">div</span>&gt;
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;header&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; z-index: 3; text-align: center;&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;font-size: calc(24px + 1vh);&#34;</span><span class="p">&gt;</span>This is the Title of the post.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><p>The above code will be rendered as follow.</p>
 <div class="container" style="width: 100%; overflow: hidden; z-index: 2; position: relative;">
   <css-doodle style="position: relative; z-index: 1; height: calc(var(--header-height) + 1vh);">
@@ -157,6 +159,12 @@
 <p>Note that it&rsquo;s better to calculate the height of the header div by adding up the height of blocks, for example, using <code>$(&quot;.header h1&quot;).outerHeight(true)</code> instead of simply <code>$(&quot;.header&quot;).outerHeight(true)</code>.</p>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2021 年 1 月 19 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mathematics Recordings | </title>
+    <title>自动添加博客页面更新日期 | </title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link href="/css/customized.css" type="text/css" rel="stylesheet" />
@@ -64,20 +64,18 @@
 
   
 
-  <body class="en">
+  <body class="cn">
     <nav>
     <ul class="menu">
     
       
-      <li><a href="/">Home</a></li>
+      <li><a href="/">首页</a></li>
       
-      <li><a href="/en/">Blog</a></li>
+      <li><a href="/cn/">博客</a></li>
       
-      <li><a href="/en/categories/">Categories</a></li>
+      <li><a href="/cn/ctags/">标签</a></li>
       
-      <li><a href="/en/tags/">Tags</a></li>
-      
-      <li><a href="/cn/">中文</a></li>
+      <li><a href="/en/">English</a></li>
       
     </ul>
     </nav>
@@ -91,41 +89,34 @@
 <div class="article-title">
   <css-doodle use="var(--rule)" as-bg="" click-to-update=""></css-doodle>
   <div class="article-meta">
-    <h1><span class="title">Mathematics Recordings</span></h1>
+    <h1><span class="title">自动添加博客页面更新日期</span></h1>
     <h2 class="author">
     
         Fei Ye
     
     </h2>
-    <h3 class="date">2020/06/24</h3>
+    <h3 class="date">2021/03/21</h3>
   </div>
 </div>
 
 <main>
-<p>The post is simply for collecting recordings from famed mathematicians. The list will be kept updated.</p>
-<ul>
-<li>
-<p><a href="https://www.youtube.com/watch?v=Jzx-0poj3Eo">Prof. Jean Dieudonné: &ldquo;The Historical Development of Algebraic Geometry&rdquo;</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=MZ6_JKYdKog">Serre: Finite groups, Yesterday and Today</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=wsQWLaUn7jo">&ldquo;How to write mathematics badly&rdquo; by Jean-Pierre Serre</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=1eAmxgINXrE">John Conway: Surreal Numbers - How playing games led to more numbers than anybody ever thought of</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/playlist?list=PLelIK3uylPMFHC6Xny11XFXgwwtv9_PO3">Differential Topology | Lectures by John W. Milnor</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=ZW9JpZXwGXc&amp;feature=youtu.be">Alexander Grothendieck: Allons-nous continuer la recherche scientifique? (CERN, 27/01/1972)</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=UN-nRM_ZCGs">Writing Matters: Ravi Vakil, Professor of Mathematics at Stanford University</a></p>
-</li>
-</ul>
+<p>Hugo 提供了一个 .LastMod 变量，可以用来给页面自动添加一个更新日期。该变量在使用的时候，默认的首选值时 git 提交日期。默认的取值顺利和方式可以在 config.yaml (config.toml) 里面修改。具体操作如下。</p>
+<h2 id="修改模板">修改模板</h2>
+<p>假设你打算将最后跟新日期放在页面内容之后。那么可以在 single.html 模板的 <code>{{ .main }}</code> 之后添加下面的代码。</p>
+<div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">ne</span><span class="w"> </span><span class="o">(</span><span class="na">.Lastmod.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> 最后更新于 <span class="cp">{{</span><span class="w"> </span><span class="na">.Lastmod.Year</span><span class="w"> </span><span class="cp">}}</span> 年 <span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;%d&#34;</span><span class="w"> </span><span class="na">.Lastmod.Month</span><span class="w"> </span><span class="cp">}}</span> 月 <span class="cp">{{</span><span class="w"> </span><span class="na">.Lastmod.Day</span><span class="w"> </span><span class="cp">}}</span> 日<span class="err">&lt;</span>/&gt;
+<span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
+</code></pre></div><p>第一行里面比较了 .LastMod 和 .Date 的日期。如果不加 .Format, 那么同一天内修改页面的话，第二行的信息也会被添加。</p>
+<h2 id="设置-configyaml">设置 config.yaml</h2>
+<p>如果要使用文件的被修改日期作为 .LastMod 的值，则需要早 config.yaml 或者 config.toml 里做相应设置。</p>
+<p>若用 yaml 配置你的博客，需添加以下设置。</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;:fileModTime&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;lastmod&#34;</span><span class="p">]</span><span class="w">
+</span></code></pre></div><p>若用 toml 配置你的博客，则需添加以下设置。</p>
+<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
+  <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;:fileModTime&#34;</span><span class="p">,</span> <span class="s2">&#34;lastmod&#34;</span><span class="p">]</span>
+</code></pre></div><h2 id="小提示">小提示</h2>
+<p>在比较日期的格式时, 一定要用 &ldquo;2006/01/02&rdquo; 这个日期。如果换成 &ldquo;2021-03-22&rdquo; 则会显示不正常。使用这个固定的日期，是由于 Go 语言的设定如此。</p>
 
 </main>
 

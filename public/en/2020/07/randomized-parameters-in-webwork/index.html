@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,7 +98,6 @@
     
     </h2>
     <h3 class="date">2020/07/10</h3>
-    
   </div>
 </div>
 
@@ -107,19 +109,19 @@
 <ul>
 <li>
 <p>Generates a random number between the initial and final values in steps of increment.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">random( $initial, $final, $increment )
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="n">random</span><span class="p">(</span> <span class="nv">$initial</span><span class="p">,</span> <span class="nv">$final</span><span class="p">,</span> <span class="nv">$increment</span> <span class="p">)</span>
 </code></pre></div><p>If the increment is 0 or less, then random chooses a floating point number between <code>$initial</code> and <code>$final</code> using a small increment.<code>$increment</code> defaults to 1, if it is not supplied as an argument.</p>
 <p>Example: <code>$m=random(-2, 20, 3);</code> generates a number among -2, 1, 4, &hellip;, 19 and stores it in the variable <code>$m</code>. Because the step is 3.</p>
 </li>
 <li>
 <p>Generates a random number between 0 and $final.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">rand( $final )
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="nb">rand</span><span class="p">(</span> <span class="nv">$final</span> <span class="p">)</span>
 </code></pre></div><p><code>$final</code> defaults to 1 if that argument is omitted.</p>
 <p>Example: <code>$r = rand(1);</code> generates a number between 0 and 1 and store it in the variable <code>$r</code>.</p>
 </li>
 <li>
 <p>Generate a nonzero random number between the initial and final values.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">non_zero_random( $initial, $final );
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="n">non_zero_random</span><span class="p">(</span> <span class="nv">$initial</span><span class="p">,</span> <span class="nv">$final</span> <span class="p">);</span>
 </code></pre></div><p>Example: <code>$coef = non_zero_random(2,7);</code> generates a nonzero integer between 2 and 7 and stores it in the variable <code>$coef</code>.</p>
 </li>
 </ul>
@@ -127,13 +129,13 @@
 <ul>
 <li>
 <p>Generate two or more different random numbers</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#66d9ef">do</span> { $new <span style="color:#f92672">=</span> random($initial, $final); } <span style="color:#66d9ef">until</span> ( $new <span style="color:#f92672">!=</span> $old );
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="k">do</span> <span class="p">{</span> <span class="nv">$new</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="nv">$initial</span><span class="p">,</span> <span class="nv">$final</span><span class="p">);</span> <span class="p">}</span> <span class="k">until</span> <span class="p">(</span> <span class="nv">$new</span> <span class="o">!=</span> <span class="nv">$old</span> <span class="p">);</span>
 </code></pre></div><p>$old is a predefined random number.</p>
 <p>Example: <code>do { $new = random(1, 6); } until ( $new != 3 );</code> generates a number between 1 and 6 but not equal to 3 and store it in the variable <code>$new</code>.</p>
 </li>
 <li>
 <p>Generate a third different random number number</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl"><span style="color:#66d9ef">do</span> { $third<span style="color:#f92672">=</span>random( $initial, $final ); } <span style="color:#66d9ef">until</span> (( $third <span style="color:#f92672">!=</span> $first ) <span style="color:#f92672">and</span> ( $third <span style="color:#f92672">!=</span> $second ));
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="k">do</span> <span class="p">{</span> <span class="nv">$third</span><span class="o">=</span><span class="n">random</span><span class="p">(</span> <span class="nv">$initial</span><span class="p">,</span> <span class="nv">$final</span> <span class="p">);</span> <span class="p">}</span> <span class="k">until</span> <span class="p">((</span> <span class="nv">$third</span> <span class="o">!=</span> <span class="nv">$first</span> <span class="p">)</span> <span class="ow">and</span> <span class="p">(</span> <span class="nv">$third</span> <span class="o">!=</span> <span class="nv">$second</span> <span class="p">));</span>
 </code></pre></div><p><code>$first</code> and <code>second</code> are predefined random numbers.</p>
 <p>Example: <code>do { $third = random(1, 6); } until (($third != 3) and ($third != 5);</code> generates a number between 1 and 6 but not equal to 3 and 5, and store it in the variable <code>$third</code>.</p>
 </li>
@@ -143,42 +145,42 @@
 <ul>
 <li>
 <p>Generate one random variable.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">$var <span style="color:#f92672">=</span> RandomVariableName( type<span style="color:#f92672">=&gt;</span>variable );
-Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>are( $var<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span> );
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="nv">$var</span> <span class="o">=</span> <span class="n">RandomVariableName</span><span class="p">(</span> <span class="n">type</span><span class="o">=&gt;</span><span class="n">variable</span> <span class="p">);</span>
+<span class="n">Context</span><span class="p">()</span><span class="o">-&gt;</span><span class="nn">variables</span><span class="o">-&gt;</span><span class="n">are</span><span class="p">(</span> <span class="nv">$var</span><span class="o">=&gt;</span><span class="s">&#39;Real&#39;</span> <span class="p">);</span>
 </code></pre></div><p>In order to use the variable <code>$var</code> in formula, the second line is necessary.</p>
 </li>
 <li>
 <p>Generate two different random variables</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">$vary <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable);
-<span style="color:#66d9ef">do</span> { $vary <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable) } <span style="color:#66d9ef">until</span> ( $vary <span style="color:#f92672">!=</span> $varx );
-Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>add( $vary<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span> );
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="nv">$vary</span> <span class="o">=</span> <span class="n">RandomVariableName</span><span class="p">(</span><span class="n">type</span><span class="o">=&gt;</span><span class="n">variable</span><span class="p">);</span>
+<span class="k">do</span> <span class="p">{</span> <span class="nv">$vary</span> <span class="o">=</span> <span class="n">RandomVariableName</span><span class="p">(</span><span class="n">type</span><span class="o">=&gt;</span><span class="n">variable</span><span class="p">)</span> <span class="p">}</span> <span class="k">until</span> <span class="p">(</span> <span class="nv">$vary</span> <span class="o">!=</span> <span class="nv">$varx</span> <span class="p">);</span>
+<span class="n">Context</span><span class="p">()</span><span class="o">-&gt;</span><span class="nn">variables</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span> <span class="nv">$vary</span><span class="o">=&gt;</span><span class="s">&#39;Real&#39;</span> <span class="p">);</span>
 </code></pre></div><p><code>$varx</code> is a predefined variable. Note that <code>add()</code> should be used for extra variables.</p>
 <p>Example: The following codes will generate two different variables <code>$varx</code> and <code>$vary</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">$varx <span style="color:#f92672">=</span> RandomVariableName( type<span style="color:#f92672">=&gt;</span>variable );
-Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>are( $vars<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span> );
-<span style="color:#66d9ef">do</span> { $vary <span style="color:#f92672">=</span> RandomVariableName(type<span style="color:#f92672">=&gt;</span>variable )} <span style="color:#66d9ef">until</span> ( $vary <span style="color:#f92672">!=</span> $varx );
-Context()<span style="color:#f92672">-&gt;</span>variables<span style="color:#f92672">-&gt;</span>add( $vary<span style="color:#f92672">=&gt;</span><span style="color:#e6db74">&#39;Real&#39;</span> );
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="nv">$varx</span> <span class="o">=</span> <span class="n">RandomVariableName</span><span class="p">(</span> <span class="n">type</span><span class="o">=&gt;</span><span class="n">variable</span> <span class="p">);</span>
+<span class="n">Context</span><span class="p">()</span><span class="o">-&gt;</span><span class="nn">variables</span><span class="o">-&gt;</span><span class="n">are</span><span class="p">(</span> <span class="nv">$vars</span><span class="o">=&gt;</span><span class="s">&#39;Real&#39;</span> <span class="p">);</span>
+<span class="k">do</span> <span class="p">{</span> <span class="nv">$vary</span> <span class="o">=</span> <span class="n">RandomVariableName</span><span class="p">(</span><span class="n">type</span><span class="o">=&gt;</span><span class="n">variable</span> <span class="p">)}</span> <span class="k">until</span> <span class="p">(</span> <span class="nv">$vary</span> <span class="o">!=</span> <span class="nv">$varx</span> <span class="p">);</span>
+<span class="n">Context</span><span class="p">()</span><span class="o">-&gt;</span><span class="nn">variables</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span> <span class="nv">$vary</span><span class="o">=&gt;</span><span class="s">&#39;Real&#39;</span> <span class="p">);</span>
 </code></pre></div></li>
 </ul>
 <h2 id="a-random-element-from-a-list">A random element from a list</h2>
 <ul>
 <li>
 <p>Randomizing from a list</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">list_random( $x1, $x2,<span style="color:#f92672">...</span>,$xn );
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="n">list_random</span><span class="p">(</span> <span class="nv">$x1</span><span class="p">,</span> <span class="nv">$x2</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="nv">$xn</span> <span class="p">);</span>
 </code></pre></div><p>The element <code>$xi</code> can be a number, a letter or an expression.</p>
 <p>Example: <code>$Days = list_random(28, 29, 30, 31)</code> randomly assigns a number from the list to the variable <code>$Days</code>.</p>
 </li>
 <li>
 <p>Randomizing from an array</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">@array <span style="color:#f92672">=</span> ( $elem1, $elem2, <span style="color:#f92672">...</span>, $elemn );
-$arrayLength <span style="color:#f92672">=</span> scalar( @array );
-$randIndex <span style="color:#f92672">=</span> random(<span style="color:#ae81ff">0</span>, $arrayLength);
-$var <span style="color:#f92672">=</span> $array[ $randIndex ];
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="nv">@array</span> <span class="o">=</span> <span class="p">(</span> <span class="nv">$elem1</span><span class="p">,</span> <span class="nv">$elem2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="nv">$elemn</span> <span class="p">);</span>
+<span class="nv">$arrayLength</span> <span class="o">=</span> <span class="nb">scalar</span><span class="p">(</span> <span class="nv">@array</span> <span class="p">);</span>
+<span class="nv">$randIndex</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$arrayLength</span><span class="p">);</span>
+<span class="nv">$var</span> <span class="o">=</span> <span class="nv">$array</span><span class="p">[</span> <span class="nv">$randIndex</span> <span class="p">];</span>
 </code></pre></div><p>Example: Randomly assigns a number or the letter $x$ from the list to the variable <code>$Days</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-perl" data-lang="perl">@array <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#39;x&#39;</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">31</span>);
-$arrayLength <span style="color:#f92672">=</span> scalar( @array );
-$randIndex <span style="color:#f92672">=</span> random(<span style="color:#ae81ff">0</span>, $arrayLength);
-$Days <span style="color:#f92672">=</span> $array[ $randIndex ];
+<div class="highlight"><pre class="chroma"><code class="language-perl" data-lang="perl"><span class="nv">@array</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#39;x&#39;</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">);</span>
+<span class="nv">$arrayLength</span> <span class="o">=</span> <span class="nb">scalar</span><span class="p">(</span> <span class="nv">@array</span> <span class="p">);</span>
+<span class="nv">$randIndex</span> <span class="o">=</span> <span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nv">$arrayLength</span><span class="p">);</span>
+<span class="nv">$Days</span> <span class="o">=</span> <span class="nv">$array</span><span class="p">[</span> <span class="nv">$randIndex</span> <span class="p">];</span>
 </code></pre></div></li>
 </ul>
 <h2 id="references">References</h2>
@@ -190,6 +192,12 @@ $Days <span style="color:#f92672">=</span> $array[ $randIndex ];
 </ul>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 7 月 19 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

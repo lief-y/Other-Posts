@@ -1,7 +1,7 @@
 ---
 title: About | 关于
 author: ' '
-layout: Home
+# layout: Home
 ---
 
 This website built using [blogdown](https://bookdown.org/yihui/blogdown/) is to collect new knowledge and skills that I learned from teaching, learning, and playing. I hope you will enjoy reading the posts and find them useful.

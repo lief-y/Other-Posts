@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,7 +98,6 @@
     
     </h2>
     <h3 class="date">2019/04/12</h3>
-    
   </div>
 </div>
 
@@ -111,13 +113,13 @@
 </ul>
 <h2 id="for-webpage-creator">For webpage creator</h2>
 <p>Adding Hypothesis to a webpage is easy. You simply need to add the following codes in the head of you html file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://hypothes.is/embed.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://hypothes.is/embed.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div><p>By default, the hypothesis client added an opened sidebar. You may change the default by adding the following codes.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/json&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-hypothesis-config&#34;</span>&gt;
-  {
-    <span style="color:#e6db74">&#34;openSidebar&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>
-  }
-&lt;/<span style="color:#f92672">script</span>&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;application/json&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;js-hypothesis-config&#34;</span><span class="p">&gt;</span>
+  <span class="p">{</span>
+    <span class="s2">&#34;openSidebar&#34;</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div><p>More <a href="https://h.readthedocs.io/projects/client/en/latest/publishers/config/">configurations for the Hypothesis client</a> are available.</p>
 <h2 id="for-readers">For readers</h2>
 <p>There are two things that have to be done before you make annotations on any webpage.</p>
@@ -133,10 +135,10 @@
 </li>
 <li>
 <p>A browser independent way is to add the following link to bookmark.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:&#39;bookmarklet&#39;};};var d=document,s=d.createElement(&#39;script&#39;);s.setAttribute(&#39;src&#39;,&#39;https://hypothes.is/embed.js&#39;);d.body.appendChild(s)})();&#34;</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_self&#34;</span>&gt;
-   &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fusion-button-text&#34;</span>&gt;&lt;<span style="color:#f92672">hypothesis-highlight</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;annotator-hl&#34;</span>&gt;Hypothesis Bookmarklet&lt;/<span style="color:#f92672">hypothesis-highlight</span>&gt;
-   &lt;/<span style="color:#f92672">span</span>&gt;
-&lt;/<span style="color:#f92672">a</span>&gt;
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fusion-button button-flat fusion-button-round button-medium button-default button-3 hyp-button-gray&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;javascript:(function(){window.hypothesisConfig=function(){return{showHighlights:true,appType:&#39;bookmarklet&#39;};};var d=document,s=d.createElement(&#39;script&#39;);s.setAttribute(&#39;src&#39;,&#39;https://hypothes.is/embed.js&#39;);d.body.appendChild(s)})();&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_self&#34;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fusion-button-text&#34;</span><span class="p">&gt;&lt;</span><span class="nt">hypothesis-highlight</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;annotator-hl&#34;</span><span class="p">&gt;</span>Hypothesis Bookmarklet<span class="p">&lt;/</span><span class="nt">hypothesis-highlight</span><span class="p">&gt;</span>
+   <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div></li>
 <li>
 <p>Using the proxy of Hypothesis <a href="https://via.hypothes.is/">via.hypothes.is</a>.</p>
@@ -147,6 +149,12 @@
 <p>For more information on how to use Hypothesis and how it can do, check the webpage <a href="https://web.hypothes.is/help-categories/tutorials/">Hypothesis Tutorials and How-Tos</a>.</p>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 7 月 17 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

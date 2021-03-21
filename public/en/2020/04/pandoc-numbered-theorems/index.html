@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,51 +98,50 @@
     
     </h2>
     <h3 class="date">2020/04/24</h3>
-    
   </div>
 </div>
 
 <main>
 <p>When writing a research paper in a single html page, we can use <a href="https://pandoc.org/MANUAL.html#divs-and-spans">Pandoc’s fenced Div blocks</a> to create theorem environments. Using the css pseudo element <code>::before</code> and <code>counter</code> property, we can add theorem name, number, and title to the theorem environment. Here is an example.</p>
 <p>Suppose we have the theorem.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex">::: {.thm title=&#34;(Fundamental Theorem of Algebra)&#34; id=&#34;thm:FTA&#34;}
-Let <span style="color:#e6db74">$</span>p<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span> be a polynomial of degree <span style="color:#e6db74">$</span>n&gt;<span style="color:#ae81ff">0</span><span style="color:#e6db74">$</span> with complex coefficients. Then <span style="color:#e6db74">$</span>p<span style="color:#f92672">(</span>x<span style="color:#f92672">)</span><span style="color:#e6db74">$</span> has exactly <span style="color:#e6db74">$</span>n<span style="color:#e6db74">$</span> linear factors over the complex number field.
-<span style="color:#e6db74">$$</span>p<span style="color:#f92672">(</span>x<span style="color:#f92672">)=</span>a\left<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>{c}_{<span style="color:#ae81ff">1</span>}\right<span style="color:#f92672">)</span>\left<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>{c}_{<span style="color:#ae81ff">2</span>}\right<span style="color:#f92672">)</span>…\left<span style="color:#f92672">(</span>x<span style="color:#f92672">-</span>{c}_{n}\right<span style="color:#f92672">)</span><span style="color:#e6db74">$$</span>
-where <span style="color:#e6db74">$</span>{c}_{<span style="color:#ae81ff">1</span>},{c}_{<span style="color:#ae81ff">2</span>},…,{c}_{n}<span style="color:#e6db74">$</span> are complex numbers and <span style="color:#e6db74">$</span>a<span style="color:#e6db74">$</span> is the leading coefficient.
+<div class="highlight"><pre class="chroma"><code class="language-tex" data-lang="tex">::: <span class="nb">{</span>.thm title=&#34;(Fundamental Theorem of Algebra)&#34; id=&#34;thm:FTA&#34;<span class="nb">}</span>
+Let <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="s">$</span> be a polynomial of degree <span class="s">$</span><span class="nb">n&gt;</span><span class="m">0</span><span class="s">$</span> with complex coefficients. Then <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="s">$</span> has exactly <span class="s">$</span><span class="nb">n</span><span class="s">$</span> linear factors over the complex number field.
+<span class="sb">$$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)=</span><span class="nb">a</span><span class="nv">\left</span><span class="o">(</span><span class="nb">x</span><span class="o">-</span><span class="nb">{c}_{</span><span class="m">1</span><span class="nb">}</span><span class="nv">\right</span><span class="o">)</span><span class="nv">\left</span><span class="o">(</span><span class="nb">x</span><span class="o">-</span><span class="nb">{c}_{</span><span class="m">2</span><span class="nb">}</span><span class="nv">\right</span><span class="o">)</span><span class="nb">…</span><span class="nv">\left</span><span class="o">(</span><span class="nb">x</span><span class="o">-</span><span class="nb">{c}_{n}</span><span class="nv">\right</span><span class="o">)</span><span class="s">$$</span>
+where <span class="s">$</span><span class="nb">{c}_{</span><span class="m">1</span><span class="nb">},{c}_{</span><span class="m">2</span><span class="nb">},…,{c}_{n}</span><span class="s">$</span> are complex numbers and <span class="s">$</span><span class="nb">a</span><span class="s">$</span> is the leading coefficient.
 :::
 </code></pre></div><p>Then the following css will added theorem name, number and title before the content of the theorem.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span> {
-    <span style="color:#66d9ef">counter-reset</span>: thmnumber;
-}
-.<span style="color:#a6e22e">thm</span> {
-    <span style="color:#66d9ef">counter-increment</span>: thmnumber;
-}
-.<span style="color:#a6e22e">thm</span>::<span style="color:#a6e22e">before</span> {
-    <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#34;Theorem &#34;</span> counter(thmnumber) <span style="color:#e6db74">&#34; &#34;</span> attr(name);
-}
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">counter-reset</span><span class="p">:</span> <span class="n">thmnumber</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">thm</span> <span class="p">{</span>
+    <span class="k">counter-increment</span><span class="p">:</span> <span class="n">thmnumber</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">thm</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;Theorem &#34;</span> <span class="nb">counter</span><span class="p">(</span><span class="n">thmnumber</span><span class="p">)</span> <span class="s2">&#34; &#34;</span> <span class="nb">attr</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div><p>To add the section number to the theorem number, we can define a section counter similarly and add to the content of <code>.thm::before</code>.</p>
 <p>Because the <code>counter</code> value can only be used by the <code>content</code> property, using the counter to create the theorem number will not help cross-referencing. Instead, within a single html file, we can use <a href="https://jquery.com/">jQuery</a> to create numbered theorems and make cross-reference available.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">$</span>(document).<span style="color:#a6e22e">ready</span>(<span style="color:#66d9ef">function</span> () {
-    <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#39;.thm&#39;</span>).<span style="color:#a6e22e">each</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">index</span>,<span style="color:#a6e22e">value</span>) {
-        <span style="color:#a6e22e">thmnumber</span><span style="color:#f92672">=</span><span style="color:#a6e22e">index</span><span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
-        <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#39;number&#39;</span>, <span style="color:#a6e22e">thmnumber</span>);
-        <span style="color:#a6e22e">thmid</span><span style="color:#f92672">=</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;id&#39;</span>);
-        <span style="color:#a6e22e">thmtitle</span><span style="color:#f92672">=</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#39;title&#39;</span>);
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">thmtitle</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>) {
-            <span style="color:#a6e22e">thmtitle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>;
-        };
-        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">thmid</span><span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>) {
-            <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">prepend</span>(<span style="color:#e6db74">&#39;&lt;span&gt;&lt;strong&gt;&#39;</span><span style="color:#f92672">+</span>
-            <span style="color:#e6db74">&#39;Theorem &#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">thmnumber</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">thmtitle</span> <span style="color:#f92672">+</span>
-            <span style="color:#e6db74">&#39;&lt;/strong&gt;&lt;/span&gt;&#39;</span>);
-        }
-        <span style="color:#66d9ef">else</span> {
-            <span style="color:#a6e22e">$</span>(<span style="color:#66d9ef">this</span>).<span style="color:#a6e22e">prepend</span>(<span style="color:#e6db74">&#39;&lt;span id=&#34;&#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">thmid</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39;&#34;&gt;&lt;strong&gt;&#39;</span><span style="color:#f92672">+</span>
-            <span style="color:#e6db74">&#39;Theorem &#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">thmnumber</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">thmtitle</span> <span style="color:#f92672">+</span>
-            <span style="color:#e6db74">&#39;&lt;/strong&gt;&lt;/span&gt;&#39;</span>);
-        }
-    });
-})
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.thm&#39;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">thmnumber</span><span class="o">=</span><span class="nx">index</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;number&#39;</span><span class="p">,</span> <span class="nx">thmnumber</span><span class="p">);</span>
+        <span class="nx">thmid</span><span class="o">=</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">);</span>
+        <span class="nx">thmtitle</span><span class="o">=</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">thmtitle</span><span class="o">==</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">thmtitle</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+        <span class="p">};</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">thmid</span><span class="o">==</span><span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">prepend</span><span class="p">(</span><span class="s1">&#39;&lt;span&gt;&lt;strong&gt;&#39;</span><span class="o">+</span>
+            <span class="s1">&#39;Theorem &#39;</span><span class="o">+</span><span class="nx">thmnumber</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span> <span class="nx">thmtitle</span> <span class="o">+</span>
+            <span class="s1">&#39;&lt;/strong&gt;&lt;/span&gt;&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">prepend</span><span class="p">(</span><span class="s1">&#39;&lt;span id=&#34;&#39;</span><span class="o">+</span><span class="nx">thmid</span><span class="o">+</span><span class="s1">&#39;&#34;&gt;&lt;strong&gt;&#39;</span><span class="o">+</span>
+            <span class="s1">&#39;Theorem &#39;</span><span class="o">+</span><span class="nx">thmnumber</span><span class="o">+</span><span class="s1">&#39; &#39;</span><span class="o">+</span> <span class="nx">thmtitle</span> <span class="o">+</span>
+            <span class="s1">&#39;&lt;/strong&gt;&lt;/span&gt;&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">})</span>
 </code></pre></div><p>The following are examples.</p>
 <div class="thm" title="(Fundamental Theorem of Algebra)" id="thm:FTA">
 Let $p(x)$ be a polynomial of degree $n>0$ with complex coefficients. Then $p(x)$ has exactly $n$ linear factors over the complex number field.
@@ -151,6 +153,12 @@ In a right triangle, the square of the hypotenuse is equal to the sum of the squ
 </div>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 7 月 19 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

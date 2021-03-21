@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/cn/ctags/blogdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>自动添加博客页面更新日期</title>
+      <link>/cn/2021/03/lastmod-hugo/</link>
+      <pubDate>Sun, 21 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/cn/2021/03/lastmod-hugo/</guid>
+      <description>Hugo 提供了一个 .LastMod 变量，可以用来给页面自动添加一个更新日期。该变量在使用的时候，默认的首选值时 git 提交日期。默认的取值顺利和方式可以在 config.yaml (config.toml) 里面修改</description>
+    </item>
+    
+    <item>
       <title>用Hugo创建中英混合博客</title>
       <link>/cn/2020/01/multilingual-blog-using-hugo/</link>
       <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>

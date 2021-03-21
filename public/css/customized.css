@@ -57,7 +57,8 @@ main p:first-of-type{
   padding-top: 1.25rem;
 }
 
-.update {
+p.update {
   font-size: smaller;
   font-style: italic;
+  text-align: center;
 }

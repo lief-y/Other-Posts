@@ -83,6 +83,9 @@
     </nav>
     <hr/>
 
+
+
+
 <div class="page">
 
 <div class="article-title">
@@ -95,7 +98,6 @@
     
     </h2>
     <h3 class="date">2019/02/22</h3>
-    
   </div>
 </div>
 
@@ -107,15 +109,15 @@
 </li>
 <li>
 <p>Create a <code>.Renviron</code> file to your home directory <code>~/</code> using the following function:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#75715e"># File will be created if it doesn&#39;t exist</span>
-<span style="color:#a6e22e">file.edit</span>(<span style="color:#e6db74">&#39;~/.Renviron&#39;</span>)
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="c1"># File will be created if it doesn&#39;t exist</span>
+<span class="nf">file.edit</span><span class="p">(</span><span class="s">&#39;~/.Renviron&#39;</span><span class="p">)</span>
 </code></pre></div><p>Add   <code>R_LIBS_USER=&quot;C:/R&quot;</code> to <code>.Renviron</code>. This variable will be the library of R packages.
 It is extremely useful if you are using a computer with limited rights and anti-virus softwares.</p>
 <p>Remember to restart RStudio before you install new packages to this folder.</p>
 </li>
 <li>
 <p>Using the function  <code>file.edit()</code> to open/create a <code>.Rprofile</code>  file.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">file.edit</span>(<span style="color:#e6db74">&#39;~/.Rprofile&#39;</span>)
+<div class="highlight"><pre class="chroma"><code class="language-r" data-lang="r"><span class="nf">file.edit</span><span class="p">(</span><span class="s">&#39;~/.Rprofile&#39;</span><span class="p">)</span>
 </code></pre></div><p>Add <code>options(servr.daemon = TRUE)</code> to the file so that <code>Infinite Moon Reader</code> addin won&rsquo;t lock <code>R</code> process.</p>
 </li>
 <li>
@@ -136,6 +138,12 @@ It is extremely useful if you are using a computer with limited rights and anti-
 </ul>
 
 </main>
+
+
+  <hr>
+  <p class="update"> Edited on 2020 年 7 月 17 日</p>
+  <hr>
+
 
 <section class="comments">
   <script src="https://utteranc.es/client.js"

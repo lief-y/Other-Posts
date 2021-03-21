@@ -3,16 +3,14 @@ languageCode = "en-us"
 DefaultContentLanguage = "en"
 hasCJKLanguage = "true"
 theme = "hugo-xmin"
-# theme = "hugo-lithium"
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 
-
-highlight = true
-highlightjsTheme = "Brown Paper"
-highlightLanguages = ["r","yaml","toml","tex","markdown","perl"]
+pygmentsUseClasses=true
+pygmentsCodefences = true
+pygmentsStyle = "monokai"
 
 # disableKinds = ["taxonomy", "taxonomyTerm"]
 
@@ -92,5 +90,9 @@ highlightLanguages = ["r","yaml","toml","tex","markdown","perl"]
     #     en = "Fei Ye"
     #     cn = "叶飞"
 
+
 [markup.goldmark.renderer]
   unsafe = true # allows HTML inside your CommonMark content
+
+[frontmatter]
+  lastmod = [":fileModTime", "lastmod"]
