@@ -15,7 +15,7 @@ Hugo 提供了一个 .LastMod 变量，可以用来给页面自动添加一个�
 
 ```go-html-template
 {{ if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}
-    <p> 最后更新于 {{ .Lastmod.Year }} 年 {{ printf "%d" .Lastmod.Month }} 月 {{ .Lastmod.Day }} 日</>
+    <p> 最后更新于 {{ .Lastmod.Year }} 年 {{ printf "%d" .Lastmod.Month }} 月 {{ .Lastmod.Day }} 日</p>
 {{ end }}
 ```
 
@@ -23,7 +23,7 @@ Hugo 提供了一个 .LastMod 变量，可以用来给页面自动添加一个�
 
 ## 设置 config.yaml
 
-如果要使用文件的被修改日期作为 .LastMod 的值，则需要早 config.yaml 或者 config.toml 里做相应设置。
+如果要使用文件的被修改日期作为 .LastMod 的值，则需要在 config.yaml 或者 config.toml 里做相应设置。
 
 若用 yaml 配置你的博客，需添加以下设置。
 
@@ -32,7 +32,7 @@ frontmatter:
   lastmod: [":fileModTime", "lastmod"]
 ```
 
-若用 toml 配置你的博客，则需添加以下设置。
+若用 toml 配置你的博客，需添加以下设置。
 
 ```toml
 [frontmatter]
@@ -41,4 +41,4 @@ frontmatter:
 
 ## 小提示
 
-在比较日期的格式时, 一定要用 "2006/01/02" 这个日期。如果换成 "2021-03-22" 则会显示不正常。使用这个固定的日期，是由于 Go 语言的设定如此。
+在比较日期的格式时, 一定要用 "2006/01/02" 这个日期。如果换成 "2021-03-22"， 则会显示不正常。因为 Go 语言的设定如此。

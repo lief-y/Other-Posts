@@ -13,10 +13,6 @@ p img:only-child{
     column-width: 45%;
 }
 
-code {
-    background: #b6f5f5;
-}
-
 main {
   margin-left: 2em;
   margin-right: 2em;

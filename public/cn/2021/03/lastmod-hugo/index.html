@@ -8,19 +8,17 @@
     <link rel="stylesheet" href="/css/fonts.css" />
     <link href="/css/customized.css" type="text/css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+
 <script src="/js/thm-numbering.js"></script>
 <script src="/js/article-meta-height.js"></script>
-
 <script src="/js/background-by-season.js"></script>
 
-<link href="/css/prism-okaidia.css" type="text/css" rel="stylesheet"/>
 
 <link href="/css/syntax.css" type="text/css" rel="stylesheet"/>
 
 <link href="/css/fonts-en-cn.css" type="text/css" rel="stylesheet"/>
 
 <link href="/css/css-doodle.css" type="text/css" rel="stylesheet"/>
-
 <script src="https://unpkg.com/css-doodle@0.13.2/css-doodle.min.js"></script>
 
 
@@ -106,19 +104,19 @@
 <h2 id="修改模板">修改模板</h2>
 <p>假设你打算将最后跟新日期放在页面内容之后。那么可以在 single.html 模板的 <code>{{ .main }}</code> 之后添加下面的代码。</p>
 <div class="highlight"><pre class="chroma"><code class="language-go-html-template" data-lang="go-html-template"><span class="cp">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">ne</span><span class="w"> </span><span class="o">(</span><span class="na">.Lastmod.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="o">)</span><span class="w"> </span><span class="o">(</span><span class="na">.Date.Format</span><span class="w"> </span><span class="s">&#34;2006-01-02&#34;</span><span class="o">)</span><span class="w"> </span><span class="cp">}}</span>
-    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> 最后更新于 <span class="cp">{{</span><span class="w"> </span><span class="na">.Lastmod.Year</span><span class="w"> </span><span class="cp">}}</span> 年 <span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;%d&#34;</span><span class="w"> </span><span class="na">.Lastmod.Month</span><span class="w"> </span><span class="cp">}}</span> 月 <span class="cp">{{</span><span class="w"> </span><span class="na">.Lastmod.Day</span><span class="w"> </span><span class="cp">}}</span> 日<span class="err">&lt;</span>/&gt;
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> 最后更新于 <span class="cp">{{</span><span class="w"> </span><span class="na">.Lastmod.Year</span><span class="w"> </span><span class="cp">}}</span> 年 <span class="cp">{{</span><span class="w"> </span><span class="k">printf</span><span class="w"> </span><span class="s">&#34;%d&#34;</span><span class="w"> </span><span class="na">.Lastmod.Month</span><span class="w"> </span><span class="cp">}}</span> 月 <span class="cp">{{</span><span class="w"> </span><span class="na">.Lastmod.Day</span><span class="w"> </span><span class="cp">}}</span> 日<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="cp">{{</span><span class="w"> </span><span class="k">end</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div><p>第一行里面比较了 .LastMod 和 .Date 的日期。如果不加 .Format, 那么同一天内修改页面的话，第二行的信息也会被添加。</p>
 <h2 id="设置-configyaml">设置 config.yaml</h2>
-<p>如果要使用文件的被修改日期作为 .LastMod 的值，则需要早 config.yaml 或者 config.toml 里做相应设置。</p>
+<p>如果要使用文件的被修改日期作为 .LastMod 的值，则需要在 config.yaml 或者 config.toml 里做相应设置。</p>
 <p>若用 yaml 配置你的博客，需添加以下设置。</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">frontmatter</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">lastmod</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;:fileModTime&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;lastmod&#34;</span><span class="p">]</span><span class="w">
-</span></code></pre></div><p>若用 toml 配置你的博客，则需添加以下设置。</p>
+</span></code></pre></div><p>若用 toml 配置你的博客，需添加以下设置。</p>
 <div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">frontmatter</span><span class="p">]</span>
   <span class="nx">lastmod</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;:fileModTime&#34;</span><span class="p">,</span> <span class="s2">&#34;lastmod&#34;</span><span class="p">]</span>
 </code></pre></div><h2 id="小提示">小提示</h2>
-<p>在比较日期的格式时, 一定要用 &ldquo;2006/01/02&rdquo; 这个日期。如果换成 &ldquo;2021-03-22&rdquo; 则会显示不正常。使用这个固定的日期，是由于 Go 语言的设定如此。</p>
+<p>在比较日期的格式时, 一定要用 &ldquo;2006/01/02&rdquo; 这个日期。如果换成 &ldquo;2021-03-22&rdquo;， 则会显示不正常。因为 Go 语言的设定如此。</p>
 
 </main>
 
@@ -149,7 +147,7 @@
 
 <script src="/js/check-for-tex.js" defer></script>
 <script async src="https://yihui.org/js/center-img.js"></script>
-<script src="/js/prism.js"></script>
+
 
 
 
