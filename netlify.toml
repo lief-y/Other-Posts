@@ -3,5 +3,3 @@
     to = "http://blog.yfei.page/:splat"
     status = 301
     force = true
-
-HUGO_VERSION = "0.81.0"
