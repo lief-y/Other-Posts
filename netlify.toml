@@ -1,5 +1,26 @@
 [[redirects]]
-    from = "http://fy-blog.netlify.com/*"
-    to = "http://blog.yfei.page/:splat"
-    status = 301
-    force = true
+  from = "http://fy-blog.netlify.com/*"
+  to = "http://blog.yfei.page/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://fy-blog.netlify.com/*"
+  to = "https://blog.yfei.page/:splat"
+  status = 301
+  force = true
+
+[build]
+  publish = "public"
+  command = "hugo"
+
+[context.production.environment]
+  HUGO_VERSION = "0.81.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.81.0"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.81.0"
