@@ -15,7 +15,7 @@ en/tags:
 
 - [Isaac Newton Institute for Mathematical Sciences](https://sms.cam.ac.uk/institution/INIMS)
 
-- [Vod the MathNet Korea](http://vod.mathnet.or.kr)
+- [MathNet Korea](http://vod.mathnet.or.kr)
 
 - [MathNet Russia](http://www.mathnet.ru/php/presentation_events.phtml?eventID=1&option_lang=eng#PRELIST1)
 
