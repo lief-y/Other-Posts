@@ -7,7 +7,7 @@ en/tags:
     - Videos
 ---
 
-## List of some links to online videos on Mathematics (mostly Algebraic Geometry).
+## List of some links to online videos on Mathematics (mostly Algebraic Geometry)
 
 - [ICM Videos](https://www.mathunion.org/icm/icm-videos)
 
@@ -47,4 +47,4 @@ en/tags:
 
 - [The Banff International Research Station for Mathematical Innovation and Discovery](http://www.birs.ca/videos)
 
-See [Mathoverflow Discussions for more online video lectures](https://mathoverflow.net/questions/54430/video-lectures-of-mathematics-courses-available-online-for-free)
+See [Mathoverflow Discussions for more online video lectures](https://mathoverflow.net/questions/54430/video-lectures-of-mathematics-courses-available-online-for-free).
