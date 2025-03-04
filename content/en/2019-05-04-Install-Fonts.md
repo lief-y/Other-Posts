@@ -33,7 +33,7 @@ If your system is Linux or MacOX, use the following command
 sudo updmap-sys --enable Map=fontname.map
 ```
 
-**Remark:** 👍 👍 👍 Another way to register a font map is to modify the `undmap.cfg` file in the `web2c` folder (create the folder and/or file under `texmf-local` if they do not exist) by adding a line `Map fontname.map`. The benefit of this method is that the font will be ready to use if you install a new version of TeXLive.
+**Remark:** 👍 👍 👍 Another way to register a font map is to modify the `udpmap.cfg` file in the `web2c` folder (create the folder and/or file under `texmf-local` if they do not exist) by adding a line `Map fontname.map`. The benefit of this method is that the font will be ready to use if you install a new version of TeXLive.
 
 After creating the `updmap.cfg` file, you may need to run `updmap-sys`.
 
